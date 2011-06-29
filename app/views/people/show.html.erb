@@ -1,0 +1,20 @@
+<div id="container">
+  <div id="content" role="main">
+    
+    <%= render :partial => "show" %>
+
+    <% content_for :sidebar do %>
+      
+      <%= render :partial => "people/dashboard_profile", :locals => {:stats => true} %>
+
+      <%= render :partial => "people/dashboard_connections" %>
+    
+      <%= render :partial => "people/dashboard_following", :locals => {:title => "Following", :count => 324} %>
+    
+      <%= render :partial => "people/dashboard_small_list" %>
+   
+    <% end %>
+
+  </div><!-- #content -->
+</div><!-- #container -->
+<%= render :partial => "shared/sidebar" %>

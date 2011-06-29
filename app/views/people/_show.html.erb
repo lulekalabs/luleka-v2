@@ -1,0 +1,102 @@
+<div class="profile-header">
+  <div class="profile-info clearfix">
+    <div class="profile-image-container">
+      <a href="http://a0.twimg.com/profile_images/1302072255/Photo_32.jpg" class="profile-picture" target="_blank"><img src="http://a0.twimg.com/profile_images/1302072255/Photo_32_reasonably_small.jpg" alt="Juergen Fesslmeier"></a>
+    </div>
+    <div class="profile-details">
+      <div class="full-name">
+        <h2>Juergen Fesslmeier</h2>
+      </div>
+      <div class="screen-name-and-location"><span class="screen-name screen-name-chinshr pill">@chinshr</span> Buenos Aires</div>
+      <div class="bio">Tech entrepreneur, creator and co-founder of Luleka, loves simplifying complexity, technology, design, business, art, economics, the Web, culture, and more</div>
+      <div class="url"><a target="_blank" rel="me nofollow" href="http://luleka.com">http://luleka.com</a></div>
+    </div>
+  </div>
+  
+  <div class="profile-actions-container">
+    <div class="component">
+      <div class="profile-actions profile-actions-6513002 clearfix">
+        <div class="buttons">
+          
+          <div class="drop-down-container">
+            <div class="button profile-actions-button" data-user-id="726073" onclick="$('#dd1').show();">
+              <span class="gear"></span>
+              <span class="down-arrow"></span>
+            </div>
+            <ul id="dd1" class="drop-down" style="left: auto; right: 0px; top: 1px; visibility: visible; display:none;">
+              <li class=""><span class="mention"></span><b class="item-name">Mention ckozus</b></li>
+              <li class=""><span class="block"></span><b class="item-name">Block ckozus</b></li>
+              <li class=""><span class="spam"></span><b class="item-name">Report <span class="truncate">ckozus</span> for spam</b></li>
+            </ul>
+          </div>
+          
+          <div class="drop-down-container">
+            <div class="button list-action-button" data-user-id="6513002" onclick="$('#dd2').show();">
+              <span class="list"></span>
+              <span class="down-arrow"></span>
+            </div>
+          
+            <ul id="dd2" class="drop-down" style="left: auto; right: 0px; top: auto; visibility: visible; display:none;">
+              <li class="">
+                <span class="list"></span>Create a list
+              </li>
+            </ul>
+          </div>
+        </div>
+        <% if false %>
+        <div class="follow-state">
+          <span class="thats-you"><a href="/settings/account">Edit your profile&nbsp;→</a></span>
+        </div>
+        <% else %>
+        <div class="follow-state">
+          <div class="button profile-follow-button" data-user-id="726073">
+            <span class="plus"></span> <strong>Follow</strong>
+          </div>
+          <!-- after user has followed -->
+          <a href="#" class="button profile-unfollow-link" data-user-id="726073">
+            <span class="you-follow"></span>
+            <em class="wrapper">
+              <b>Following</b>
+              <b class="unfollow">Unfollow</b>
+            </em>
+          </a>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<!-->  
+  <ul class="stream-tabs">
+    <li class="stream-tab stream-tab-tweets  active">
+      <a class="tab-text" href="/#!/chinshr">Timeline</a>
+    </li>
+    <li class="stream-tab stream-tab-favorites">
+      <a class="tab-text" href="/#!/chinshr/favorites">Favorites</a>
+    </li>
+    <li class="stream-tab stream-tab-following">
+      <a class="tab-text" href="/#!/chinshr/following">Following</a>
+    </li>
+    <li class="stream-tab stream-tab-followers">
+      <a class="tab-text" href="/#!/chinshr/followers">Followers</a>
+    </li>
+    <li class="stream-tab stream-tab-lists dropdown-link">
+      <p class="tab-text">Lists<i></i></p>
+    </li>
+  </ul>
+-->  
+
+  <div id="" class="menu">
+    <ul>
+      <li class="current_page_item"><a href="#">Timeline</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Recommendations</a></li>
+      <li><a href="#">Reputation</a></li>
+    </ul>
+  </div>  
+  
+</div>
+
+<div class="teaser">
+  <%= render :partial => "posts/teaser", :collection => @posts %>
+</div><!-- end of teaser -->

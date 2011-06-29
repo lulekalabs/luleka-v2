@@ -1,0 +1,18 @@
+<!-- dashboard profile -->  
+<%
+  stats ||= false
+%>
+<div class="component">
+  <div class="dashboard-profile-annotations clearfix">
+    <h2 class="dashboard-profile-title"><img src="http://a2.twimg.com/profile_images/133507335/yo-y-rene-square-small_normal.jpg" alt="Carlos Kozuszko" width="24" class="profile-dashboard">About @ckozus</h2>
+  </div>
+  <% if stats %>
+  <ul class="user-stats clearfix">
+    <li><a class="user-stats-count" href="/#!/ckozus">1,934<span class="user-stats-stat">Tweets</span></a></li>
+    <li><a class="user-stats-count" href="/#!/ckozus/following">323<span class="user-stats-stat">Following</span></a></li>
+    <li><a class="user-stats-count" href="/#!/ckozus/followers">306<span class="user-stats-stat">Followers</span></a></li>
+    <li><a class="user-stats-count" href="/#!/ckozus/lists/memberships">22<span class="user-stats-stat">Listed</span></a></li>
+  </ul>
+  <% end %>
+  <hr class="component-spacer">
+</div>
