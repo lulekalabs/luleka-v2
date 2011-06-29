@@ -1,0 +1,2 @@
+module Account::AccountApplicationHelper
+end
