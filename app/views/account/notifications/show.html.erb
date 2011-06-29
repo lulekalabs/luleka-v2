@@ -1,0 +1,89 @@
+<div id="container">
+  <div id="content">
+
+    <div class="page-header">
+      <h1>
+        <a href="/settings/profile"><img alt="luleka" class="photo fn" height="48" src="https://si1.twimg.com/profile_images/1348029875/lulekafb_normal.png" width="48"></a>luleka’s settings
+      </h1>
+      <%= render :partial => "account/tabs" %>
+    </div>
+
+    <div class="content-section">
+
+      <form action="" class="luleka-form notifications-settings" method="post">
+        <p class="lead">Choose when and how often Twitter sends emails to jfesslmeier@yahoo.com (<a href="/settings/account">change</a>).</p>
+
+        <fieldset>
+          <legend>Messages</legend>
+          <div class="row">
+            <label>Email me when</label>
+            <div class="input">
+              <ul class="options">
+
+                <li>
+                  <input checked="checked" id="user_send_new_direct_text_email" name="user[send_new_direct_text_email]" type="checkbox" value="1"><input name="user[send_new_direct_text_email]" type="hidden" value="0">
+                  <label for="user_send_new_direct_text_email">
+                    I'm sent a direct message
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Activity</legend>
+          <div class="row">
+            <label>Email me when</label>
+            <div class="input">
+              <ul class="options">
+
+                <li>
+                  <input checked="checked" id="user_send_new_friend_email" name="user[send_new_friend_email]" type="checkbox" value="1"><input name="user[send_new_friend_email]" type="hidden" value="0">
+                  <label for="user_send_new_friend_email">
+                    I'm followed by someone new
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Updates</legend>
+          <div class="row">
+            <label>Email me with</label>
+            <div class="input">
+              <ul class="options">
+
+                <li>
+                  <input checked="checked" id="user_send_email_newsletter" name="user[send_email_newsletter]" type="checkbox" value="1"><input name="user[send_email_newsletter]" type="hidden" value="0">
+                  <label for="user_send_email_newsletter">
+                    Occasional updates about new Twitter products, features, and tips
+                  </label>
+                </li>
+
+                <li>
+                  <input checked="checked" id="user_send_account_updates_email" name="user[send_account_updates_email]" type="checkbox" value="1"><input name="user[send_account_updates_email]" type="hidden" value="0">
+                  <label for="user_send_account_updates_email">
+                    Product or service updates related to my Twitter account
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <input class="btn btn-m btn-blue" name="commit" type="submit" value="Save">
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+<%= render :partial => "shared/sidebar" %>
