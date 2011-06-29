@@ -1,0 +1,29 @@
+<%
+  comment ||= post
+%>
+<li id="<%= dom_id(comment) %>" class="comment-post <%= cycle("odd", "even") %>">
+  <div class="comment-thumbnail">
+    <a href="" class="">
+      <img width="24" height="24"
+      title="To change this icon, please add featured image for post ."
+      src="/images/thumbnail.png" />
+    </a>
+  </div>
+  <div class="entry-person-name">
+    <a class="entry-screen-name user-profile-link" title="<%= h comment.person.name %>"><%= h comment.person.screen_name %></a>
+    <span class="entry-full-name"><%= h comment.person.name %></span>
+    <span class="entry-person-action"><%= "commented" %></span>
+  </div>
+  <div class="comment-body">
+    <%= sh(comment.body) %>
+  </div>
+  <div class="entry-meta">
+    <a href="#" class="comment-permalink"><%= "%s ago" % distance_of_time_in_words_to_now(comment.created_at) %></a>
+  </div>
+  <div class="entry-utility">
+    <span class="reply-link"><i></i><%= link_to "Reply", '#' %></span>
+    <span class="edit-link"><i></i><%= link_to "Edit", '#' %></span>
+    <span class="delete-link"><i></i><%= link_to "Delete", '#' %></span>
+  </div>
+  <%= render :partial => "comments/form" %>
+</li>

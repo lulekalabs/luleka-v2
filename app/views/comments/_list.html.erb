@@ -1,0 +1,53 @@
+<%
+  commentable ||= @commentable || @kase || @response || @post
+  comments ||= list || @comments || []
+  title ||= "%s Responses to %s" % [comments.size, commentable.title]
+%>
+<div id="comments">
+<% if false %>
+		<p class="nopassword">This post is password protected. Enter the password to view any comments</p>
+	</div><!-- #comments -->
+<% end %>
+
+
+<% if !comments.blank? %>
+	<h3 id="comments-title">
+	  <%= title %>
+  </h3>
+
+  <!-- Are there comments to navigate through? -->
+  <% if comments.size / 5 > 1 && get_option('page_comments') %>
+			<div class="navigation">
+				<div class="nav-previous">
+				    <span class="meta-nav">&larr;</span> Older Comments
+				</div>
+				<div class="nav-next">
+				  Newer Comments <span class="meta-nav">&rarr;</span>
+				</div>
+			</div> <!-- .navigation -->
+  <% end %>
+
+	<ol class="comment-list">
+	  <%= render :partial => "comments/post", :collection => comments %>
+	</ol>
+
+  <!-- Are there comments to navigate through? -->
+  <% if comments.size / 5 > 1 && get_option('page_comments') %>
+			<div class="navigation">
+				<div class="nav-previous">
+				    <span class="meta-nav">&larr;</span> Older Comments
+				</div>
+				<div class="nav-next">
+				  Newer Comments <span class="meta-nav">&rarr;</span>
+				</div>
+			</div> <!-- .navigation -->
+  <% end %>
+
+<% else %>
+  <% if !@comments_open %>
+  <p class="nocomments">Comments are closed</p>
+  <% end %>
+
+  <% @comment_form %>
+<% end %>
+</div><!-- #comments -->

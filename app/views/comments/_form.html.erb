@@ -1,0 +1,27 @@
+<%
+  title ||= false
+  commentable ||= @commentable
+  if title.is_a?(TrueClass) && commentable
+    title = "Comment on %s" % "<span class=\"comment-commentable-title\">#{truncate(h(commentable.body))}</span>"
+  end
+%>
+<div class="comment-box-container">
+  <div class="comment-box">
+    <% if title %>
+    <div class="comment-box-title">
+      <h2><%= title %></h2>
+    </div>
+    <% end %>
+    <div class="text-area">
+      <div class="text-area-editor full-editor">
+        <textarea class="comment-box-editor"></textarea>
+      </div>
+    </div>
+    <div class="button-container comment-button-container">
+      <span class="geo-control"></span>
+      <img src="/images/spinner.gif" class="comment-spinner" style="display: none;">
+      <input class="comment-counter" value="140" disabled="disabled">
+      <a href="#" class="comment-button button disabled">Post</a>
+    </div>
+  </div>
+</div>
