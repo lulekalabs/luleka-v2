@@ -6,6 +6,7 @@ The second incarnation of a professional recommendations site developed by Lulek
 
     git clone [this repo]
     cd nl
+    gem install bundler (first time)
     bundle install
     rake db:setup
 

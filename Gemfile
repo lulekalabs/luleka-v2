@@ -5,7 +5,7 @@ gem 'rails', '3.0.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,3 +29,24 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'mysql2', "~> 0.2.0"
+gem 'jquery-rails'
+
+group :test do
+  gem 'simplecov', '>= 0.4.0', :require => false
+  gem 'minitest'
+  gem 'ruby-debug19' unless RUBY_VERSION < "1.9"
+end
+
+group :development, :test do
+  gem 'capistrano', '2.5.21'
+  gem 'mocha', '0.9.12'
+  gem 'thin', '1.2.11'
+  gem 'ruby-debug19' unless RUBY_VERSION < "1.9"
+end
+
+gem 'koala', '1.0.0'
+gem 'json', '1.5.1'
+gem 'devise', '1.3.4'
+gem 'friendly_id4', '4.0.0.pre3', :require => "friendly_id"
