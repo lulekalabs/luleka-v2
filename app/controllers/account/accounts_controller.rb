@@ -1,4 +1,4 @@
-class Account::AccountsController < ApplicationController
+class Account::AccountsController < Account::AccountApplicationController
 
   def show
   end

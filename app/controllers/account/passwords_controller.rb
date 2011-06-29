@@ -1,2 +1,2 @@
-class Account::PasswordsController < ApplicationController
+class Account::PasswordsController < Account::AccountApplicationController
 end

@@ -1,2 +1,2 @@
-class Account::NotificationsController < ApplicationController
+class Account::NotificationsController < Account::AccountApplicationController
 end

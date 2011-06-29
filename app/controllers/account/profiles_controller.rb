@@ -1,2 +1,2 @@
-class Account::ProfilesController < ApplicationController
+class Account::ProfilesController < Account::AccountApplicationController
 end
