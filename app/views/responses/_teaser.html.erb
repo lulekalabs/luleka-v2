@@ -1,0 +1,52 @@
+<%
+  response ||= teaser
+  dom_id ||= dom_id(response)
+%>
+<div id="<%= dom_id %>" class="post response hentry">
+  <div class="post-thumbnail">
+    
+    <!-- Vote -->
+    <div class="vertical-vote-control">
+      <div class="vote-buttons">
+        <div class="button vote-up-button">
+          <span class="vote-up-icon"></span>
+        </div>
+        <div class="button vote-down-button">
+          <span class="vote-down-icon"></span>
+        </div>
+      </div>
+      <div class="watch-sparkbars">
+        <div class="vote-up-watch-sparkbar" style="height:50%"></div>
+        <div class="vote-down-watch-sparkbar" style="height:50%"></div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="post-item">
+    <!--
+    <h2 class="entry-title"><a href="<%= response_path(response) %>" title="" rel="bookmark"><%= response.title %></a></h2>
+    -->
+    <div class="show-full-entity">&raquo;</div>
+    <div class="excerpt"><%= truncate(response.body) %></div>
+    <div class="entry-meta">
+      <a href="#" class="user-profile-link">
+        <img src="http://a2.twimg.com/profile_images/1330927127/mirah-logotype-blue-small_mini.png" height="24" width="24" title="mirahlang">
+      </a>
+      <span><%= "%s ago" % distance_of_time_in_words_to_now(response.created_at) %><span>
+    	<span class="meta-sep">by</span>
+  		<span class="author vcard">
+  		  <a class="url fn n" href="<%= responses_person_path(response.person) %>" title="View all recommendations by %s">
+  		    <%= h(response.person.username) %>
+  		  </a>
+  		  <span class="post-full-name"><%= h(response.person.name) %></span>
+  		</span>
+      <a href="<%= response_path(response) %>" class="response-permalink"><%= response_url(response) %></a>
+    </div><!-- .entry-meta -->
+    <div class="entry-utility">
+      <span class="comments-link"><i></i><%= link_to "Comment", '#' %></span>
+      <span class="edit-link"><i></i><%= link_to "Edit", '#' %></span>
+      <span class="delete-link"><i></i><%= link_to "Delete", '#' %></span>
+    </div><!-- .entry-utility -->
+    
+  </div>
+</div><!-- #post-## -->

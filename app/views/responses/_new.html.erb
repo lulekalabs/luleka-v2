@@ -1,0 +1,33 @@
+<% unless slide? %>
+  <%= render :partial => "kases/post", :locals => {:can_edit => false, :dom_id => dom_id(@kase, :slider)} %>
+<% end %>
+
+<div class="response-box-container">
+  <div class="response-box">
+    <div class="response-box-title">
+      <h2><%= "Add Recommendation for %s" % "<span class=\"response-concern-title\">#{h(@kase.title)}</span>" %></h2>
+    </div>
+    
+    <div class="text-area">
+      <div class="text-area-editor full-editor">
+        <textarea class="response-box-editor" style="width: 482px; height: 56px; "></textarea>
+      </div>
+    </div>
+    <div class="button-container response-button-container">
+      <span class="control geo-control"><i></i><%= link_to "Add Location", '#' %></span>
+      <img src="/images/spinner.gif" class="response-spinner" style="display: none;">
+      <input class="response-counter" value="140" disabled="disabled">
+      <a href="#" class="response-button button disabled">Reply</a>
+    </div>
+  </div>
+</div>
+
+<div class="recent-responses">
+  <h3 class="responses-title">Recent Recommendations</h3>
+  
+  <% if @responses %>
+    <%= render :partial => "responses/list" %>
+  <% else %>
+    <a class="add-yours" href="">Add first&nbsp;→</a>
+  <% end %>
+</div>

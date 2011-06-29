@@ -1,0 +1,24 @@
+<%
+  responses ||= list || @responses
+%>
+<% if responses.empty? %>
+	<div id="post-0" class="post error404 not-found">
+		<h1 class="entry-title"><%= 'Not found' %></h1>
+		<div class="entry-content">
+			<p><%= 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.' %></p>
+			<%= render :partial => "shared/search_form" %>
+		</div><!-- .entry-content -->
+	</div><!-- #post-0 -->
+<% end %>
+
+<div class="teaser">
+  <%= render :partial => "responses/teaser", :collection => responses %>
+</div><!-- end of teaser -->
+
+<%# /* Display navigation to next/previous pages when applicable */ %>
+<% if false %>
+  <div id="nav-below" class="navigation">
+  	<div class="nav-previous"><a href="#"><span class="meta-nav">&#x00ab;</span> Older posts</a></div>
+  	<div class="nav-next"><a href="#">Newer posts <span class="meta-nav">&#x00bb;</span></a></div>
+  </div><!-- #nav-below -->
+<% end %>
