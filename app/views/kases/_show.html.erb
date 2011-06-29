@@ -1,0 +1,19 @@
+<% # kases/_show
+  post ||= show || @kase
+  can_edit ||= false
+  editing ||= false
+%>
+<%= render :partial => "kases/post", :locals => {:utility => true, :can_edit => can_edit} %>
+
+<%= render :partial => "kases/actions" %>
+
+<!-- menu -->
+<div class="recommendations-header">
+  <div id="" class="menu">
+    <ul>
+      <li><a href="#">Recommendations</a></li>
+    </ul>
+  </div>  
+</div>
+
+<%= render :partial => "responses/list" %>

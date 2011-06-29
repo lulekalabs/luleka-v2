@@ -1,0 +1,19 @@
+<div id="container">
+	<div id="content" role="main">
+
+  <%= render :partial => "page_header" %>
+  
+	<%= render :partial => "kases/list" %>
+	
+	<% content_for :sidebar do %>
+    <%= render :partial => "tiers/dashboard_profile", :locals => {:stats => true} %>
+  
+    <%= render :partial => "topics/dashboard_small_list" %>
+
+    <%= render :partial => "people/dashboard_following", :locals => {:title => "Participants", :count => 45} %>
+	<% end %>
+	
+	</div><!-- #content -->
+</div><!-- #container -->
+
+<%= render :partial => "shared/sidebar" %>

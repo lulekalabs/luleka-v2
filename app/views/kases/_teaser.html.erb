@@ -1,0 +1,45 @@
+<%
+  kase ||= teaser || @kase
+%>
+<div id="<%= dom_id(kase)%>" class="post kase hentry">
+  <div class="post-thumbnail">
+  <% if has_post_thumbnail? kase %>
+    the_post_thumbnail(post);
+  <% else %>
+    <img width="48" height="48"
+    title="To change this icon, please add featured image for post ."
+    src="/images/thumbnail.png" />
+  <% end %>
+  </div>
+  <div class="post-item">
+    <div class="entry-person-name">
+      <a class="entry-screen-name user-profile-link" title="<%= h kase.person.name %>"><%= h kase.person.screen_name %></a>
+      <span class="entry-full-name"><%= h kase.person.name %></span>
+      <span class="entry-person-action"><%= ['asked', 'shared an idea', 'complained', 'praised'][rand(3)] %></span>
+    </div>
+    <h2 class="entry-title"><a href="<%= kase_path(kase) %>" title="" rel="bookmark"><%= kase.title %></a></h2>
+    <div class="show-full-entity">&raquo;</div>
+    <div class="excerpt"><%= truncate(kase.body, :length => 140) %></div>
+    <div class="entry-meta">
+      <%= "%s ago" % distance_of_time_in_words_to_now(kase.created_at) %>
+    </div><!-- .entry-meta -->
+    
+    <div class="entry-utility">
+      <span class="reply-link"><i></i><%= link_to "Reply", '#' %></span>
+      <% if rand(100) % 2 == 0 %>
+      <span class="connect-link active"><i></i><%= link_to "Connected", '#' %></span>
+      <% else %>
+      <span class="connect-link"><i></i><%= link_to "Connect", '#' %></span>
+      <% end %>
+      <span class="comments-link"><i></i><%= link_to "Comment", '#' %></span>
+      <span class="edit-link"><i></i><%= link_to "Edit", '#' %></span>
+      <span class="delete-link"><i></i><%= link_to "Delete", '#' %></span>
+      <% if rand(100) % 2 == 0 %>
+      <span class="favorite-link active"><i></i><%= link_to "Favorited", '#' %></span>
+      <% else %>
+      <span class="favorite-link"><i></i><%= link_to "Favorite", '#' %></span>
+      <% end %>
+    </div><!-- .entry-utility -->
+  </div>
+</div><!-- #post-## -->
+<%#= render :partial => "comments/list" %>

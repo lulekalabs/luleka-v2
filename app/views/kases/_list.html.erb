@@ -1,0 +1,13 @@
+<% if @posts.empty? %>
+	<div id="post-0" class="post error404 not-found">
+		<h1 class="entry-title"><%= 'Not found' %></h1>
+		<div class="entry-content">
+			<p><%= 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.' %></p>
+			<%= render :partial => "shared/search_form" %>
+		</div><!-- .entry-content -->
+	</div><!-- #post-0 -->
+<% end %>
+
+<div class="teaser">
+  <%= render :partial => "kases/teaser", :collection => @posts %>
+</div><!-- end of teaser -->

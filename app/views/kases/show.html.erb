@@ -1,0 +1,21 @@
+<div id="container">
+  <div id="content" role="main">
+    <%#= render :partial => "shared/page_header" %>
+    <div class="entries">
+      <%= render :partial => "show", :locals => {:can_edit => true} %>
+    </div>
+
+    <% content_for :sidebar do %>
+      <%= render :partial => "tiers/dashboard_profile", :locals => {:stats => true, :spacer => false} %>
+
+      <%= render :partial => "topics/dashboard_small_list" %>
+
+      <%= render :partial => "people/dashboard_following", :locals => {:title => "Followers", :count => 11} %>
+
+      <%= render :partial => "people/dashboard_following", :locals => {:title => "Participants", :count => 45} %>
+
+      <%= render :partial => "kases/stats" %>
+  	<% end %>
+  </div><!-- #content -->
+</div><!-- #container -->
+<%= render :partial => "shared/sidebar" %>

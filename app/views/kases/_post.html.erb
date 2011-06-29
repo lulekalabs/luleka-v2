@@ -1,0 +1,80 @@
+<% # kases/_post
+  kase ||= post || @kase
+  can_edit ||= false
+  editing ||= false
+  dom_id ||= dom_id(kase)
+  utility ||= false
+%>
+<div id="<%= dom_id %>" class="post">
+  <!-- topics -->
+  <% if can_edit && kase.categories.empty? %>
+  <div class="topic-list-container">
+    <a class="view-all" href="#">Add topics&nbsp;→</a>
+  </div>  
+  <% elsif editing %>
+    <div class="topic-list-container">
+      <ul class="topic-list">
+        <% kase.categories.each do |topic| %>
+        <li class="topic-list-item">
+          <a class="topic-remove"><span class="cross">&times;</span></a>
+          <span class="topic-text"><%= h(topic.name) %></span>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <div class="topic-list-container">
+      <ul class="topic-list">
+        <% kase.categories.each do |topic| %>
+        <li class="topic-list-item">
+          <a class="topic-link"><span class="topic-text"><%= h(topic.name) %></span></a>
+        </li>
+        <% end %>
+      </ul>
+  	  <% if can_edit %>
+      <span class="inline-edit-link"><i></i><a href="#"><span>Edit</a></span>
+  	  <% end %>
+    </div>
+  <% end %>
+
+  <!-- header -->
+	<h1 class="entry-title">
+	  <%= h(kase.title) %>
+	  <% if can_edit %>
+	  <span class="inline-edit-link"><i></i><a href="#">Edit</a></span>
+	  <% end %>
+	</h1>
+
+  <!-- meta -->
+	<div class="entry-meta">
+    <a href="#" class="user-profile-link">
+      <img src="http://a2.twimg.com/profile_images/1330927127/mirah-logotype-blue-small_mini.png" height="24" width="24" title="mirahlang">
+    </a>
+		<a href="<%= kase_path(kase) %>" title="<%= l(kase.created_at) %>" rel="bookmark"><%= "%s ago" % distance_of_time_in_words_to_now(kase.created_at) %></a>
+		<span class="meta-sep">by</span>
+		<span class="author vcard">
+		  <a class="url fn n" href="<%= kases_person_path(kase.person) %>" title="View all posts by %s">
+		    <%= h(kase.person.username) %>
+		  </a>
+		  <span class="post-full-name"><%= h(kase.person.name) %></span>
+		</span>
+	</div><!-- .entry-meta -->
+	<% if utility %>
+  <div class="entry-utility">
+    <span class="reply-link"><i></i><%= link_to "Reply", new_kase_response_path(kase) %></span>
+    <span class="comments-link"><i></i><%= link_to "Comment", new_kase_comment_path(kase) %></span>
+    <span class="delete-link"><i></i><%= link_to "Delete", '#' %></span>
+  </div>
+  <% end %>
+
+  <!-- content -->
+	<div class="entry-content">
+	  <%= sh(kase.body) %>
+	  <% if can_edit %>
+	  <span class="inline-edit-link"><i></i><a href="#">Edit</a></span>
+	  <% end %>
+	  <div class="page-link">
+	    <%#= link_to "Full", "#" %>
+	  </div>
+	</div><!-- .entry-content -->
+</div><!-- #post-## -->
