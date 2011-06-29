@@ -1,0 +1,68 @@
+<%
+  post ||= show || @post
+%>
+<% if post.parent %>
+  <p class="page-title">
+    <a href="<%= post_path(post.parent) %>" title="Return to %s" rel="gallery">
+      <span class="meta-nav">&larr;</span>&nbsp;<%= h post.parent.title %>
+    </a>  
+  </p>  
+<% end %>
+
+
+<div id="post-<%= dom_id(post) %>" class="post">
+  <h2 class="entry-title"><%= h post.title %></h2>
+
+  <div class="entry-meta">
+    <span class="meta-prep meta-prep-author">By</span> 
+    <span class="author vcard">
+      <a class="url fn n" href="<%= person_path(post.person) %>" title="View all posts by %s">
+        <%= h post.person.name %>
+      </a>
+    </span>
+    <span class="meta-sep">|</span>
+    <span class="meta-prep meta-prep-entry-date">Published</span>
+    <span class="entry-date">
+      <abbr class="published" title="<%= l(post.created_at ) %>">
+        <%= distance_of_time_in_words_to_now(post.created_at) %>
+      </abbr>
+    </span>
+    <span class="meta-sep">|</span>
+    <a href="/images/<%= post.attachment_image_url %>" title="link to full size image">320 &times; 200</a>
+    <span class="meta-sep">|</span>
+    <span class="edit-link">
+      <a href="#">Edit</a>
+    </span>
+  </div><!-- .entry-meta -->
+
+  <div class="entry-content">
+    <div class="entry-attachment">
+    <% if post.attachment_image? %>
+      <p class="attachment">
+        <a href="next_attachment_url" title="next attachment title" rel="attachment">
+          <%= image_tag post.attachment_image_url %>
+        </a>
+      </p>
+
+      <div id="nav-below" class="navigation">
+        <div class="nav-previous">
+          <a href="#">Previous</a>
+        </div>
+        <div class="nav-next">
+          <a href="#">Next</a>
+        </div>
+      </div><!-- #nav-below -->
+    <% else %>				
+      <a href="#" title="none image attachment" rel="attachment"><%= post.attachment_name %></a>
+    <% end %>
+    </div><!-- .entry-attachment -->
+    <div class="entry-caption"><%= truncate(sh(post.body))%></div>
+    <a href="#">Continue reading <span class="meta-nav">&rarr;</span></a>
+    <div class="entry-full-content" style="display:none;"><%= sh post.body %></div>
+    <div class="page-link"><a href="">Pages: 5</a></div>
+  </div><!-- .entry-content -->
+
+  <div class="entry-utility">
+    <%= post.categories.map(&:name).join(", ") %>
+  </div><!-- .entry-utility -->
+</div><!-- #post-## -->
