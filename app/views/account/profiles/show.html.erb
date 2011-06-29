@@ -1,0 +1,83 @@
+<div id="container">
+  <div id="content">
+
+    <div class="page-header">
+      <h1>
+        <a href="/settings/profile"><img alt="luleka" class="photo fn" height="48" src="https://si1.twimg.com/profile_images/1348029875/lulekafb_normal.png" width="48"></a>luleka’s settings
+      </h1>
+      <%= render :partial => "account/tabs" %>
+    </div>
+
+    <div class="content-section">
+
+      <form action="" class="luleka-form profile-settings" enctype="multipart/form-data" id="profile_form" method="post">
+
+        <div class="row">
+          <label for="profile_image_uploaded_data">Picture</label>
+          <div class="input avatar-settings avatar-exists">
+            <img alt="Photo_32_bigger" class="profile-image" height="73" src="https://si0.twimg.com/profile_images/1302072255/Photo_32_bigger.jpg" width="73">
+
+            <span class="avatar-actions">
+              <a href="#" class="btn change-image">Change image</a>
+              <a href="#" class="delete-image">Delete this image</a>
+            </span>
+
+            <span class="avatar-upload">
+              <input id="profile_image_uploaded_data" name="profile_image[uploaded_data]" size="15" type="file">
+              <p class="help-block">Maximum size of 700k.  JPG, GIF, PNG.</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="user_name">Name</label>
+          <div class="input">
+            <input id="user_name" maxlength="20" name="user[name]" size="20" type="text" value="Juergen Fesslmeier">
+            <p class="help-block">Enter your real name, so people you know can recognize you.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="user_location">Location</label>
+          <div class="input">
+            <input id="user_location" name="user[location]" size="30" type="text" value="Buenos Aires">
+            <p class="help-block">Where in the world are you?</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="user_url">Web</label>
+          <div class="input">
+            <input id="user_url" name="user[url]" rel="http://luleka.com" size="30" type="text" value="http://luleka.com">
+            <p class="help-block">
+              Have a homepage or a blog? Put the address here.<br>
+              <a href="/goodies/" title="Put Twitter on your site!">(You can also add Twitter to your site here)</a>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="user_description">Bio</label>
+          <div class="input">
+            <textarea class="bio xlarge" cols="40" id="user_description" maxlength="160" name="user[description]" rows="3">Tech entrepreneur, creator and co-founder of Luleka, loves simplifying complexity, technology, design, business, art, economics, the Web, culture, and more</textarea>
+            <p class="help-block">
+              About yourself in fewer than <span class="char-counter">160</span> chars.
+            </p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <input class="btn btn-m btn-blue" id="save" name="commit" type="submit" value="Save">
+        </div>
+
+
+
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
+<%= render :partial => "shared/sidebar" %>
