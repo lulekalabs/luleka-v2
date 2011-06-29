@@ -1,0 +1,44 @@
+<div id="container">
+  <div id="content">
+
+    <div class="page-header">
+      <h1>
+        <a href="/settings/profile"><img alt="luleka" class="photo fn" height="48" src="https://si1.twimg.com/profile_images/1348029875/lulekafb_normal.png" width="48"></a>luleka’s settings
+      </h1>
+      <%= render :partial => "account/tabs" %>
+    </div>
+
+    <div class="content-section">
+
+      <form action="" class="luleka-form password-settings" id="passwords_settings_form" method="post" name="f">
+
+          <div class="row">
+            <label for="password">Current Password</label>
+            <div class="input">
+              <input autocomplete="off" id="current_password" name="current_password" tabindex="1" type="password">        <span class="help-inline"><a href="/account/resend_password">Forgot your password?</a></span>
+            </div>
+          </div>
+          <div class="row">
+            <label for="password">New Password</label>
+            <div class="input">
+              <input autocomplete="off" id="user_password" name="user_password" tabindex="2" type="password"> <span class="help-inline password-meter"><span class="pstrength-text"></span></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="password_confirmation">Verify New Password</label>
+            <div class="input">
+              <input autocomplete="off" id="user_password_confirmation" name="user_password_confirmation" tabindex="3" type="password">
+              <small class="help-inline help-error" id="nomatch" style="display:none;">Passwords don't match</small>
+            </div>
+          </div>
+
+          <div class="actions">
+            <input class="btn btn-m btn-blue" id="password_change_submit" name="commit" tabindex="4" type="submit" value="Change">    </div>
+        </form>
+        
+    </div>
+
+  </div>
+</div>
+<%= render :partial => "shared/sidebar" %>
