@@ -1,0 +1,138 @@
+<% if modal? %>
+
+<div class="twttr-dialog-body clearfix">
+  <div class="twttr-dialog-content">
+    <div id="signin-or-signup">
+      <form action="https://twitter.com/sessions?phx=1" class="signin" method="post">
+        <fieldset class="textbox">
+          <label class="username">
+            <span>Username or email</span>
+            <input type="text" value="" name="session[username_or_email]" autocomplete="on">
+          </label>
+          <label class="password">
+            <span>Password</span>
+            <input type="password" value="" name="session[password]">
+          </label>
+        </fieldset>
+        <fieldset class="subchck">
+          <label class="remember">
+            <input type="checkbox" value="1" name="remember_me">
+            <span>Remember me</span>
+          </label>
+          <button type="submit" class="btn">Sign in</button>
+        </fieldset>
+        <input type="hidden" name="redirect_after_login" value="/#!/thesulk">
+        <p>
+          <a class="forgot" href="/account/resend_password">Forgot password?</a><br>
+          <a class="mobile" href="/account/complete">Already using Luleka on your phone?</a>
+        </p>
+      </form>
+      <div class="signup">
+        <h2>Not on Luleka? Sign up, tune into the things you care about, and get updates as they happen.</h2>
+        <form action="https://twitter.com/signup" class="signup signup-btn" method="get">
+          <input name="follow" type="hidden" value="thesulk">
+          <input type="hidden" name="context" value="profile">
+          <input class="btn btn-blue" type="submit" value="Sign up »">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% else %>
+
+<div>
+  <div class="main">
+    <form action="https://twitter.com/sessions?phx=1" class="signin" method="post">
+      <h4>Sign in to Luleka</h4>
+      <fieldset class="textbox">
+        <label class="username">
+          <span>Username or email</span>
+          <input type="text" value="" name="session[username_or_email]" autocomplete="on">
+        </label>
+        <label class="password">
+          <span>Password</span>
+          <input type="password" value="" name="session[password]">
+        </label>
+      </fieldset>
+      <div class="captcha"></div>
+      <fieldset class="subchck">
+        <label class="remember">
+          <input type="checkbox" value="1" name="remember_me">
+          <span>Remember me</span>
+        </label>
+        <button type="submit" class="submit button">Sign in</button>
+      </fieldset>
+
+      <input type="hidden" name="return_to_ssl" value="true">
+      <input type="hidden" name="redirect_after_login" value="">
+
+    </form>
+    <div class="signup">
+      <a href="https://twitter.com/signup?context=login">New to Luleka? <em>Join Today!</em></a>
+    </div>
+    <div class="aside">
+      <p class="forgot">
+        <span class="icon"></span>
+        Forgot your <a href="/account/resend_password">password</a> or <a href="/account/resend_password" original-title="If you remember your password, try logging in with your email">username</a>?
+      </p>
+      <p class="mobile">
+        <span class="icon"></span>
+        Already using Luleka via SMS?<br>
+        <a href="/account/complete">Activate your account »</a>
+      </p>
+    </div>
+  </div>
+  <% if false %>
+  <div class="bottompart">
+    <div class="component">
+      <div class="language inline-list">
+        <form action="/sessions/change_locale" method="POST">
+          <input type="hidden" name="lang" value="">
+          <input type="hidden" name="redirect" value="https://twitter.com/#!/login/">
+          <strong>Languages</strong>
+          <span class="dot">·</span>
+          <em class="current">English</em>
+          <span class="dot">·</span>
+          <a href="?lang=fr" hreflang="fr">français</a>
+          <span class="dot">·</span>
+          <a href="?lang=de" hreflang="de">Deutsch</a>
+          <span class="dot">·</span>
+          <a href="?lang=it" hreflang="it">Italiano</a>
+          <span class="dot">·</span>
+          <a href="?lang=ja" hreflang="ja">日本語</a>
+          <span class="dot">·</span>
+          <a href="?lang=ko" hreflang="ko">한국어</a>
+          <span class="dot">·</span>
+          <a href="?lang=ru" hreflang="ru">Русский</a>
+          <span class="dot">·</span>
+          <a href="?lang=es" hreflang="es">Español</a>
+          <span class="dot">·</span>
+          <a href="?lang=tr" hreflang="tr">Türkçe</a>
+        </form>
+      </div>
+      <hr class="component-spacer"></div><div class="component"><div class="footer inline-list">
+        <ul>
+          <li><a href="/about">About</a><span class="dot"> ·</span></li>
+          <li><a href="http://support.twitter.com">Help</a><span class="dot"> ·</span></li>
+          <li><a href="http://blog.twitter.com">Blog</a><span class="dot"> ·</span></li>
+          <li><a href="/#!/download">Mobile</a><span class="dot"> ·</span></li>
+          <li><a href="http://status.twitter.com">Status</a><span class="dot"> ·</span></li>
+          <li><a href="/jobs">Jobs</a><span class="dot"> ·</span></li>
+          <li><a href="/tos">Terms</a><span class="dot"> ·</span></li>
+          <li><a href="/privacy">Privacy</a><span class="dot"> ·</span></li>
+          <li><a href="//business.twitter.com/advertise/start">Advertisers</a><span class="dot"> ·</span></li>
+          <li><a href="//business.twitter.com/">Businesses</a><span class="dot"> ·</span></li>
+          <li><a href="http://media.twitter.com">Media</a><span class="dot"> ·</span></li>
+          <li><a href="//dev.twitter.com">Developers</a><span class="dot"> ·</span></li>
+          <li><a href="/about/resources">Resources</a><span class="dot"> ·</span></li>
+          <li><span class="copyright">© 2011 Twitter</span></li>
+        </ul>
+      </div>
+      <hr class="component-spacer">
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<% end %>
