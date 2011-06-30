@@ -1,6 +1,21 @@
 Nl::Application.routes.draw do
   root :to => "pages#index"
 
+  resources :kases do
+    resources :responses
+    resources :comments
+  end
+
+  resources :responses, :as => "recommendations"
+  resources :users
+  resource :session
+  
+  namespace :account, :module => :account do
+    root :to => "account/settings#show"
+    resource :settings, :notifications, :password, :profile, 
+      :only => [:show, :update]
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
