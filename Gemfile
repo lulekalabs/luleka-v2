@@ -36,14 +36,14 @@ gem 'jquery-rails'
 group :test do
   gem 'simplecov', '>= 0.4.0', :require => false
   gem 'minitest'
-  gem 'ruby-debug19' unless RUBY_VERSION < "1.9"
+  gem 'ruby-debug19', :require => 'ruby-debug' unless RUBY_VERSION < "1.9"
 end
 
 group :development, :test do
   gem 'capistrano', '2.5.21'
   gem 'mocha', '0.9.12'
   gem 'thin', '1.2.11'
-  gem 'ruby-debug19' unless RUBY_VERSION < "1.9"
+  gem 'ruby-debug19', :require => 'ruby-debug' unless RUBY_VERSION < "1.9"
 end
 
 gem 'koala', '1.0.0'

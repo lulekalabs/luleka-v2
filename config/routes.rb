@@ -1,20 +1,28 @@
 Nl::Application.routes.draw do
-  root :to => "pages#index"
-
-  resources :kases do
+=begin
+  resources :kases, :path => "concerns" do
     resources :responses
     resources :comments
   end
 
-  resources :responses, :as => "recommendations"
+  resources :responses
   resources :users
   resource :session
   
-  namespace :account, :module => :account do
+  namespace :account, :path => 'settings' do
     root :to => "account/settings#show"
-    resource :settings, :notifications, :password, :profile, 
+    resource :settings, :path => 'account'
+    resource :notifications, :password, :profile, 
       :only => [:show, :update]
   end
+=end  
+
+  resources :kases
+  constraints(Subdomain) do
+    match '/' => 'kases#show' 
+  end
+
+  root :to => "pages#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
