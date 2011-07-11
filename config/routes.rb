@@ -17,12 +17,31 @@ Nl::Application.routes.draw do
   end
 =end  
 
+=begin
   resources :kases
   constraints(Subdomain) do
     match '/' => 'kases#show' 
   end
 
   root :to => "pages#index"
+  
+  scope :module => :biz, :as => :biz do
+    constraints(:subdomain => 'biz') do
+      resources :users
+      resources :projects
+      root :to => 'Biz::HomeController#index'
+    end
+  end
+=end
+
+  scope :as => "tier" do
+    constraints(Subdomain) do
+      root :to => "tiers#index"
+      constraints(:tier_id => /.+/) do
+        resources :kases
+      end
+    end
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
