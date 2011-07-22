@@ -50,3 +50,4 @@ gem 'koala', '1.0.0'
 gem 'json', '1.5.1'
 gem 'devise', '1.3.4'
 gem 'friendly_id4', '4.0.0.pre3', :require => "friendly_id"
+gem 'subdomain_routes'

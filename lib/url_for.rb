@@ -14,7 +14,4 @@ module UrlFor
   end
   
 end
-#ActionDispatch::Routing::UrlFor.module_eval do
-#  include UrlHelper
-#end
 ActionDispatch::Routing::UrlFor.send(:include, UrlFor)

@@ -34,6 +34,7 @@ Nl::Application.routes.draw do
   end
 =end
 
+=begin
   scope :as => "tier" do
     constraints(Subdomain) do
       root :to => "tiers#index"
@@ -42,7 +43,14 @@ Nl::Application.routes.draw do
       end
     end
   end
-  
+=end
+
+  resources :tiers do
+    constraints(Subdomain) do
+      resources :kases
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
