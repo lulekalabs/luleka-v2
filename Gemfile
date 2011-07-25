@@ -4,12 +4,8 @@ gem 'rails', '3.1.0.rc4'
 gem 'sass-rails', "~> 3.1.0.rc"
 gem 'coffee-script'
 gem 'uglifier'
+
 gem 'jquery-rails'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-# gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -34,25 +30,37 @@ gem 'jquery-rails'
 #   gem 'webrat'
 # end
 
-gem 'mysql2', "~> 0.2.0"
-
 group :test do
   gem 'simplecov', '>= 0.4.0', :require => false
+  gem 'rcov', :platform => :ruby_18
+  # Make sure we use the minitest gem for consistency
   gem 'minitest'
-  gem 'ruby-debug19', :require => 'ruby-debug' unless RUBY_VERSION < "1.9"
+  gem 'mocha', '0.9.12'
+  gem 'thin', '1.2.11'
 end
 
 group :development, :test do
   gem 'capistrano', '2.5.21'
-  gem 'mocha', '0.9.12'
-  gem 'thin', '1.2.11'
-  gem 'ruby-debug19', :require => 'ruby-debug' unless RUBY_VERSION < "1.9"
+  gem 'ruby-debug19', :platform => :mri_19
+  gem 'ruby-debug',   :platform => :mri_18
+  gem 'ffaker'
+end
+
+platform :jruby do
+  gem 'jruby-openssl'
+  gem 'ffi-ncurses'
+  gem 'mysql'
+end
+
+platform :mri do
+  gem 'mysql2', "~> 0.3.0"
 end
 
 gem 'koala', '1.0.0'
 gem 'json', '1.5.1'
 gem 'devise', '1.3.4'
 gem 'friendly_id4', '4.0.0.pre3', :require => "friendly_id"
+gem 'hoptoad_notifier'
 
 #--- paper-trail: versioning models with undo/redo functionality
 # https://github.com/airblade/paper_trail
@@ -78,4 +86,8 @@ gem 'paper_trail', '~> 2'
 #--- Aloha-Editor: Javascript WYSIWYG Editor
 # https://github.com/alohaeditor/Aloha-Editor
 
-
+# ActiveAdmin and friends
+gem 'activeadmin', :git => "git://github.com/bvision/active_admin.git"
+gem 'fastercsv'
+gem 'kaminari'
+gem 'nokogiri'
