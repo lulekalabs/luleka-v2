@@ -61,6 +61,7 @@ gem 'friendly_id4', '4.0.0.pre3', :require => "friendly_id"
 #      has_paper_trail
 #   end
 #   # @post.reify!
+#   # post_version_path(@post, "2")
 gem 'paper_trail', '~> 2'
 
 #--- uglifier: JS packager (minify, compress, etc)
