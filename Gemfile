@@ -1,6 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.1.0.rc4'
+gem 'sass-rails', "~> 3.1.0.rc"
+gem 'coffee-script'
+gem 'uglifier'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -31,7 +35,6 @@ gem 'rails', '3.0.9'
 # end
 
 gem 'mysql2', "~> 0.2.0"
-gem 'jquery-rails'
 
 group :test do
   gem 'simplecov', '>= 0.4.0', :require => false
@@ -70,7 +73,7 @@ gem 'paper_trail', '~> 2'
 #
 # Rails 3.1
 # config.assets.js_compressor  = :uglifier
-gem 'uglifier'
+# gem 'uglifier'
 
 #--- Aloha-Editor: Javascript WYSIWYG Editor
 # https://github.com/alohaeditor/Aloha-Editor
