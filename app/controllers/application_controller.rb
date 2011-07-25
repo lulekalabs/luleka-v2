@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include UrlFor
+  include UrlHelper
   protect_from_forgery
   
   layout 'slide'

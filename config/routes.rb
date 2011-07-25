@@ -15,15 +15,14 @@ Nl::Application.routes.draw do
     resource :notifications, :password, :profile, 
       :only => [:show, :update]
   end
-=end  
+=end
+
+  constraints(Subdomain::Tier) do
+    resources :kases
+  end
+  root :to => "pages#index"
 
 =begin
-  resources :kases
-  constraints(Subdomain) do
-    match '/' => 'kases#show' 
-  end
-
-  root :to => "pages#index"
   
   scope :module => :biz, :as => :biz do
     constraints(:subdomain => 'biz') do
@@ -32,9 +31,7 @@ Nl::Application.routes.draw do
       root :to => 'Biz::HomeController#index'
     end
   end
-=end
 
-=begin
   scope :as => "tier" do
     constraints(Subdomain) do
       root :to => "tiers#index"
@@ -45,11 +42,13 @@ Nl::Application.routes.draw do
   end
 =end
 
+=begin
   resources :tiers do
     constraints(Subdomain) do
       resources :kases
     end
   end
+=end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

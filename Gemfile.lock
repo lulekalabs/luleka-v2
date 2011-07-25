@@ -112,8 +112,6 @@ GEM
     simplecov (0.4.2)
       simplecov-html (~> 0.4.4)
     simplecov-html (0.4.5)
-    subdomain_routes (0.3.1)
-      actionpack (>= 2.2.1)
     thin (1.2.11)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -141,5 +139,4 @@ DEPENDENCIES
   rails (= 3.0.9)
   ruby-debug19
   simplecov (>= 0.4.0)
-  subdomain_routes
   thin (= 1.2.11)

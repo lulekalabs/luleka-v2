@@ -3,7 +3,7 @@ class KasesController < ApplicationController
   before_filter :settings
 
   def index
-    @posts = Kase.all
+    @posts = [] # Kase.all
   end
   
   def show
@@ -26,10 +26,8 @@ class KasesController < ApplicationController
   end
 
   def load_kase
-    debugger 
-    
-    @kase = Post.find(params[:id])
-    @responses = Post.all
+    #@kase = Kase.find(params[:id])
+    # @responses = Post.all
   rescue ActiveRecord::RecordNotFound
     @kase = nil
   end

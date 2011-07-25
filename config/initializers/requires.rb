@@ -1,2 +1,2 @@
 require "subdomain"
-require "url_for"
+require "url_helper"
