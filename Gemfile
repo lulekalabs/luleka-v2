@@ -50,3 +50,28 @@ gem 'koala', '1.0.0'
 gem 'json', '1.5.1'
 gem 'devise', '1.3.4'
 gem 'friendly_id4', '4.0.0.pre3', :require => "friendly_id"
+
+#--- paper-trail: versioning models with undo/redo functionality
+# https://github.com/airblade/paper_trail
+# http://railscasts.com/episodes/255-undo-with-paper-trail
+#
+# E.g. 
+#
+#   Post < ActiveRecord::Base
+#      has_paper_trail
+#   end
+#   # @post.reify!
+gem 'paper_trail', '~> 2'
+
+#--- uglifier: JS packager (minify, compress, etc)
+# https://github.com/lautis/uglifier
+# http://stackoverflow.com/questions/6325286/uglifier-gem-with-rails-3-0
+#
+# Rails 3.1
+# config.assets.js_compressor  = :uglifier
+gem 'uglifier'
+
+#--- Aloha-Editor: Javascript WYSIWYG Editor
+# https://github.com/alohaeditor/Aloha-Editor
+
+
