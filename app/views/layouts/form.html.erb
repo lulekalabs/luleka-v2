@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <%= render :partial => "layouts/nl/head" %>
-  <body class="<%= body_dom_class %>" id="<%= @body_dom_id %>">
+  <body class="<%= body_dom_class %>" id="<%= @body_dom_id %> <%= params[:controller].parameterize %>_controller">
     <%= render :partial => "layouts/nl/top" %>
     <div id="wrapper" class="hfeed">
       <div id="main">
