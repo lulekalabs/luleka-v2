@@ -9,7 +9,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: luleka_development
+  database: nl_development
   pool: 5
   username: root
   password: 
@@ -22,7 +22,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: luleka_test
+  database: nl_test
   pool: 5
   username: root
   password: 
@@ -32,7 +32,7 @@ staging:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: luleka_staging
+  database: nl_staging
   pool: 5
   host: confirmdocs.czknysrlbuqh.us-east-1.rds.amazonaws.com
   username: root
@@ -42,7 +42,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: luleka_production
+  database: nl_production
   pool: 5
   username: root
   password:
