@@ -5,6 +5,9 @@ gem 'sass-rails', "~> 3.1.0.rc"
 gem 'coffee-script'
 gem 'uglifier'
 
+# temporary fix 
+gem 'sprockets', '= 2.0.0.beta.10'
+
 gem 'jquery-rails'
 
 # Use unicorn as the web server
@@ -75,19 +78,12 @@ gem 'hoptoad_notifier'
 #   # post_version_path(@post, "2")
 gem 'paper_trail', '~> 2'
 
-#--- uglifier: JS packager (minify, compress, etc)
-# https://github.com/lautis/uglifier
-# http://stackoverflow.com/questions/6325286/uglifier-gem-with-rails-3-0
-#
-# Rails 3.1
-# config.assets.js_compressor  = :uglifier
-# gem 'uglifier'
-
 #--- Aloha-Editor: Javascript WYSIWYG Editor
 # https://github.com/alohaeditor/Aloha-Editor
 
 # ActiveAdmin and friends
-gem 'activeadmin', :git => "git://github.com/bvision/active_admin.git"
+gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git', :branch => "rails-3-1"
+gem "meta_search", '>= 1.1.0.pre'
 gem 'fastercsv'
 gem 'kaminari'
 gem 'nokogiri'

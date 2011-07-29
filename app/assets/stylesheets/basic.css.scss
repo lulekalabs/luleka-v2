@@ -1888,7 +1888,6 @@ html #wpadminbar {
   display: block;
   height: 40px;
   margin-right: 5px;
-  outline: ;
   text-indent: -9999px;
   width: 140px;
 }
@@ -4891,11 +4890,13 @@ form.signin p, form.signin span {
 -------------------------------------------------------------- */
 
 .front-page {
+/*  
   xbackground: white url(data:image/jpeg;base64,%2F9j%2F4AAQSkZJRgABAgAAZABkAAD%2F7AARRHVja3kAAQAEAAAASQAA%2F%2B4ADkFkb2JlAGTAAAAAAf%2FbAIQABAICAgMCBAMDBAUDAwMFBgQEBAQGBwYGBgYGBwkHCAcHCAcJCQoLCwsKCQwMDAwMDA8PDw8PEREREREREREREQEEBAQHBgcNCQkNEw4NDhMUERERERQRERERERERERERERERERERERERERERERERERERERERERERERERERERERER%2F8AAEQgBoQA3AwERAAIRAQMRAf%2FEAG8AAQEBAQEAAAAAAAAAAAAAAAEAAgMGAQEBAAAAAAAAAAAAAAAAAAAABhABAAEDAwIEBAUDBAMAAAAAAREAIQIxQRJRYXGBkSKhsTID8MHRQhPxciPhUrIz0gQ0EQEAAAAAAAAAAAAAAAAAAAAA%2F9oADAMBAAIRAxEAPwDyLBkO8WvD1qkTgIizMQmwR3oLP6ke8vQjRigvc4zltETEQ2vQOHOw2x24n6UB%2FHEuSRjawbeVBcDi22kxOk386BynjFhfbx6u0lqCwcjLKJ5Y%2FtISWgDIMcpZx%2Bm9qCxwcnE4kMx%2BJ70CTxLh%2B2CLLcZoL2FlbEordWgsRckQbSE2nzoIcUjL%2B56E%2BNBZWgyMYdWIb3vtQawHl2ddHTX40GLGE2gL3br09KDU%2FwCOMYePUnWgL4xkTybAMRQLkMNrSByt6%2BVBlnKcbDgJGPTxoNExpruu%2FTegxEBtOktkig19vgZDjd%2F3X9IKCcXFyW%2BmMl7tBH22RNdTvB5b0BGKRNh870C8Fd%2B5fbpQRkS8dxMeLEdO%2B1BMJGi%2FTc0Yt1oGPamUiik%2B6Hx2SgyZ5ZTY9s2d7fOglOy65Da2%2FrQT%2FIYExfTTolBMuRN1VIH470DwxWDeQi8x2oDHHLJ0ZdNtelA8sJknHJmbx86DI5ZWd274daDY8mJm2sTvGhegDLHlJqM62ifTSg1YU2xLQtj86DEqXDJj6rT%2BtBvHEsBqSa7nzmgwccMrsxbi2nx8GgZmOMa2hIZ7NBKZOWOMAXjrG1BOb19uk%2Bfe9BPGeKnt7QeYUCQ6M5EzBDDvQCLK3yjWbx3KCyAxcj6mYt3%2FAEKAlbntbXA2nwoGPbLY0lmSTy60DhkwykbNomJ2tQGQ8ZZbuUGuNBBxyieQd1oIynQ4w%2B6TT870Fi48pAvLxFnqfKgIyEbSjxVt86B4ol%2BJjMw9OtBXc9YQmTTrNBGWRNol9xpPhQOIuTxUiY2LUGZyW6ZDsT8dKBtiyQwpe1Bfx6GQoheL%2FEoLK1voddTebfGgAQmYnfrvN%2B9A5Ze%2FRg2T19ZoLFyNLN%2Fbfx260FyDI3i7OtpdqByYL2Mi8xee9BmZxjXaz0%2BNBSB7z2vn%2BdAy8TCdCIj8daAcMTK5HQn9VoNCaBdNU9DQtQUat7PIiC29AMbSZsya%2BlulAZZRiRvdOshrK0DjkA4yQ3t1bUBKkP0bM%2F6UHQ%2B79mQcMfdeFz6azyoMuf2oMT7eDMN8so6acqBfu%2FY4n%2BPHumWSf8qA5%2Fbv%2FiwxP7s47OtA%2FwAn2mJ%2B0cYGJz%2F8u9AGf22eP2sbwwOaj391A%2FzfYiP4yXR98f8AOgw4vB6O4a%2BdqBOLkEcR21idrUEFpnkKyecE%2BtAK4nJZYiMr70F9zPJejkR7f1O9Az7cWecapNigv3cCIx8N38FBaJjoagdZsXv50FnkTBjM343%2FAKa0Ep9JfQDQZvpQR7nkJOs6M0FOpkQDL4SECRQWOEjliLDp38POgzjjGTe7e2nrQORyx5WJjrBaKCYjSf3Mak3PnQOFiVJB8SJnegyw%2B5u6Ws6akUG5ZHItls3oMuWUHKcnLZ10Q9ZoNF7suJfvHz70BJlkZe76Y1J7%2BVBZXOOMdmTzigsS8uv7XR6aTQBlkZKsjBdn50Cynu0xfl1oJniEaDIfn03oJvZVcXa7e96A%2B5bK5N5XWZny60DK4RKLcj5WoDJDGAJdyzbb%2BtAs8l8L6flpQNpY9rlu72OrQZW5E6Ft%2BvQ%2BFBrMOIcW4SdOh12oM85mZMdWL7%2BW9A8pP7pY27dNaCb5BxWIevqFAYwW1m0JpFoeuu1BrTMMTXSB07a7UGU9qZWMmeXGe8TQKD7iLX5HbtQWMS%2B1tAMTt%2FpQB9w5TIMzx1POWgXDG8RqMbWfOaAHE%2BMxJpQaeLqookF3yoDFyuGxZnQ6npQUBlAnFdV0n46UGTGMRSJ%2Bmf0mgdSW49b%2BfnQXGEGCHedvnYoL26TEKdLXjSgco%2Fjgst%2Fy6FAsjOULoby%2BPhrQGUASTaYe%2Fbt40E4s%2B8iDUtebO1BTDOltYv4a0BEzlqrebNrbUDiGJPhMGnYoJywbk445QdiPxpQZjMLvGzO2s%2BVAwxEA6FiJmF9aBxWIhxxbkEa0BgpZti6rMNvzoBy90hjxxet2LUGzKRmccsYjL9WgMchh%2BmC2s%2BVAnsAmNUS5b0oMuDHFRAib6unpQMGAWvuX8LFAEP2zixbi2V86DUOmIs2H1aCcgA%2Bmbr87d6AV3mFiAny1%2BFAguSkwMTl0oMnKcoffY0%2BM0GkwbQTlcYm%2FSgzji4nKG7pv52mgccc3IfonT92l7dKDOOvubP7e0zJFBriY%2B3G%2BTDB17a6UBg5y2A14aUCIPJvj1IUlsdKAyXJYyYW5p57X8KCQgSCNUtL8taBcN8gTRd6AXB6RjJHT0oEJ%2B42JmxLNqBwAxmOUTjG%2FSgoAP9v5Pl56UGVx4OKe4JGemxrQai0wdbdO7j0oMl0fp4m%2Bq9XzoHkLxZjG3i9x60EZZ8SLJZjr4FATmE3QfMenlFBpMrHJMJ2ux18aDE48cYu3DZ7fGg6ZZM8kmNpv0l8qDOcPIQtrDc2oLLLJV%2BlBviOtn40Fjnky8mMtVj8adKCNUEnQlv4DQHLKBm31R1XfSg1aIy9wXL6b0GcTEJ%2BPfTegXDDJAIWydHv60ErMzrIx%2Bb0oGRyhbxGsxG21BkQJAJsW8rNAuHLLjLImheC1%2FwBaBcX%2BNmMW19J6N%2F1oMscgBxttprvNAoC7uP1dNNYoAFzCzAuMjfb8poJB11%2BlIYibeFBr7eJfYszrZ2oIeWSrpcNrd6DOJkhOkSWnSPhQCqiCSzyBWenrQaXJGZXSG3n2oAyBk%2BmNG9As5TkFsiPhvpQHINLJ3m2gCUD7CHIteDf0oL3IJC6WbaRE0A4KKAl7hpEUFkYyjj7nwUj8RQLnkyABezdmHegsMZyCHWIsNu9AkA3JjuT0b96AY5XWddtW8FtdKCgibQaGt3Qts0BjmR7QlsoaT0oNK8DjixBfXXWO80AcXii9INTYmgPcYx%2Fu14uvpegc2RbI9762b0FwYAJyuPjGtBkft433neX8RQKYjYjix49YltQTCrK8dCNfWWg3GWn1ccbce0ROrQF45KCgHnQHLFmyq6s3%2FSgeJMpOK8QHSO9Bky2JyYu9egFA8EZ4%2B3aL67%2BdBcsrY5X42nc66RQOX25VXjGhO3lFBTlk3PcRad9TWgzmY8YBTytLtQaXPmLdi17w7x1oMw6xfIbdNW%2BtBMn3J0G56bdqCx5qp9Tc%2FPvtQactRjlnrCrEdIoDixBkesaeHegeS4MIcgH5delAGf7tce2sUA2G8DMvh5PwoEgFtxbk7x2oAymxrOveguSu3JGx321vQUZkLILP49aBcUMoE3Ftt3oA4GEBON5WW%2Bk6UCuLsri8wNb7X70CpbGZDWV8S8PSgDi5HHKV2GL%2FAI7UF7XIVvJ%2BDegceLGJcu%2B1sDbegokCExyuuVpnwoDnh9Zd%2BpPx6UFy%2Fai5G8z5%2BVBY3uclIWJs2trQUOulrxMH4daB4JE2h5M9%2B%2Fagzinhkb2i%2FnQOZ70n3NtOtAGOV8WwkRL4bdaDWDHEdXS2xo2oDDHPhEWy7iWtQWGXt0THGGB18KAQcXQTWd%2FW9A7kGNptOw6zrQWOOM9Z1HqPTegjLOZJAOTMRKLQXLLICPbCy9pigEeQzIbvaaB9riSyOto9Y8KAjLHLI4sZaR4UGsZJuTjY3jZ3n1oMZmWGQje3unUjxoNTDqS3hd%2Bt%2FWgkylhG1vP5UBnyxwsJilx7%2FwBaDWeDETw4ljeO2nSgzghNmG8ZeVu1BqYJC%2BWx8qDOLLb28Zvl%2Be1BY5BOTj1SbmtAmSziOsEw3NIv3oJ%2Fjgsrrf5S9u1AMv1LGpr16X3oNcsRY035FofGgMubl7vbjsTEdWguKZooRF8S1%2BwlAy8nZbvW22m7QAxbLImIH0jxoH7n3P8AJ3tpp8aDOe8tp001e9AwLleL3xG%2BvVoBxcnTaOt9KBw4gy6EbaFA5Aw%2FuNpf6zQFtZi%2FGNk70Ce7H3RHY3dr9KCnIs3GxsbUEGWG5jc4j1YKAIkyhxJTW%2FSaA454Foe97RqfGg0GS6mKXmPG540ApHHERyN09KCyyxlswzidIKAM8XL2hj12ekWOtBOeXKDL25b2mLmtAjOSSC6b%2BVBJOTFjEk7kdqA90TEOpsRaaBxiX2toBidv9KAPuHKZBmeOp5y0C4Y3iNRjaz5zQA4nxmJNKDTxdVFEgu%2BVAYuVw2LM6HU9KCgMoE4rquk%2FHSgyYxiKRP0z%2Bk0DqS3Hrfz86C4wgwQ7zt87FBe3SYhTpa8aUDlH8cFlv%2BXQoFkZyhdDeXx8NaAygCSbTD37dvGgnFn3kQalrzZ2oKYZ0trF%2FDWgImctVbzZtbagcQxJ8Jg07FBOWDcnHHKDsR%2BNKDMZhd42Z21nyoGGIgHQsRMwvrQOKxEOOLcgjWgMFLNsXVZht%2BdAOXukMeOL1uxag2ZSMzjljEZfq0BjkMP0wW1nyoE9gExqiXLelBlwY4qIETfV09KBgwC19y%2FhYoAh%2B2cWLcWyvnQah0xFmw%2BrQTkAH0zdfnbvQCu8wsQE%2BWvwoEFyUmBiculBk5TlD77Gnxmg0mDaCcrjE36UGccXE5Q3dN%2FO00Djjm5D9E6fu0vbpQZx19zZ%2Fb2mZIoNcTH243yYYOvbXSgMHOWwGvDSgRB5N8epCktjpQbf%2BnP%2B7P5NBx%2Bz%2BePzoD%2F2P%2B58vlQWf%2FTh45flQbP%2FAKMfL50EfSf2PyoLD%2FqP7c6D%2F9k%3D) repeat-x 0px 0px;
   xbackground: #white url(/images/nl/bg/algie.jpg) repeat-x;
   xbackground: #white url(/images/nl/bg/paper-420p.jpg) repeat-x;
   xbackground: #white url(/images/nl/bg/neurons.jpg) repeat-x;
-  background: #white url(/images/nl/bg/zelle.jpg) repeat-x;
+*/  
+  background: white url(/assets/nl/bg/zelle.jpg) repeat-x;
 }
 
 .front-page #wrapper {
@@ -4903,9 +4904,10 @@ form.signin p, form.signin span {
 }
 
 .front-page #main {
-  xbackground: url(http://a2.twimg.com/a/1306889658/phoenix/img/front/map.png) no-repeat 50% 0px;
-  background: url(/images/nl/bg/nature-p443.png) no-repeat 50% 0px;
-  
+/*
+  background: url(http://a2.twimg.com/a/1306889658/phoenix/img/front/map.png) no-repeat 50% 0px;
+*/  
+  background: url("/assets/nl/bg/nature-p443.png") no-repeat 50% 0px;
   overflow:visible; 
 }
 
@@ -4936,7 +4938,9 @@ body.narrow #front-container, body.narrow #page-container {
 }
 
 .front-page .leftside h1 {
+/*  
   xbackground: url(http://a2.twimg.com/a/1306889658/phoenix/img/front/logo.png) no-repeat 0px 0px;
+*/  
   background: url(/images/luleka_front.png) no-repeat 0px 0px;
   height: 39px;
   width: 184px;
@@ -4959,7 +4963,9 @@ body.narrow #front-container, body.narrow #page-container {
   color: #006f79;
   outline: none;
   text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
+/*
   xtext-shadow: #c6e8e9 0px 1px 0px;
+*/  
   font-weight: normal;
 }
 
@@ -5081,14 +5087,6 @@ body.narrow #front-container, body.narrow #page-container {
   position: absolute;
   top: 135px;
   width: 310px;
-}
-
-{
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 6px;
-  text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 0px;
 }
 
 .front-signup .holding input, 
