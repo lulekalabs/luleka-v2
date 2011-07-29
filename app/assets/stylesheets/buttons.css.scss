@@ -1,24 +1,25 @@
 /* =Buttons
 -------------------------------------------------------------- */
+@mixin button-rounded-corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-bottom-left-radius: $radius $radius;
+  border-bottom-left-radius: $radius $radius;
+  border-bottom-right-radius: $radius $radius;
+  border-bottom-right-radius: $radius $radius;
+  border-top-left-radius: $radius $radius;
+  border-top-left-radius: $radius $radius;
+  border-top-right-radius: $radius $radius;
+  border-top-right-radius: $radius $radius;
+}
+
+
 .button {
   background: #DDD url(/assets/nl/buttons/bg-btn.gif) repeat-x 0px 0px;
   border-color: #BBB #BBB #999;
   border-style: solid;
   border-width: 1px;
-
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
-  
+  @include button-rounded-corners(4px);
   color: #333 !important;
   cursor: pointer;
   display: inline-block;

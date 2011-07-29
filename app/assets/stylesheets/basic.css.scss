@@ -1,15 +1,23 @@
-/*
-Theme Name: HostUCan Tweety
-Theme URI: http://hostucan.com/webmaster-tutorials/hostucan-tweety
-Description: This is a twitter like theme with 20+ built-in color schemes, it also support full color customization. It uses ajax to show posts. support customize background and featured image. Compatible with wordpress 3.0+. Don't Support IE7 or below.
-Author: HostUCan.com
-Author URI: http://hostucan.com/
-Version: 0.9.2.2
-License: GNU General Public License
-License URI: license.txt
-Tags:  black, blue, brown, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light,custom-colors,custom-background,theme-options, two-columns, fixed-width, flexible-width, sticky-post
-*/
+$main-color-example: #1c1f23;
 
+/*  
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+*/  
+
+@mixin input-rounded-corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-bottom-left-radius: $radius $radius;
+  border-bottom-left-radius: $radius $radius;
+  border-bottom-right-radius: $radius $radius;
+  border-bottom-right-radius: $radius $radius;
+  border-top-left-radius: $radius $radius;
+  border-top-left-radius: $radius $radius;
+  border-top-right-radius: $radius $radius;
+  border-top-right-radius: $radius $radius;
+}
 
 /* =Layout
 -------------------------------------------------------------- */
@@ -305,10 +313,12 @@ text-align: left;
   font-weight: bold;
   text-shadow: none;
   border-color:#eee;
+/*  
   xborder-top: 1px solid #eee;
   xborder-left: 1px solid #eee;
   xborder-right: 1px solid #eee;
   xborder-bottom: 0px solid white;
+*/  
 }
 
 .menu ul li.active:hover a {
@@ -331,7 +341,6 @@ text-align: left;
   -moz-border-radius-topleft: 0;
   border-radius: 4px;
   border-top-left-radius: 0;
-  
   zoom: 1;
   margin: 0 0 0 0!important;
   padding: 3px 0!important;
@@ -721,9 +730,6 @@ overflow: hidden;
   float: right;
 }
 
-
-
-
 /* =Global Elements
 -------------------------------------------------------------- */
 
@@ -829,7 +835,9 @@ sub {
 }
 input[type="text"],
 textarea {
+/*  
   xbackground: #f9f9f9;
+*/  
   background: #fcfcfc;
   border: 1px solid #ccc;
   box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
@@ -884,7 +892,6 @@ text-decoration: none;
   display: block;
   float: left;
 }
-
 
 /* =Menu
 -------------------------------------------------------------- */
@@ -4268,14 +4275,7 @@ form.signin p, form.signin span {
 
 form.signin .textbox input {
   border: 1px solid #CCC;
-  border-bottom-left-radius: 3px 3px;
-  border-bottom-left-radius: 3px 3px;
-  border-bottom-right-radius: 3px 3px;
-  border-bottom-right-radius: 3px 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
+  @include input-rounded-corners(3px);
   font: normal normal normal 13px/normal Arial, sans-serif;
   padding: 6px 6px 4px;
   width: 200px;
@@ -5045,6 +5045,8 @@ body.narrow #front-container, body.narrow #page-container {
 }
 
 .front-signup .holding input {
+  @include input-rounded-corners(4px);
+/*  
   border-bottom-left-radius: 4px 4px;
   border-bottom-left-radius: 4px 4px;
   border-bottom-right-radius: 4px 4px;
@@ -5053,6 +5055,7 @@ body.narrow #front-container, body.narrow #page-container {
   border-top-left-radius: 4px 4px;
   border-top-right-radius: 4px 4px;
   border-top-right-radius: 4px 4px;
+*/  
   margin-bottom: 8px;
   opacity: 1 !important;
   padding: 8px 6px;
@@ -5100,14 +5103,7 @@ body.narrow #front-container, body.narrow #page-container {
 
 .front-page .search input {
   background: rgba(255, 255, 255, 0.597656);
-  border-bottom-left-radius: 40px 40px;
-  border-bottom-left-radius: 40px 40px;
-  border-bottom-right-radius: 40px 40px;
-  border-bottom-right-radius: 40px 40px;
-  border-top-left-radius: 40px 40px;
-  border-top-left-radius: 40px 40px;
-  border-top-right-radius: 40px 40px;
-  border-top-right-radius: 40px 40px;
+  @include input-rounded-corners(40px);
   padding: 9px 12px;
   width: 314px;
 }

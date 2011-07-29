@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <%= render :partial => "layouts/head" %>
-  <body class="front-page narrow logged-out" id="landing">
+  <body class="front-page narrow logged-out <%= params[:controller].parameterize %>_controller" id="landing">
     <%#= render :partial => "layouts/nl/top" %>
     <div id="wrapper">
-    	<div id="main">
+      <div id="main">
         <div id="front-container">
-        
           <%= yield %>
-
           <div class="bottompart">
             <!-- mobile obsolete  -->
             <div class="mobile-complete">
@@ -24,9 +22,8 @@
               <%= render :partial => "shared/layout/footer_nav" %>
             </div>
           </div>
-          
         </div><!-- #front-container -->
-    	</div><!-- #main -->
+      </div><!-- #main -->
     </div><!-- #wrapper -->
   </body>
 </html>
