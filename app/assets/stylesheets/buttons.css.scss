@@ -1,7 +1,7 @@
 /* =Buttons
 -------------------------------------------------------------- */
 .button {
-  background: #DDD url(/images/nl/buttons/bg-btn.gif) repeat-x 0px 0px;
+  background: #DDD url(/assets/nl/buttons/bg-btn.gif) repeat-x 0px 0px;
   border-color: #BBB #BBB #999;
   border-style: solid;
   border-width: 1px;
@@ -62,7 +62,7 @@ input[type="file"] > input[type="button"] {
 .btn, 
 input[type="submit"].btn, 
 input[type="button"].btn {
-  background: #ddd url(/images/nl/buttons/bg-btn.gif) repeat-x 0px 0px;
+  background: #ddd url(/assets/nl/buttons/bg-btn.gif) repeat-x 0px 0px;
   border-bottom-color: #CCC;
   border-bottom-color: #CCC;
   border-style: solid;
@@ -174,7 +174,7 @@ input[type="button"].btn-m {
 
 .btn-blue {
   background-color: #39D !important;
-  background-image: url(/images/nl/buttons/bg-btn-blue.gif) !important;
+  background-image: url(/assets/nl/buttons/bg-btn-blue.gif) !important;
   border-color: #39D #39D #28C !important;
   color: white !important;
   text-shadow: #39D -1px -1px 0px !important;
@@ -183,7 +183,7 @@ input[type="button"].btn-m {
 a.promotional, input.promotional {
   -webkit-box-shadow: white 0px 1px 0px;
   xbackground: #FA2 url(https://si1.twimg.com/a/1306889658/phoenix/img/buttons/bg-btn-signup.png) repeat-x 0px 0px;
-  background: #FA2 url(/images/nl/buttons/bg-btn-signup.png) repeat-x 0px 0px;
+  background: #FA2 url(/assets/nl/buttons/bg-btn-signup.png) repeat-x 0px 0px;
   border: 1px solid #FA2;
   /*
   border-bottom-left-radius: 5px 5px;
