@@ -8,8 +8,8 @@ class CreatePeople < ActiveRecord::Migration
       t.string   "gender", :limit => 1
       t.string   "url"
       t.text     "description"
-      t.decimal  "lat", :precision => 15, :scale => 10
-      t.decimal  "lng", :precision => 15, :scale => 10
+      t.decimal  "latitude", :precision => 15, :scale => 10
+      t.decimal  "longitude", :precision => 15, :scale => 10
       t.string   "twitter_name", :limit => 60
       t.integer  "followers_count", :default => 0
       t.integer  "views_count", :default => 0

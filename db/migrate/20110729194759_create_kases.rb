@@ -8,8 +8,8 @@ class CreateKases < ActiveRecord::Migration
       t.text     "description"
       t.string   "language_code", :limit => 2
       t.string   "country_code", :limit => 2
-      t.decimal  "lat", :precision => 15, :scale => 10
-      t.decimal  "lng", :precision => 15, :scale => 10
+      t.decimal  "latitude", :precision => 15, :scale => 10
+      t.decimal  "longitude", :precision => 15, :scale => 10
       t.string   "status", :default => "created", :null => false
       t.integer  "views_count", :default => 0
       t.integer  "visits_count", :default => 0
@@ -37,5 +37,6 @@ class CreateKases < ActiveRecord::Migration
     add_index :kases, "votes_sum"
     add_index :kases, "responses_count"
     add_index :kases, "followers_count"
+    add_index :kases, "created_at"
   end
 end

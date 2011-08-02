@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110729210230) do
+ActiveRecord::Schema.define(:version => 20110802144949) do
 
   create_table "kases", :force => true do |t|
     t.integer  "person_id"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(:version => 20110729210230) do
     t.text     "description"
     t.string   "language_code",    :limit => 2
     t.string   "country_code",     :limit => 2
-    t.decimal  "lat",                           :precision => 15, :scale => 10
-    t.decimal  "lng",                           :precision => 15, :scale => 10
+    t.decimal  "latitude",                      :precision => 15, :scale => 10
+    t.decimal  "longitude",                     :precision => 15, :scale => 10
     t.string   "status",                                                        :default => "created", :null => false
     t.integer  "views_count",                                                   :default => 0
     t.integer  "visits_count",                                                  :default => 0
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20110729210230) do
 
   add_index "kases", ["comments_count"], :name => "index_kases_on_comments_count"
   add_index "kases", ["country_code"], :name => "index_kases_on_country_code"
+  add_index "kases", ["created_at"], :name => "index_kases_on_created_at"
   add_index "kases", ["down_votes_count"], :name => "index_kases_on_down_votes_count"
   add_index "kases", ["followers_count"], :name => "index_kases_on_followers_count"
   add_index "kases", ["language_code"], :name => "index_kases_on_language_code"
@@ -60,8 +61,8 @@ ActiveRecord::Schema.define(:version => 20110729210230) do
     t.string   "gender",                     :limit => 1
     t.string   "url"
     t.text     "description"
-    t.decimal  "lat",                                      :precision => 15, :scale => 10
-    t.decimal  "lng",                                      :precision => 15, :scale => 10
+    t.decimal  "latitude",                                 :precision => 15, :scale => 10
+    t.decimal  "longitude",                                :precision => 15, :scale => 10
     t.string   "twitter_name",               :limit => 60
     t.integer  "followers_count",                                                          :default => 0
     t.integer  "views_count",                                                              :default => 0
@@ -89,5 +90,34 @@ ActiveRecord::Schema.define(:version => 20110729210230) do
   add_index "people", ["uuid"], :name => "index_people_on_uuid"
   add_index "people", ["views_count"], :name => "index_people_on_views_count"
   add_index "people", ["visits_count"], :name => "index_people_on_visits_count"
+
+  create_table "responses", :force => true do |t|
+    t.integer  "kase_id"
+    t.integer  "person_id"
+    t.text     "description"
+    t.decimal  "latitude",                      :precision => 15, :scale => 10
+    t.decimal  "longitude",                     :precision => 15, :scale => 10
+    t.string   "status",                                                        :default => "created", :null => false
+    t.string   "language_code",    :limit => 2
+    t.string   "country_code",     :limit => 2
+    t.integer  "votes_count",                                                   :default => 0
+    t.integer  "up_votes_count"
+    t.integer  "down_votes_count"
+    t.integer  "votes_sum",                                                     :default => 0
+    t.integer  "comments_count",                                                :default => 0
+    t.datetime "published_at"
+    t.datetime "activated_at"
+    t.datetime "suspended_at"
+    t.datetime "deleted_at"
+    t.datetime "accepted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "responses", ["country_code"], :name => "index_responses_on_country_code"
+  add_index "responses", ["created_at"], :name => "index_responses_on_created_at"
+  add_index "responses", ["kase_id"], :name => "index_responses_on_kase_id"
+  add_index "responses", ["language_code"], :name => "index_responses_on_language_code"
+  add_index "responses", ["person_id"], :name => "index_responses_on_person_id"
 
 end

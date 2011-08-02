@@ -77,6 +77,7 @@ GEM
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
     friendly_id4 (4.0.0.beta4)
+    geocoder (1.0.2)
     has_scope (0.5.0)
     highline (1.6.2)
     hike (1.2.0)
@@ -212,6 +213,7 @@ DEPENDENCIES
   ffaker
   ffi-ncurses
   friendly_id4 (= 4.0.0.beta4)
+  geocoder
   hoptoad_notifier
   jquery-rails
   jruby-openssl

@@ -91,3 +91,4 @@ gem 'sprockets', '= 2.0.0.beta.10'
 gem 'state_machine'
 gem 'ruby-graphviz', :require => 'graphviz'
 
+gem 'geocoder'
