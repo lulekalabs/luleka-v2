@@ -25,6 +25,9 @@ class CreateResponses < ActiveRecord::Migration
     add_index :responses, "person_id"
     add_index :responses, "language_code"
     add_index :responses, "country_code"
+    add_index :responses, "status"
+    add_index :responses, "votes_count"
+    add_index :responses, "comments_count"
     add_index :responses, "created_at"
   end
 end
