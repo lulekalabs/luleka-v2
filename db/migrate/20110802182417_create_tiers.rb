@@ -11,7 +11,7 @@ class CreateTiers < ActiveRecord::Migration
       t.decimal  "longitude", :precision => 15, :scale => 10
       t.string   "language_code", :limit => 2
       t.string   "country_code", :limit => 2
-      t.integer  "kases_count", :default => 0,
+      t.integer  "kases_count", :default => 0
       t.integer  "members_count", :default => 0
       t.integer  "topics_count", :default => 0
       t.integer  "people_count", :default => 0
