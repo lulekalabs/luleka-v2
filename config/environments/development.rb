@@ -23,5 +23,8 @@ Nl::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   config.assets.compress = false
+  
+  # Expands the lines which load the assets
+  config.assets.debug = true
 end
 
