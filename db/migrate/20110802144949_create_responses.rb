@@ -1,6 +1,7 @@
 class CreateResponses < ActiveRecord::Migration
   def change
     create_table :responses do |t|
+      t.string   "uid"
       t.integer  "kase_id"
       t.integer  "person_id"
       t.text     "description"
@@ -21,6 +22,7 @@ class CreateResponses < ActiveRecord::Migration
       t.datetime "accepted_at"
       t.timestamps
     end
+    add_index :responses, "uid"
     add_index :responses, "kase_id"
     add_index :responses, "person_id"
     add_index :responses, "language_code"
@@ -29,5 +31,7 @@ class CreateResponses < ActiveRecord::Migration
     add_index :responses, "votes_count"
     add_index :responses, "comments_count"
     add_index :responses, "created_at"
+    add_index :responses, "latitude"
+    add_index :responses, "longitude"
   end
 end

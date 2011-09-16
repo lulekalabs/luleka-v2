@@ -42,7 +42,6 @@ gem 'json', '1.5.1'
 gem 'devise', '1.4.3'
 gem 'friendly_id4', '4.0.0.beta4', :require => "friendly_id"
 gem 'hoptoad_notifier'
-
 gem 'state_machine'
 gem 'ruby-graphviz', :require => 'graphviz'
 

@@ -1,11 +1,12 @@
 class CreateKases < ActiveRecord::Migration
   def change
     create_table :kases do |t|
+      t.string   "uid"
       t.integer  "person_id"
       t.string   "title"
+      t.text     "description"
       t.string   "slug"
       t.string   "type"
-      t.text     "description"
       t.string   "language_code", :limit => 2
       t.string   "country_code", :limit => 2
       t.decimal  "latitude", :precision => 15, :scale => 10
@@ -22,6 +23,7 @@ class CreateKases < ActiveRecord::Migration
       t.integer  "followers_count", :default => 0
       t.timestamps
     end
+    add_index :kases, "uid"
     add_index :kases, "person_id"
     add_index :kases, "type"
     add_index :kases, "language_code"
@@ -38,5 +40,7 @@ class CreateKases < ActiveRecord::Migration
     add_index :kases, "responses_count"
     add_index :kases, "followers_count"
     add_index :kases, "created_at"
+    add_index :kases, "latitude"
+    add_index :kases, "longitude"
   end
 end

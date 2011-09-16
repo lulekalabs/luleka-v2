@@ -3,11 +3,18 @@
 %>
 <head>
   <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= @title || "Newluleka" %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
   <% if false %>
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="pingback" href="<% "some_url" %>" />
   <% end %>
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tag %>

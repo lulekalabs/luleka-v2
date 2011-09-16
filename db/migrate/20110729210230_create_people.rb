@@ -1,7 +1,7 @@
 class CreatePeople < ActiveRecord::Migration
   def change
     create_table :people do |t|
-      t.string   "uuid"
+      t.string   "uid"
       t.string   "first_name"
       t.string   "last_name"
       t.string   "slug"
@@ -25,7 +25,7 @@ class CreatePeople < ActiveRecord::Migration
       t.boolean  "notify_on_any_post", :default => false, :null => false
       t.timestamps
     end
-    add_index :people, "uuid"
+    add_index :people, "uid"
     add_index :people, "slug"
     add_index :people, "followers_count"
     add_index :people, "views_count"
@@ -35,5 +35,7 @@ class CreatePeople < ActiveRecord::Migration
     add_index :people, "received_votes_count"
     add_index :people, "received_up_votes_count"
     add_index :people, "received_down_votes_count"
+    add_index :people, "latitude"
+    add_index :people, "longitude"
   end
 end
