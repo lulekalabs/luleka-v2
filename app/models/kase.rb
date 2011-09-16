@@ -6,7 +6,7 @@ class Kase < ActiveRecord::Base
   friendly_id :title, :use => :history
   
   #--- attributes
-  attr_protected :status, :price
+  attr_protected :status
   
   #--- associations
   has_many :contexts
