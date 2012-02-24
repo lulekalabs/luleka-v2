@@ -11,6 +11,7 @@ gem 'jquery-rails'
 group :test, :development do
   gem "execjs"
   gem "thin"
+  gem "hpricot"
 end
 
 group :production do

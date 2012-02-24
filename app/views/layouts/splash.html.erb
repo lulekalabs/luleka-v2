@@ -16,6 +16,7 @@
     <%= yield :head %>
   </head>
   <body class="splash-page narrow logged-out" id="landing <%= params[:controller].parameterize %>_controller">
+    <%= yield :javascript %>
     <div id="wrapper">
       <div id="main">
         <div id="front-container">
@@ -23,16 +24,20 @@
           <div class="bottompart">
             <!-- mobile obsolete  -->
             <div class="mobile-complete">
-              Follow us on
-              <a href="http://facebook.com/luleka">Facebook</a> or <a href="http://twitter.com/luleka">Twitter</a>
+              <%= t(".follow_us", :twitter => '<a href="http://twitter.com/luleka">Twitter</a>', 
+                :facebook => '<a href="http://facebook.com/luleka">Facebook</a>').html_safe %>
             </div>
             <!-- locale -->
             <div class="language inline-list">
               <form action="/sessions/change_locale" class="change-locale-form" method="POST">
                 <input type="hidden" name="lang" value="">
                 <input type="hidden" name="redirect" value="https://twitter.com/#!/login/">
-                <strong>Languages</strong>
+                <strong><%= t ".languages", :raise => true %></strong>
                 <span class="dot">·</span>
+                
+                <%= language_links %>
+
+                <% if false %>
                 <em class="current">English</em>
                 <span class="dot">·</span>
                 <a href="?locale=de">Deutsch</a>
@@ -50,6 +55,7 @@
                 <a href="?locale=ru">Русский</a>
                 <span class="dot">·</span>
                 <a href="?locale=ja">日本語</a>
+                <% end %>
               </form>
             </div><!-- .inline-list -->
             <div class="footer inline-list">

@@ -1,20 +1,35 @@
 <div class="leftside ">
   <h1><span>Luleka</span></h1>
-  <h2><a href="/"><%= t ".h2" %></a></h2>
-  <p><%= t(".h3").html_safe %></p>
+  <h2><a href="/"><%= t ".coming_soon" %></a></h2>
+  <p><%= t(".teaser").html_safe %></p>
 </div>
 
 <div class="rightside">
   <div class="gradient"></div>
-  <div class="front-signup ">
-    <h3>Want to know when we are live?</h3>
-    <%= form_for , :url => "/", :validate => true do |f| %>
+  <div class="front-signup">
+    <h3><%= t ".action" %></h3>
+    <%= form_for @registration || Registration.new, :validate => true, :remote => true do |f| %>
       <div class="holding email">
-        <input type="email" autocomplete="off" value="" name="user[email]" class="string required unique" data-validate="true">
+        <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
         <span class="holder">Enter your email</span>
       </div>
-      <input type="hidden" value="front" name="context">
-      <input type="submit" class="promotional submit button" value="Send">
+      <%= f.submit t(".submit"), :class => "promotional submit button" %>
     <% end %>
   </div>
+  <div class="front-response">
+    <h3><%= t ".response" %></h3>
+  </div>
 </div>
+<% content_for :javascript do %>
+<script type='text/javascript'>
+  $(function() {
+    if("<%= registered? %>" == "true") {
+      $(".front-signup").hide();
+      $(".front-response").show();
+    } else {
+      $(".front-signup").show();
+      $(".front-response").hide();
+    }
+  });
+</script>
+<% end %>

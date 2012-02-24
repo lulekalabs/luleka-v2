@@ -19,8 +19,7 @@ body.splash-page {
   }
 
   #main {
-    xbackground: transparent url("/assets/nl/bg/dandelion-v2.png") no-repeat 50% 0px;
-    overflow:visible; 
+    overflow: visible; 
     max-width: 1000px;
   }
 
@@ -107,10 +106,27 @@ body.splash-page {
         z-index: -1;
       }
 
+      .front-response {
+        display: none;
+        padding: 20px;
+        position: absolute;
+        top: 145px;
+        width: 310px;
+        
+        h3 {
+          color: #333;
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 6px;
+          text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
+          line-height: 1.25em;
+        }
+      }
+
       .front-signup {
         padding: 20px;
         position: absolute;
-        top: 142px;
+        top: 145px;
         width: 310px;
 
         h3 {
@@ -118,7 +134,7 @@ body.splash-page {
           font-size: 16px;
           font-weight: bold;
           margin-bottom: 6px;
-          xtext-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 0px; 
+          text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px; 
         }
 
         h3 em {
@@ -126,43 +142,54 @@ body.splash-page {
           font-weight: 300;
         }
 
-        .holding input, 
-        .holding .holder {
-          font: normal normal normal 15px/normal 'Helvetica Neue', Arial, sans-serif;
-        }
+        .holding {
+          input, 
+          .holder {
+            font: normal normal normal 15px/normal 'Helvetica Neue', Arial, sans-serif;
+          }
 
-        .holding input {
-          @include input-rounded-corners(4px);
-          margin-bottom: 8px;
-          #opacity: 1 !important;
-          padding: 8px 6px;
-          width: 296px;
-        }
+          input {
+            @include input-rounded-corners(4px);
+            margin-bottom: 8px;
+            padding: 8px 6px;
+            width: 296px;
+            padding: 9px 7px 10px;
+          }
 
-        form .holding input {
-          -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
-          -webkit-transition: opacity 1s;
-          background-color: white;
-          border: none !important;
-          color: #567792;
-          opacity: 0.7;
+          .holder {
+            line-height: 38px;
+          }
+          
+          .field_with_errors {
+            label {
+              float: left;
+              position: relative;
+              top: -5px;
+              left: 0;
+              color: red;
+              font-size: 11px;
+            }
+          }
         }
+        
+        form {
+          .holding input {
+            -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
+            -webkit-transition: opacity 1s;
+            background-color: white;
+            border: none !important;
+            color: #567792;
+            opacity: 0.7;
+          }
 
-        form .holding:hover input {
-          -webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px -1px 0px, rgba(0, 0, 0, 0.296875) 0px 1px 2px inset;
-          opacity: 0.9;
-        }
+          .holding:hover input {
+            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0px, rgba(0, 0, 0, 0.3) 0px 1px 2px inset;
+            opacity: 0.9;
+          }
 
-        form .holding input:focus {
-          outline-width: 0;
-        }
-
-        .holding input {
-          padding: 9px 7px 10px;
-        }
-
-        .holding .holder {
-          line-height: 38px;
+          .holding input:focus {
+            outline-width: 0;
+          }
         }
 
         .button {
@@ -170,7 +197,7 @@ body.splash-page {
         }
 
         .submit {
-          -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 0px;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
           float: right;
           height: 35px;
           padding-left: 16px;

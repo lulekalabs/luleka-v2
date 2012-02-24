@@ -2,25 +2,23 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 en:
   site:
+    title: Luleka
+    tagline: Connecting you to local professionals.
     legal_name: Luleka LLC
     
   pages:
     splash:
-      h2: "Coming Soon."
-      h3: "Connecting <em>you</em> to local professionals."
-
-  shared:
-    layout:
-      footer_nav:
-        about: "About"
-        help: "Help"
-        blog: "Blog"
-        jobs: "Jobs"
-        terms: "Terms"
-        privacy: "Privacy"
-        guidelines: "Guidelines"
-        company_name: "Luleka S.A."
-
+      coming_soon: "Coming Soon."
+      teaser: "Connecting <em>you</em> to local professionals."
+      action: "Want to know when we are live?"
+      response: "Thanks for your interest! You will hear back from us shortly."
+      submit: "Send"
+      
+  layouts:
+    splash:
+      languages: Languages
+      follow_us: "Follow us on %{facebook} or %{twitter}"
+  
   errors:
       messages:
-        email_format: "is not formatted properly"
+        email_format: "not formatted properly"

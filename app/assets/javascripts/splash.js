@@ -12,11 +12,11 @@
 $(function() {
   $(".holding input").focus(function(event) {
     if($(this).val().length == 0) {
-      $(this).parent(".holding").find(".holder").fadeOut(25)
+      $(this).closest(".holding").find(".holder").fadeOut(25)
     }
   }).blur(function(event) {
     if($(this).val().length == 0) {
-      $(this).parent(".holding").find(".holder").fadeIn(100);
+      $(this).closest(".holding").find(".holder").fadeIn(100);
     }
   });
   $(".holder").click(function(event) {
@@ -27,10 +27,8 @@ $(function() {
   });
 });
 
-/*
 clientSideValidations.validators.local["email_format"] = function(element, options) {
   if (!/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i.test(element.val())) {
     return options.message;
   }
 }
-*/

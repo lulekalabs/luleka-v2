@@ -1,56 +1,8 @@
 Nl::Application.routes.draw do
-=begin
-  resources :kases, :path => "concerns" do
-    resources :responses
-    resources :comments
-  end
-
-  resources :responses
-  resources :users
-  resource :session
+  resources :registrations, :only => :create
   
-  namespace :account, :path => 'settings' do
-    root :to => "account/settings#show"
-    resource :settings, :path => 'account'
-    resource :notifications, :password, :profile, 
-      :only => [:show, :update]
-  end
-=end
-
-  constraints(Subdomain::Tier) do
-    resources :kases
-  end
   root :to => "pages#splash"
   match "home" => "pages#index"
-  
-=begin
-  
-  scope :module => :biz, :as => :biz do
-    constraints(:subdomain => 'biz') do
-      resources :users
-      resources :projects
-      root :to => 'Biz::HomeController#index'
-    end
-  end
-
-  scope :as => "tier" do
-    constraints(Subdomain) do
-      root :to => "tiers#index"
-      constraints(:tier_id => /.+/) do
-        resources :kases
-      end
-    end
-  end
-=end
-
-=begin
-  resources :tiers do
-    constraints(Subdomain) do
-      resources :kases
-    end
-  end
-=end
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
