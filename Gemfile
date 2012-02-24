@@ -25,5 +25,5 @@ group :test do
   gem 'minitest'
 end
 
-gem 'mysql2'
+gem 'pg'
 gem "client_side_validations"
