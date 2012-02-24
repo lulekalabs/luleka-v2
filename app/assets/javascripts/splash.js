@@ -25,6 +25,12 @@ $(function() {
       $(this).parent(".holding").find("input").focus();
     }
   });
+  
+  $("form#change-locale-form a").click(function(event) {
+    $(this).closest("form").find("input[name='locale']").val($(this).attr("data-locale"));
+    $(this).closest("form").submit();
+    event.preventDefault();
+  });
 });
 
 clientSideValidations.validators.local["email_format"] = function(element, options) {

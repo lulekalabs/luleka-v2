@@ -1,0 +1,26 @@
+es:
+  site:
+    title: Luleka
+    tagline: Conéctese a los profesionales en su región.
+    legal_name: Luleka LLC
+    
+  pages:
+    splash:
+      coming_soon: "Muy pronto."
+      teaser: "<em>Conéctese</em> a los profesionales en su región."
+      action: "¿Quieres saber más?"
+      response: "Gracias por su interés! Usted recibira una respuesta en breve."
+      submit: "Enviar"
+      form:
+        fields:
+          email:
+            label: Ingrese su e-mail
+      
+  layouts:
+    splash:
+      languages: Idiomas
+      follow_us: "Seguinos en %{facebook} o %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "dirección incorrecta"

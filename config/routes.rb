@@ -3,6 +3,8 @@ Nl::Application.routes.draw do
   
   root :to => "pages#splash"
   match "home" => "pages#index"
+  match "pages/change_locale" => "pages#change_locale", :method => :post, :as => "change_locale"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta content="<%= "#{I18n.locale}" %>" http-equiv="Content-Language" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title><%= "Luleka" %></title>
-    <meta name="description" content="">
-    <meta name="author" content="Luleka Labs S.A.">
+    <title><%= page_title %></title>
+    <meta name="description" content="<%= t "site.tagline" %>">
+    <meta name="author" content="Luleka Labs">
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,6 +15,12 @@
     <%= javascript_include_tag "splash" %>
     <%= csrf_meta_tag %>
     <%= yield :head %>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png">
   </head>
   <body class="splash-page narrow logged-out" id="landing <%= params[:controller].parameterize %>_controller">
     <%= yield :javascript %>
@@ -25,42 +32,21 @@
             <!-- mobile obsolete  -->
             <div class="mobile-complete">
               <%= t(".follow_us", :twitter => '<a href="http://twitter.com/luleka">Twitter</a>', 
-                :facebook => '<a href="http://facebook.com/luleka">Facebook</a>').html_safe %>
+                :facebook => '<a href="http://www.facebook.com/pages/Luleka/191923610825">Facebook</a>').html_safe %>
             </div>
             <!-- locale -->
             <div class="language inline-list">
-              <form action="/sessions/change_locale" class="change-locale-form" method="POST">
-                <input type="hidden" name="lang" value="">
-                <input type="hidden" name="redirect" value="https://twitter.com/#!/login/">
-                <strong><%= t ".languages", :raise => true %></strong>
-                <span class="dot">·</span>
-                
+              <form action="<%= change_locale_path %>" id="change-locale-form" method="post">
+                <input type="hidden" name="locale" value="">
+                <input type="hidden" name="redirect" value="<%= url_for({}) %>">
+                <strong><%= t ".languages" %></strong>
+                <span class="dot">&nbsp;</span>
                 <%= language_links %>
-
-                <% if false %>
-                <em class="current">English</em>
-                <span class="dot">·</span>
-                <a href="?locale=de">Deutsch</a>
-                <span class="dot">·</span>
-                <a href="?locale=es">Español</a>
-                <span class="dot">·</span>
-                <a href="?locale=pt">Português</a>
-                <span class="dot">·</span>
-                <a href="?locale=it">Italiano</a>
-                <span class="dot">·</span>
-                <a href="?locale=fr">Français</a>
-                <span class="dot">·</span>
-                <a href="?locale=tr">Türkçe</a>
-                <span class="dot">·</span>
-                <a href="?locale=ru">Русский</a>
-                <span class="dot">·</span>
-                <a href="?locale=ja">日本語</a>
-                <% end %>
               </form>
             </div><!-- .inline-list -->
             <div class="footer inline-list">
               <ul class="footer-nav">
-                <li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.legal_name", :raise => true) %></span></li>
+                <li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.legal_name") %></span></li>
               </ul>
             </div>
           </div>

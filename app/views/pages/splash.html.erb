@@ -1,5 +1,5 @@
 <div class="leftside ">
-  <h1><span>Luleka</span></h1>
+  <h1><span><%= t "site.title" %></span></h1>
   <h2><a href="/"><%= t ".coming_soon" %></a></h2>
   <p><%= t(".teaser").html_safe %></p>
 </div>
@@ -11,7 +11,7 @@
     <%= form_for @registration || Registration.new, :validate => true, :remote => true do |f| %>
       <div class="holding email">
         <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
-        <span class="holder">Enter your email</span>
+        <span class="holder"><%= t ".form.fields.email.label" %></span>
       </div>
       <%= f.submit t(".submit"), :class => "promotional submit button" %>
     <% end %>

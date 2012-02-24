@@ -1,4 +1,4 @@
-i18n:
+de:
   transliterate:
     rule:
       ä: 'ae'
@@ -8,3 +8,29 @@ i18n:
       ö: 'oe'
       Ö: 'Oe'
       ß: 'ss'
+      
+  site:
+    title: Luleka
+    tagline: Vernetzen Sie sich mit Profis vor Ort
+    legal_name: Luleka GmbH
+
+  pages:
+    splash:
+      coming_soon: "Coming Soon."
+      teaser: "Vernetzen <em>Sie</em> sich mit Profis vor Ort."
+      action: "Wann ist es soweit?"
+      response: "Danke für Ihr Interesse! Sie werden bald von uns hören."
+      submit: "Senden"
+      form:
+        fields:
+          email:
+            label: E-Mail Adresse eingeben
+
+  layouts:
+    splash:
+      languages: Sprachen
+      follow_us: "Folgen Sie uns auf %{facebook} oder %{twitter}"
+
+  errors:
+      messages:
+        email_format: "fehlerhaftes Format"

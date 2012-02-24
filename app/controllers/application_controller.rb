@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
   helper_method :modal?
 
   def set_locale
-    I18n.locale = request.compatible_language_from I18n.available_locales
+    I18n.locale = current_locale || request.compatible_language_from(I18n.available_locales)
+    logger.debug "* Current locale set to '#{current_locale}'"
     logger.debug "* Locale set to '#{I18n.locale}'"
   end
   

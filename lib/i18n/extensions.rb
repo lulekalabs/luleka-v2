@@ -56,6 +56,7 @@ module I18n
       def locale_country(locale=nil)
         "#{locale || I18n.locale}".match(/-([a-zA-Z]{2})/) ? $1.to_sym : nil
       end
+      
     end
   end
 end
