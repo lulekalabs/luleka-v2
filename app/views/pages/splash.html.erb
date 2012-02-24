@@ -8,13 +8,13 @@
   <div class="gradient"></div>
   <div class="front-signup ">
     <h3>Want to know when we are live?</h3>
-    <form action="https://twitter.com/signup" method="post" data-validate="true">
+    <%= form_for , :url => "/", :validate => true do |f| %>
       <div class="holding email">
-        <input type="text" autocomplete="off" value="" name="user[email]" class="string required unique" data-validate="true">
+        <input type="email" autocomplete="off" value="" name="user[email]" class="string required unique" data-validate="true">
         <span class="holder">Enter your email</span>
       </div>
       <input type="hidden" value="front" name="context">
       <input type="submit" class="promotional submit button" value="Send">
-    </form>
+    <% end %>
   </div>
 </div>
