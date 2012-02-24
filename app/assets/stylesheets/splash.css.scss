@@ -1,0 +1,204 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require reset
+ *= require base
+ *= require buttons
+ *= require splash
+ *= require_self
+*/
+@import "mixins.css.scss";
+
+body.splash-page {
+  background: transparent url("/assets/nl/bg/dandelion-v2.png") no-repeat 50% 0px;
+  xbackground: #f7f6fc url("/assets/nl/bg/dandelion-bg.png") repeat;
+  
+  #wrapper {
+    margin-top:0; 
+  }
+
+  #main {
+    xbackground: transparent url("/assets/nl/bg/dandelion-v2.png") no-repeat 50% 0px;
+    overflow:visible; 
+    max-width: 1000px;
+  }
+
+  #front-container {
+    display:block;
+    margin: 0px 40px;
+    max-width: 920px;
+    min-width: 920px;
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    
+    .leftside {
+      height: 435px;
+      padding-top: 30px;
+      width: 530px;
+      
+      h1 {
+      /*  
+        xbackground: url(http://a2.twimg.com/a/1306889658/phoenix/img/front/logo.png) no-repeat 0px 0px;
+      */  
+        background: url(/assets/luleka_front.png) no-repeat 0px 0px;
+        height: 39px;
+        width: 184px;
+      }
+
+      h1 span {
+        visibility: hidden;
+      }
+
+      h2 {
+        font-size: 54px;
+        font-weight: 100;
+        line-height: 0.9em;
+        margin: 95px 0px 8px;
+      }
+
+      h2 a {
+        -webkit-transition: text-shadow 0.4s ease-in-out;
+        #color: white;
+        color: #006f79;
+        outline: none;
+        text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
+        xtext-shadow: #c6e8e9 0px 1px 0px;
+        font-weight: bold;
+      }
+
+      h2 a:hover {
+        text-decoration: none;
+        text-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px, #8FB5C8 0px 0px 6px, rgba(143, 181, 200, 0.699219) 0px 0px 30px;
+      }
+      
+      p {
+        color: #333;
+        font-size: 35px;
+        font-weight: 300;
+        line-height: 1.25em;
+        xtext-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px;
+      }
+      
+      p em {
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
+    
+    .rightside {
+      position: absolute;
+      right: -20px;
+      top: 0px;
+      width: 350px;
+
+      div.gradient {
+        xbackground-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(#8FB5C8), to(rgba(143, 181, 200, 0)));
+        xbackground-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(#b6b4b2), to(rgba(143, 181, 200, 0)));
+        xbackground-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(#aaa), to(rgba(143, 181, 200, 0)));
+        background-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
+        height: 417px;
+        left: -225px;
+        position: absolute;
+        top: 0px;
+        width: 750px;
+        z-index: -1;
+      }
+
+      .front-signup {
+        padding: 20px;
+        position: absolute;
+        top: 142px;
+        width: 310px;
+
+        h3 {
+          color: #333;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 6px;
+          xtext-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 0px; 
+        }
+
+        h3 em {
+          font-style: normal;
+          font-weight: 300;
+        }
+
+        .holding input, 
+        .holding .holder {
+          font: normal normal normal 15px/normal 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .holding input {
+          @include input-rounded-corners(4px);
+          margin-bottom: 8px;
+          #opacity: 1 !important;
+          padding: 8px 6px;
+          width: 296px;
+        }
+
+        form .holding input {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
+          -webkit-transition: opacity 1s;
+          background-color: white;
+          border: none !important;
+          color: #567792;
+          opacity: 0.7;
+        }
+
+        form .holding:hover input {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px -1px 0px, rgba(0, 0, 0, 0.296875) 0px 1px 2px inset;
+          opacity: 0.9;
+        }
+
+        form .holding input:focus {
+          outline-width: 0;
+        }
+
+        .holding input {
+          padding: 9px 7px 10px;
+        }
+
+        .holding .holder {
+          line-height: 38px;
+        }
+
+        .button {
+          border: 0;
+        }
+
+        .submit {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 0px;
+          float: right;
+          height: 35px;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+    }
+    
+    .bottompart {
+      border-top: 0px none;
+      margin-top: 0;
+      padding-top: 0;
+
+      .language label span,
+      div.language,
+      .footer {
+        color: #666;
+        text-transform: capitalize; 
+      }
+
+      .inline-list {
+        -webkit-font-smoothing: antialiased;
+        font-size: 12px;
+      }
+
+      a {
+        color: #437EA1;
+      }
+    }
+  }
+}

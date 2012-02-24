@@ -1,0 +1,20 @@
+$main-color-example: #1c1f23;
+
+/*  
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+*/  
+
+@mixin input-rounded-corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-bottom-left-radius: $radius $radius;
+  border-bottom-left-radius: $radius $radius;
+  border-bottom-right-radius: $radius $radius;
+  border-bottom-right-radius: $radius $radius;
+  border-top-left-radius: $radius $radius;
+  border-top-left-radius: $radius $radius;
+  border-top-right-radius: $radius $radius;
+  border-top-right-radius: $radius $radius;
+}

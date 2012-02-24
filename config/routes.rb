@@ -20,8 +20,9 @@ Nl::Application.routes.draw do
   constraints(Subdomain::Tier) do
     resources :kases
   end
-  root :to => "pages#index"
-
+  root :to => "pages#splash"
+  match "home" => "pages#index"
+  
 =begin
   
   scope :module => :biz, :as => :biz do

@@ -1,6 +1,14 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 en:
+  site:
+    legal_name: Luleka LLC
+    
+  pages:
+    splash:
+      h2: "Coming Soon."
+      h3: "Connecting <em>you</em> to local professionals."
+
   shared:
     layout:
       footer_nav:
@@ -12,4 +20,7 @@ en:
         privacy: "Privacy"
         guidelines: "Guidelines"
         company_name: "Luleka S.A."
-        
+
+  errors:
+      messages:
+        email_format: "is not formatted properly"
