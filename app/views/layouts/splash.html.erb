@@ -14,6 +14,7 @@
     <%= stylesheet_link_tag    "splash" %>
     <%= javascript_include_tag "splash" %>
     <%= csrf_meta_tag %>
+    <%= ga_async_javascript_tag("UA-9091575-5") %>
     <%= yield :head %>
 
     <!-- Le fav and touch icons -->
@@ -31,8 +32,8 @@
           <div class="bottompart">
             <!-- mobile obsolete  -->
             <div class="mobile-complete">
-              <%= t(".follow_us", :twitter => '<a href="http://twitter.com/luleka">Twitter</a>', 
-                :facebook => '<a href="http://www.facebook.com/pages/Luleka/191923610825">Facebook</a>').html_safe %>
+              <%= t(".follow_us", :twitter => '<a href="http://twitter.com/luleka" target="_blank">Twitter</a>', 
+                :facebook => '<a href="http://www.facebook.com/pages/Luleka/191923610825" target="_blank">Facebook</a>').html_safe %>
             </div>
             <!-- locale -->
             <div class="language inline-list">
@@ -46,7 +47,7 @@
             </div><!-- .inline-list -->
             <div class="footer inline-list">
               <ul class="footer-nav">
-                <li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.legal_name") %></span></li>
+                <li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span></li>
               </ul>
             </div>
           </div>

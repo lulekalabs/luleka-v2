@@ -21,5 +21,28 @@ module ApplicationHelper
     end
     html
   end
+  
+  # Javascript for google analytics
+  def ga_async_javascript(id)
+    <<-JS
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '#{id}']);
+_gaq.push(['_setDomainName', '.luleka.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script');
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  ga.setAttribute('async', 'true');
+  document.documentElement.firstChild.appendChild(ga);
+})();
+    JS
+  end
+
+  # wraps ga code in a script tag
+  def ga_async_javascript_tag(id)
+    javascript_tag(ga_async_javascript(id)) if Rails.env.production?
+  end
+  
 
 end
