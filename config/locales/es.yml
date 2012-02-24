@@ -1,13 +1,13 @@
 es:
   site:
     title: Luleka
-    tagline: Conéctese a los profesionales en su región.
+    tagline: Lo conectamos a los profesionales de su región
     legal_name: Luleka S.A.
     
   pages:
     splash:
       coming_soon: "Muy pronto."
-      teaser: "<em>Conéctese</em> a los profesionales en su región."
+      teaser: "<em>Conectándolo</em> a los profesionales en su región."
       action: "¿Quieres saber más?"
       response: "Gracias por su interés! Usted recibira una respuesta en breve."
       submit: "Enviar"

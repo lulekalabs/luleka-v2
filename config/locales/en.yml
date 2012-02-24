@@ -1,14 +1,14 @@
 en:
   site:
     title: Luleka
-    tagline: Connecting you to local professionals.
+    tagline: Connecting you to local professionals
     legal_name: Luleka LLC
     
   pages:
     splash:
       coming_soon: "Coming Soon."
       teaser: "Connecting <em>you</em> to local professionals."
-      action: "Want to know when we are live?"
+      action: "Want to know when we open?"
       response: "Thanks for your interest! You will hear back from us shortly."
       submit: "Send"
       form:

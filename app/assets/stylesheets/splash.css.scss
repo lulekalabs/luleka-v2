@@ -11,7 +11,7 @@
 @import "mixins.css.scss";
 
 body.splash-page {
-  background: transparent url("/assets/nl/bg/dandelion.png") no-repeat 50% 0px;
+  background: transparent url("/assets/nl/bg/dandelion.png") repeat-x 50% 0px;
   
   #wrapper {
     margin-top:0; 
@@ -38,9 +38,6 @@ body.splash-page {
       width: 530px;
       
       h1 {
-      /*  
-        xbackground: url(http://a2.twimg.com/a/1306889658/phoenix/img/front/logo.png) no-repeat 0px 0px;
-      */  
         background: url(/assets/luleka_front.png) no-repeat 0px 0px;
         height: 39px;
         width: 184px;
@@ -54,7 +51,7 @@ body.splash-page {
         font-size: 54px;
         font-weight: 100;
         line-height: 0.9em;
-        margin: 95px 0px 8px;
+        margin: 95px 0px 10px;
       }
 
       h2 a {
