@@ -11,8 +11,7 @@
 @import "mixins.css.scss";
 
 body.splash-page {
-  background: transparent url("/assets/nl/bg/dandelion-v2.png") no-repeat 50% 0px;
-  xbackground: #f7f6fc url("/assets/nl/bg/dandelion-bg.png") repeat;
+  background: transparent url("/assets/nl/bg/dandelion.png") no-repeat 50% 0px;
   
   #wrapper {
     margin-top:0; 
@@ -60,11 +59,9 @@ body.splash-page {
 
       h2 a {
         -webkit-transition: text-shadow 0.4s ease-in-out;
-        #color: white;
         color: #006f79;
         outline: none;
         text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
-        xtext-shadow: #c6e8e9 0px 1px 0px;
         font-weight: bold;
       }
 
@@ -78,7 +75,6 @@ body.splash-page {
         font-size: 35px;
         font-weight: 300;
         line-height: 1.25em;
-        xtext-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px;
       }
       
       p em {
@@ -94,9 +90,6 @@ body.splash-page {
       width: 350px;
 
       div.gradient {
-        xbackground-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(#8FB5C8), to(rgba(143, 181, 200, 0)));
-        xbackground-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(#b6b4b2), to(rgba(143, 181, 200, 0)));
-        xbackground-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(#aaa), to(rgba(143, 181, 200, 0)));
         background-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
         height: 417px;
         left: -225px;
