@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+# Create a default admin user
+AdminUser.find_or_create_by_email 'manager@luleka.com', {
+  :password              => 'buenosaires11:rosanegra',
+  :password_confirmation => 'buenosaires11:rosanegra'
+}
