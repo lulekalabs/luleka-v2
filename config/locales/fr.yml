@@ -1,0 +1,26 @@
+fr:
+  site:
+    title: Luleka
+    tagline: Le reliant aux professionnels de votre région
+    legal_name: Luleka S.A.
+    
+  pages:
+    splash:
+      coming_soon: "Très bientôt."
+      teaser: "<em>Le</em> reliant aux professionnels de votre région."
+      action: "Vous voulez en savoir plus?"
+      response: "Je vous remercie pour votre intérêt! Vous recevrez une réponse sous peu."
+      submit: "Envoyer"
+      form:
+        fields:
+          email:
+            label: Entrez votre e-mail
+      
+  layouts:
+    splash:
+      languages: Langues
+      follow_us: "Suivez-nous sur %{facebook} ou %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "mauvaise direction"

@@ -11,13 +11,13 @@ de:
       
   site:
     title: Luleka
-    tagline: Vernetzt Sie mit Profis vor Ort
+    tagline: Vernetzen Sie sich mit Profis vor Ort
     legal_name: Luleka GmbH
 
   pages:
     splash:
       coming_soon: "Demnächst."
-      teaser: "Können <em>Sie</em> sich mit Profis vor Ort vernetzen."
+      teaser: "Vernetzen <em>Sie</em> sich mit Profis vor Ort."
       action: "Wann ist es soweit?"
       response: "Danke für Ihr Interesse! Sie werden bald von uns hören."
       submit: "Senden"
