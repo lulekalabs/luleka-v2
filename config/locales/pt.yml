@@ -1,0 +1,26 @@
+pt:
+  site:
+    title: Luleka
+    tagline: Ligar para os profissionais em sua área.
+    legal_name: Luleka S.A.
+    
+  pages:
+    splash:
+      coming_soon: "Muito em breve."
+      teaser: "<em>Ligar</em> para os profissionais em sua área."
+      action: "Quer saber mais?"
+      response: "Obrigado pelo seu interesse! Você receberá uma resposta breve."
+      submit: "Enviar"
+      form:
+        fields:
+          email:
+            label: Digite o seu e-mail
+      
+  layouts:
+    splash:
+      languages: Línguas
+      follow_us: "Siga-nos no %{facebook} ou %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "dirección incorrecta"

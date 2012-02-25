@@ -11,9 +11,9 @@ module ApplicationHelper
       if I18n.locale == locale
         html += content_tag(:em, t("languages.#{I18n.locale_language}"), :class => "current")
       else
-        html += link_to(I18n.switch_locale(locale) {t("languages.#{I18n.locale_language(locale)}")}, 
+        html += link_to(I18n.switch_locale(locale) {t("languages.#{I18n.locale_language(locale)}").titleize}, 
           url_for({:locale => I18n.locale_language(locale)}),
-            :title => t("languages.#{I18n.locale_language(locale)}"), "data-locale" => locale)
+            :title => t("languages.#{I18n.locale_language(locale)}").titleize, "data-locale" => locale)
       end
       unless index == locales.size - 1
         html += '<span class="dot"> &middot; </span>'.html_safe
