@@ -1,0 +1,26 @@
+da:
+  site:
+    title: Luleka
+    tagline: Tilslut dig med branchefolk fra lokale
+    legal_name: Luleka GmbH
+
+  pages:
+    splash:
+      coming_soon: "Snart."
+      teaser: "Tilslut <em>dig</em> med branchefolk fra lokale."
+      action: "Når den tid kommer?"
+      response: "Tak for din interesse! Du vil snart høre fra os."
+      submit: "Send"
+      form:
+        fields:
+          email:
+            label: E-mail-adresse på din konto
+
+  layouts:
+    splash:
+      languages: Sprog
+      follow_us: "Følg os på %{facebook} eller %{twitter}"
+
+  errors:
+      messages:
+        email_format: "misdannede"
