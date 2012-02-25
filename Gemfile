@@ -30,3 +30,4 @@ gem "pg"
 gem "client_side_validations"
 gem "devise", '~> 1.5.3'
 gem "activeadmin"
+gem "heroku"
