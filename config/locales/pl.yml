@@ -1,0 +1,26 @@
+pl:
+  site:
+    title: Luleka
+    tagline: Łączenie się ze specjalistami z lokalnych
+    legal_name: Luleka LLC
+
+  pages:
+    splash:
+      coming_soon: "Niedługo."
+      teaser: "Łączenie <em>się</em> ze specjalistami z lokalnych."
+      action: "Kiedy nadejdzie czas?"
+      response: "Dziękujemy za zainteresowanie! Wkrótce usłyszeć od nas."
+      submit: "Wysłać"
+      form:
+        fields:
+          email:
+            label: Adres e-mail dla Twojego konta
+
+  layouts:
+    splash:
+      languages: Języki
+      follow_us: "Stosuj się do nas na %{facebook} czy %{twitter}"
+
+  errors:
+      messages:
+        email_format: "zniekształcone"

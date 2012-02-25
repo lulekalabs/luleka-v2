@@ -1,0 +1,26 @@
+tr:
+  site:
+    title: Luleka
+    tagline: Yerel profesyoneller ile kendinizi bağlayın
+    legal_name: Luleka GmbH
+
+  pages:
+    splash:
+      coming_soon: "Yakında."
+      teaser: "Yerel profesyoneller ile kendinizi bağlayın."
+      action: "Zaman gelir? Zaman"
+      response: "İlginiz için teşekkür ederiz! Yakında bizden duyacaksınız."
+      submit: "Göndermek"
+      form:
+        fields:
+          email:
+            label: Hesabınız için e-posta adresi
+
+  layouts:
+    splash:
+      languages: Diller
+      follow_us: "%{facebook} veya %{twitter} bizi takip"
+
+  errors:
+      messages:
+        email_format: "kusurlu"

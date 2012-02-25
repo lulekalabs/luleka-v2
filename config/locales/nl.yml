@@ -1,0 +1,26 @@
+nl:
+  site:
+    title: Luleka
+    tagline: Verbind jezelf met professionals uit de lokale
+    legal_name: Luleka GmbH
+
+  pages:
+    splash:
+      coming_soon: "Binnenkort."
+      teaser: "Verbind <em>jezelf</em> met professionals uit de lokale."
+      action: "Wanneer de tijd komt?"
+      response: "Dank u voor uw interesse! U zult snel van ons horen."
+      submit: "Verzenden"
+      form:
+        fields:
+          email:
+            label: E-mailadres van uw account
+
+  layouts:
+    splash:
+      languages: Talen
+      follow_us: "Volg ons op %{facebook} of %{twitter}"
+
+  errors:
+      messages:
+        email_format: "misvormd"
