@@ -26,5 +26,7 @@ group :test do
   gem 'minitest'
 end
 
-gem 'pg'
+gem "pg"
 gem "client_side_validations"
+gem "devise", '~> 1.5.3'
+gem "activeadmin"
