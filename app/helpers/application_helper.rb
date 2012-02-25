@@ -6,8 +6,8 @@ module ApplicationHelper
   
   def language_links
     html = "".html_safe
-    available_locales = I18n.available_locales
-    available_locales.each_with_index do |locale, index|
+    locales = I18n.active_locale_languages
+    locales.each_with_index do |locale, index|
       if I18n.locale == locale
         html += content_tag(:em, t("languages.#{I18n.locale_language}"), :class => "current")
       else
@@ -15,7 +15,7 @@ module ApplicationHelper
           url_for({:locale => I18n.locale_language(locale)}),
             :title => t("languages.#{I18n.locale_language(locale)}"), "data-locale" => locale)
       end
-      unless index == available_locales.size - 1
+      unless index == locales.size - 1
         html += '<span class="dot"> &middot; </span>'.html_safe
       end
     end

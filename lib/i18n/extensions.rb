@@ -57,6 +57,16 @@ module I18n
         "#{locale || I18n.locale}".match(/-([a-zA-Z]{2})/) ? $1.to_sym : nil
       end
       
+      def active_locales
+        I18n.fallbacks.reject {|k,v| k.to_s.length < 2}.keys.compact.uniq
+      rescue Exception => ex
+        raise "I18n.fallbacks must be setup to determine active locales"
+      end
+
+      def active_locale_languages
+        active_locales.map {|l| locale_language(l)}.compact.uniq
+      end
+      
     end
   end
 end
