@@ -10,6 +10,23 @@
 //= require_self
 
 $(function() {
+  window.scrollTo(0, 1);
+  
+  var updateLayout = function() {
+    var currentWidth;
+    if (window.innerWidth != currentWidth) {
+      currentWidth = window.innerWidth;
+      var orient = (currentWidth == 320) ? "profile" : "landscape";
+      document.body.setAttribute("orient", orient);
+      window.scrollTo(0, 1);
+    }
+  };
+
+  if(!(typeof(iPhone) === "undefined")) {
+    iPhone.DomLoad(updateLayout);
+  }
+  setInterval(updateLayout, 400);
+  
   $(".holding input").focus(function(event) {
     if($(this).val().length == 0) {
       $(this).closest(".holding").find(".holder").fadeOut(25)
