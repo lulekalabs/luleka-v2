@@ -10,23 +10,10 @@
 //= require_self
 
 $(function() {
+  /* Hide address bar on iOS devices */ 
   window.scrollTo(0, 1);
-  
-  var updateLayout = function() {
-    var currentWidth;
-    if (window.innerWidth != currentWidth) {
-      currentWidth = window.innerWidth;
-      var orient = (currentWidth == 320) ? "profile" : "landscape";
-      document.body.setAttribute("orient", orient);
-      window.scrollTo(0, 1);
-    }
-  };
 
-  if(!(typeof(iPhone) === "undefined")) {
-    iPhone.DomLoad(updateLayout);
-  }
-  setInterval(updateLayout, 400);
-  
+  /* Taking care of inline text input labels */
   $(".holding input").focus(function(event) {
     if($(this).val().length == 0) {
       $(this).closest(".holding").find(".holder").fadeOut(25)
@@ -42,7 +29,8 @@ $(function() {
       $(this).parent(".holding").find("input").focus();
     }
   });
-  
+
+  /* Locale settings submitted in a form */
   $("form#change-locale-form a").click(function(event) {
     $(this).closest("form").find("input[name='locale']").val($(this).attr("data-locale"));
     $(this).closest("form").submit();
@@ -50,6 +38,7 @@ $(function() {
   });
 });
 
+/* For email format client side validations */
 clientSideValidations.validators.local["email_format"] = function(element, options) {
   if (!/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i.test(element.val())) {
     return options.message;
