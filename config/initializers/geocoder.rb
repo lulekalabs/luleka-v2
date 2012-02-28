@@ -1,10 +1,10 @@
 # config/initializers/geocoder.rb
 
 # geocoding service (see below for supported options):
-Geocoder::Configuration.lookup = :bing
+Geocoder::Configuration.lookup = :google
 
 # to use an API key:
-Geocoder::Configuration.api_key = "Age4GTTndmboyJ2iiHW1fA5JuDs92yMb9LdMvM-FSjHy4PlVfkOKWNr46RnIUGlN"
+Geocoder::Configuration.api_key = Rails.env.production? ? "AIzaSyDkkNkocQXz7HlXXkeeaL8BYdOH88FPTA4" : nil
 
 # geocoding service request timeout, in seconds (default 3):
 Geocoder::Configuration.timeout = 5
