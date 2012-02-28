@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :ensure_domain
   before_filter :set_locale
-  before_filter :get_location
 
   APP_DOMAIN = 'www.luleka.com'
 
@@ -67,10 +66,5 @@ class ApplicationController < ActionController::Base
   
   def cookie_auth_token
     "#{locale_param}_auth_token".to_sym
-  end
-  
-  def get_location
-    result = request.location
-    logger.debug result.inspect
   end
 end

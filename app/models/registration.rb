@@ -1,17 +1,20 @@
 class Registration < ActiveRecord::Base
   validates :email, :email_format => true, :uniqueness => true
   
-  scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC").limit(10) : order("created_at DESC").limit(n)}
+  attr_accessible :email, :time_zone
   
+  scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC").limit(10) : order("created_at DESC").limit(n)}
   
   class << self
     def instance_for(*attrs)
-      options = {}
-      (attrs).each do |attr|
-        puts normalize_params(attr)
-        options.merge! normalize_params(attr)
+      secure_options, custom_options = {}, {}
+      attrs.each_with_index do |attr, index|
+        index == 0 ? secure_options.merge!(normalize_params(attr)) : custom_options.merge!(normalize_params(attr))
       end
-      new options
+      record = new
+      custom_options.each {|k, v| record.send("#{k}=", v)}
+      record.attributes = secure_options
+      record
     end
     
     private
@@ -46,6 +49,11 @@ class Registration < ActiveRecord::Base
     result << self.first_name
     result << self.last_name
     result.compact.map(&:strip).reject(&:blank?).join(' ')
+  end
+
+  # Convert from "America/Argentina/Buenos_Aires" to "Buenos Aires"
+  def time_zone=(value)
+    self[:time_zone] = ActiveSupport::TimeZone::MAPPING.invert[value] ? ActiveSupport::TimeZone::MAPPING.invert[value] : value
   end
   
 end

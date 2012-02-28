@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails.validations
+//= require detect_timezone
 //= require_self
 
 $(function() {
@@ -36,6 +37,9 @@ $(function() {
     $(this).closest("form").submit();
     event.preventDefault();
   });
+  
+  /* Set browser time zone */
+  $("form input[name='registration[time_zone]']").val(jstz.determine_timezone().name());
 });
 
 /* For email format client side validations */

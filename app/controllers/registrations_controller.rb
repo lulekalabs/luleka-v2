@@ -1,10 +1,10 @@
 class RegistrationsController < ApplicationController
   
   def create
-    @registration = Registration.instance_for({
+    @registration = Registration.instance_for(params[:registration], {
       :language_code => "#{I18n.locale_language}",
       :ip_address    => request.remote_ip
-    }, request.location.data, params[:registration])
+    }, request.location.data)
     @registration.save
     respond_to do |format|
       format.js {}
