@@ -1,13 +1,13 @@
 class RegistrationsController < ApplicationController
   
   def create
-    @registration = Registration.create({
+    @registration = Registration.instance_for({
       :language_code => "#{I18n.locale_language}",
-      :country_code  => "#{I18n.locale_country}",
       :ip_address    => request.remote_ip
-    }.merge((params[:registration] || {}).symbolize_keys))
+    }, request.location.data, params[:registration])
+    @registration.save
     respond_to do |format|
-      format.js {  }
+      format.js {}
       format.html { 
         redirect_to root_path(:registered => true)
         return

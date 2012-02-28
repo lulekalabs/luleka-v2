@@ -71,6 +71,7 @@ GEM
     fastercsv (1.5.4)
     formtastic (2.1.0)
       actionpack (~> 3.0)
+    geocoder (1.1.1)
     has_scope (0.5.1)
     heroku (2.20.1)
       launchy (>= 0.3.2)
@@ -189,6 +190,7 @@ DEPENDENCIES
   devise (~> 1.5.3)
   execjs
   factory_girl_rails
+  geocoder
   heroku
   hpricot
   jquery-rails
