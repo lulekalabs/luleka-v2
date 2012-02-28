@@ -4,7 +4,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.instance_for(params[:registration], {
       :language_code => "#{I18n.locale_language}",
       :ip_address    => request.remote_ip
-    }, request.location.data)
+    }, request.location ? request.location.data : {})
     @registration.save
     respond_to do |format|
       format.js {}
