@@ -7,7 +7,14 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 # Create a default admin user
+require File.expand_path(File.dirname(__FILE__) + '/import')
+
+@import.each do |hash|
+  Registration.find_or_create_by_email hash[:email], hash
+end
+
 AdminUser.find_or_create_by_email 'manager@luleka.com', {
   :password              => 'buenosaires11:rosanegra',
   :password_confirmation => 'buenosaires11:rosanegra'
 }
+

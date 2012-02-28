@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228134724) do
+ActiveRecord::Schema.define(:version => 20120228143845) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(:version => 20120228134724) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ip_address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "time_zone"
   end
 
   add_index "registrations", ["email"], :name => "index_registrations_on_email", :unique => true

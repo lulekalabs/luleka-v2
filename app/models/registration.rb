@@ -8,4 +8,12 @@ class Registration < ActiveRecord::Base
     result.reject!(&:blank?)
     result.join("-").to_sym unless result.empty?
   end
+  
+  def name
+    result = []
+    result << self.first_name
+    result << self.last_name
+    result.compact.map(&:strip).reject(&:blank?).join(' ')
+  end
+  
 end
