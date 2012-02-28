@@ -4,7 +4,7 @@
 Geocoder::Configuration.lookup = :google
 
 # to use an API key:
-Geocoder::Configuration.api_key = Rails.env.production? ? "AIzaSyDkkNkocQXz7HlXXkeeaL8BYdOH88FPTA4" : nil
+Geocoder::Configuration.api_key = Rails.env.production? ? "AIzaSyCR2tu-GOwUDF85_a2SoG51hYsRorv9FZU" : nil
 
 # geocoding service request timeout, in seconds (default 3):
 Geocoder::Configuration.timeout = 5
