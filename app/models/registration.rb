@@ -1,6 +1,8 @@
 class Registration < ActiveRecord::Base
   validates :email, :email_format => true, :uniqueness => true
   
+  scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC").limit(10) : order("created_at DESC").limit(n)}
+  
   def locale
     result = []
     result << language_code.downcase if language_code
