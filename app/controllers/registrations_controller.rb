@@ -4,7 +4,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.create({
       :language_code => "#{I18n.locale_language}",
       :country_code  => "#{I18n.locale_country}",
-      :ip            => request.remote_ip
+      :ip_address    => request.remote_ip
     }.merge((params[:registration] || {}).symbolize_keys))
     respond_to do |format|
       format.js {  }
