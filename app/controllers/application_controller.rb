@@ -1,11 +1,20 @@
 class ApplicationController < ActionController::Base
   include UrlHelper
   protect_from_forgery
+  before_filter :ensure_domain
   before_filter :set_locale
+
+  APP_DOMAIN = 'www.luleka.com'
 
   layout 'slide'
   
   protected
+  
+  def ensure_domain
+    if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
+      redirect_to "http://#{APP_DOMAIN}", :status => 301
+    end
+  end
   
   # should probably be recalled to -> slider?
   def slide?

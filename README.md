@@ -55,3 +55,8 @@ ssh-add ~/.ssh/heroku@luleka.com.identity
 heroku plugins:install git://github.com/ddollar/heroku-accounts.git
 heroku accounts:add nl
 heroku accounts:set nl
+
+### Heroku Add-ons
+
+*  heroku addons:add custom_domains
+*  heroku addons:add custom_domains:wildcard
