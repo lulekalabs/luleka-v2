@@ -11,47 +11,56 @@
 @import "mixins.css.scss";
 
 body.splash-page {
-  background: transparent url("/assets/nl/bg/dandelion-p8.png") repeat-x 50% 0px;
-  
+  background: white url("/assets/nl/bg/dandelion-p8.png") repeat-x 50% 0px;
+
   #wrapper {
-    margin-top:0; 
+    margin-top:0;
+    min-width: 530px;
+    z-index: 1;
   }
 
   #main {
     overflow: visible; 
     max-width: 1000px;
+    min-width: 530px;
   }
 
   #front-container {
     display:block;
     margin: 0px 40px;
     max-width: 920px;
-    min-width: 920px;
     overflow: visible;
     position: relative;
     text-align: left;
+    padding-top: 50px;
     z-index: 1;
+
+    h1 {
+      background: url(/assets/luleka_front.png) no-repeat 0px 0px;
+      height: 39px;
+      width: 184px;
+    }
+
+    h1 span {
+      visibility: hidden;
+    }
+    
+    .float-unit {
+      display: block;
+      height: 265px;
+      max-width: 920px;
+      min-width: 530px;
+      margin: 75px 0;
+    }
     
     .leftside {
-      height: 435px;
-      padding-top: 30px;
       width: 530px;
+      float: left;
       
-      h1 {
-        background: url(/assets/luleka_front.png) no-repeat 0px 0px;
-        height: 39px;
-        width: 184px;
-      }
-
-      h1 span {
-        visibility: hidden;
-      }
-
       h2 {
         font-size: 54px;
         font-weight: 100;
         line-height: 0.9em;
-        margin: 95px 0px 10px;
       }
 
       h2 a {
@@ -81,26 +90,23 @@ body.splash-page {
     }
     
     .rightside {
-      position: absolute;
-      right: -20px;
-      top: 0px;
-      width: 350px;
+      position: relative;
+      width: 315px;
+      float: right;
+      overflow: visible;
 
       div.gradient {
-        background-image: -webkit-gradient(radial, 50% 65%, 40, 50% 50%, 350, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
-        height: 417px;
-        left: -225px;
+        background-image: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 260, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
         position: absolute;
-        top: 0px;
+        left: -220px;
+        top: -260px;
+        height: 617px;
         width: 750px;
         z-index: -1;
       }
 
       .front-response {
         display: none;
-        padding: 20px;
-        position: absolute;
-        top: 145px;
         width: 310px;
         
         h3 {
@@ -114,9 +120,6 @@ body.splash-page {
       }
 
       .front-signup {
-        padding: 20px;
-        position: absolute;
-        top: 145px;
         width: 310px;
 
         h3 {
@@ -200,6 +203,12 @@ body.splash-page {
       border-top: 0px none;
       margin-top: 0;
       padding-top: 0;
+      width: auto !important;
+      max-width: 920px;
+      min-width: 530px;
+      
+      .language {
+      }
 
       .language label span,
       div.language,
