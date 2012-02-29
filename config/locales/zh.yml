@@ -19,7 +19,7 @@ zh:
   layouts:
     splash:
       languages: 語言
-      follow_us: "按照我們對%{facebook}或%{twitter}"
+      follow_us: "按照我們對 %{facebook} 或 %{twitter}"
   
   errors:
       messages:
