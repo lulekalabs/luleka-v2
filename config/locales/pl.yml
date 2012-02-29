@@ -24,3 +24,11 @@ pl:
   errors:
       messages:
         email_format: "zniekształcone"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "już zarejestrowany"

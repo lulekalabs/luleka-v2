@@ -34,3 +34,12 @@ de:
   errors:
       messages:
         email_format: "fehlerhaftes Format"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "ist bereits registriert"
+        

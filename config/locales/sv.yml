@@ -24,3 +24,11 @@ sv:
   errors:
       messages:
         email_format: "felaktigt"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "har redan registrerat"

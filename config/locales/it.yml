@@ -24,3 +24,11 @@ it:
   errors:
       messages:
         email_format: "Direzione sbagliata"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "ha già registrato"

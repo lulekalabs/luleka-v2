@@ -23,4 +23,4 @@ fr:
   
   errors:
       messages:
-        email_format: "mauvaise direction"
+        email_format: "a déjà enregistré"

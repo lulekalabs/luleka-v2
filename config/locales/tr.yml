@@ -24,3 +24,11 @@ tr:
   errors:
       messages:
         email_format: "kusurlu"
+        
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "zaten kayıtlı olan"

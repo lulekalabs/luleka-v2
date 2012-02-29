@@ -24,3 +24,11 @@ nl:
   errors:
       messages:
         email_format: "misvormd"
+        
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "reeds ingeschreven"

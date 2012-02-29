@@ -24,3 +24,11 @@ da:
   errors:
       messages:
         email_format: "misdannede"
+        
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "er allerede registreret"

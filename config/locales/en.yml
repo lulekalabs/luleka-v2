@@ -24,3 +24,11 @@ en:
   errors:
       messages:
         email_format: "incorrectly formatted"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "has already registered"
