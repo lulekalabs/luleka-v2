@@ -1,0 +1,34 @@
+zh:
+  site:
+    title: Luleka
+    tagline: 您連接到本地的專業人士
+    legal_name: Luleka LLC
+    
+  pages:
+    splash:
+      coming_soon: "預告。"
+      teaser: "連接<em>您</em>本地的專業人士。"
+      action: "要知道，當我們打開？"
+      response: "感謝您的關注！你會聽到我們回來不久。"
+      submit: "發送"
+      form:
+        fields:
+          email:
+            label: 輸入您的電子郵件
+      
+  layouts:
+    splash:
+      languages: 語言
+      follow_us: "按照我們對%{facebook}或%{twitter}"
+  
+  errors:
+      messages:
+        email_format: "格式不正確"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "已註冊"
