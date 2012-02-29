@@ -7,10 +7,10 @@ he:
     
   pages:
     splash:
-      coming_soon: ".בקרוב"
-      teaser: ".התחברות לך אנשי מקצוע מקומיים"
-      action: "?רוצים לדעת מתי אנחנו פותחים"
-      response: ".תודה על העניין! תשמעו חזרה אלינו בקרוב"
+      coming_soon: "בקרוב."
+      teaser: "חיבור <em>לך</em> אנשי מקצוע מקומיים."
+      action: "רוצים לדעת מתי אנחנו פותחים?"
+      response: "תודה על העניין! תשמעו חזרה אלינו בקרוב."
       submit: "לשלוח"
       form:
         fields:
@@ -20,7 +20,7 @@ he:
   layouts:
     splash:
       languages: שפות
-      follow_us: "%{twitter} או %{facebook} עקבו אחרינו ב"
+      follow_us: "עקבו אחרינו ב %{twitter} או %{facebook}"
   
   errors:
       messages:
