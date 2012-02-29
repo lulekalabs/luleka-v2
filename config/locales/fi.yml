@@ -1,0 +1,34 @@
+fi:
+  site:
+    title: Luleka
+    tagline: Yhteyden sinua paikallisia ammattilaisia
+    legal_name: Luleka LLC
+    
+  pages:
+    splash:
+      coming_soon: "Tulossa."
+      teaser: "Yhteyden <em>sinua</em> paikallisia ammattilaisia."
+      action: "Haluatko tietää, milloin avaamme?"
+      response: "Kiitos mielenkiinnostasi! Kuulet takaisin meiltä pian."
+      submit: "Lähettää"
+      form:
+        fields:
+          email:
+            label: Kirjoita sähköpostiosoitteesi
+      
+  layouts:
+    splash:
+      languages: Kielet
+      follow_us: "Seuraa meitä %{facebook} ja %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "virheellisesti muotoiltu"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "on jo rekisteröity"
