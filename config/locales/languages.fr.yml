@@ -117,7 +117,7 @@ fr:
     ng: "ndonga"
     nl: "néerlandais"
     nn: "norvégien nynorsk"
-    no: "norvégien"
+    "no": "norvégien"
     nr: "ndébélé du Sud"
     nv: "navaho"
     ny: "nyanja"

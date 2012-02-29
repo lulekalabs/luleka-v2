@@ -117,7 +117,7 @@ sv:
     ng: "ndonga"
     nl: "nederländska"
     nn: "nynorska"
-    no: "norska"
+    "no": "norska"
     nr: "sydndebele"
     nv: "navaho"
     ny: "nyanja"

@@ -1,0 +1,34 @@
+"no":
+  site:
+    title: Luleka
+    tagline: Koble deg med fagfolk fra lokale
+    legal_name: Luleka GmbH
+
+  pages:
+    splash:
+      coming_soon: "Snart."
+      teaser: "Koble <em>deg</em> med fagfolk fra lokale."
+      action: "Når den tid kommer?"
+      response: "Takk for din interesse! Du vil snart høre fra oss."
+      submit: "Send"
+      form:
+        fields:
+          email:
+            label: E-postadressen for kontoen din
+
+  layouts:
+    splash:
+      languages: Språk
+      follow_us: "Følg oss på %{facebook} eller %{twitter}"
+
+  errors:
+      messages:
+        email_format: "misdannet"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "er allerede registrert"
