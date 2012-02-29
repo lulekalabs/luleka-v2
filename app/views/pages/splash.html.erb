@@ -1,9 +1,8 @@
-<div class="leftside ">
+<div class="leftside">
   <h1><span><%= t "site.title" %></span></h1>
   <h2><a href="/"><%= t ".coming_soon" %></a></h2>
   <p><%= t(".teaser").html_safe %></p>
 </div>
-
 <div class="rightside">
   <div class="gradient"></div>
   <div class="front-signup">
@@ -23,6 +22,11 @@
 </div>
 <% content_for :javascript do %>
 <script type='text/javascript'>
+  $.preload([
+    "assets/nl/bg/dandelion-p8.png",
+    "assets/nl/buttons/bg-btn-signup.png"
+  ]);
+  
   $(function() {
     if("<%= registered? %>" == "true") {
       $(".front-signup").hide();
