@@ -1,0 +1,34 @@
+af:
+  site:
+    title: Luleka
+    tagline: Verbinding te plaaslike professionele
+    legal_name: Luleka LLC
+    
+  pages:
+    splash:
+      coming_soon: "Kom gou."
+      teaser: "Connecting <em>jy</em> aan die plaaslike professionele mense."
+      action: "Wil jy weet wanneer ons oop?"
+      response: "Dankie vir jou belangstelling! Jy sal hoor van ons kort."
+      submit: "Stuur"
+      form:
+        fields:
+          email:
+            label: Vul jou e-pos
+      
+  layouts:
+    splash:
+      languages: Tale
+      follow_us: "Volg ons op %{facebook} en %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "nie korrek geformateer"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "het reeds geregistreer"
