@@ -1,0 +1,34 @@
+et:
+  site:
+    title: Luleka
+    tagline: Ühendamine teil kohalike spetsialistide
+    legal_name: Luleka LLC
+    
+  pages:
+    splash:
+      coming_soon: "Peagi."
+      teaser: "Ühendamine <em>sa</em> kohalikud spetsialistid."
+      action: "Tahan teada, kui me avame?"
+      response: "Täname huvi eest! Te kuulete tagasi meile varsti."
+      submit: "Saatma"
+      form:
+        fields:
+          email:
+            label: Sisesta oma e-posti
+      
+  layouts:
+    splash:
+      languages: Keeled
+      follow_us: "Jälgi meid %{facebook} või %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "valesti vormindatud"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "juba registreeritud"
