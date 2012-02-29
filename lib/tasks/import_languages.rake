@@ -68,7 +68,7 @@ namespace :import do
   languages:
 HEAD
     languages.each do |language|
-      output << "    #{language[:code]}: \"#{language[:name]}\"\n"
+      output << "    \"#{language[:code]}\": \"#{language[:name]}\"\n"
     end
     output <<<<TAIL
 TAIL

@@ -67,6 +67,11 @@ module I18n
         active_locales.map {|l| locale_language(l)}.compact.uniq
       end
       
+      # Right-to-left language? E.g. Hebrew or Arabic
+      def rtl?
+        t("site.direction", :default => "ltr") == "rtl"
+      end
+      
     end
   end
 end

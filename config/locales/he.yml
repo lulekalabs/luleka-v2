@@ -1,0 +1,35 @@
+he:
+  site:
+    title: Luleka
+    tagline: התחברות לך אנשי מקצוע מקומיים
+    legal_name: Luleka LLC
+    direction: rtl
+    
+  pages:
+    splash:
+      coming_soon: ".בקרוב"
+      teaser: ".התחברות לך אנשי מקצוע מקומיים"
+      action: "?רוצים לדעת מתי אנחנו פותחים"
+      response: ".תודה על העניין! תשמעו חזרה אלינו בקרוב"
+      submit: "לשלוח"
+      form:
+        fields:
+          email:
+            label: הזן את כתובת האימייל שלך
+      
+  layouts:
+    splash:
+      languages: שפות
+      follow_us: "%{twitter} או %{facebook} עקבו אחרינו ב"
+  
+  errors:
+      messages:
+        email_format: "מעוצב בצורה לא נכונה"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "יש כבר רשום"
