@@ -54,8 +54,8 @@ body.splash-page {
     }
     
     .leftside {
-      width: 530px;
       float: left;
+      width: 530px;
       
       h2 {
         font-size: 54px;
@@ -227,4 +227,29 @@ body.splash-page {
       }
     }
   }
+}
+
+html[dir=rtl] .leftside {
+  float: right !important;
+}
+
+html[dir=rtl] .rightside {
+  float: left !important;
+}
+
+html[dir=rtl] #front-container {
+  text-align: right !important;
+}
+
+html[dir=rtl] form .holding .holder {
+  right: 8px !important;
+  left: auto !important;
+}
+
+html[dir=rtl] .bottompart .inline-list {
+  float: right !important;
+}
+
+html[dir=rtl] .bottompart div.mobile-complete {
+  float: left !important;
 }

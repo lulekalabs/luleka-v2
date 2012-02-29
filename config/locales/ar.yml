@@ -1,0 +1,35 @@
+ar:
+  site:
+    title: Luleka
+    tagline: يربط لك المهنيين المحليين
+    legal_name: Luleka LLC
+    direction: rtl
+    
+  pages:
+    splash:
+      coming_soon: "قريبا."
+      teaser: "ربط <em> ترغب </em> لالمهنيين المحليين."
+      action: "نريد أن نعرف أننا عندما فتح؟"
+      response: "شكرا على اهتمامك! سوف تسمع ظهر لنا من فترة وجيزة."
+      submit: "إرسال"
+      form:
+        fields:
+          email:
+            label: أدخل البريد الإلكتروني الخاص بك
+      
+  layouts:
+    splash:
+      languages: لغات
+      follow_us: "تابعنا على %{facebook} أو %{twitter}"
+  
+  errors:
+      messages:
+        email_format: "تنسيقها بشكل غير صحيح"
+
+  activerecord:
+    errors:
+      models:
+        registration:
+          attributes:
+            email:
+              taken: "وقد سجلت بالفعل"
