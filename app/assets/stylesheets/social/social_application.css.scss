@@ -4,3 +4,49 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
 */
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  xoverflow: hidden;
+}
+
+body {
+  xoverflow: hidden;
+  xmargin: 0;
+}
+
+#wrapper {
+  width: 520px;
+  margin: auto;
+}
+
+#footer {
+  margin: 20px 10px 10px 10px;
+  color: #666;
+}
+
+#debug {
+  padding: 10px;
+  border-top: 1px red solid;
+  background-color: pink;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+#entry {
+  background: transparent url("/assets/nl/bg/dandelion-fb-p8.png") top left no-repeat;
+  width: 520px;
+  height: 700px;
+}

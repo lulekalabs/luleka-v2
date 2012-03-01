@@ -13,7 +13,7 @@ module Social::SocialApplicationHelper
       },
       :campaign => @campaign.page_data.merge({
         :registration_path   => registrations_path,
-        :tracking_event_path => events_path,
+        :tracking_event_path => social_events_path,
         :referral_url        => referral_url,
         :liked               => @campaign.session.liked?
       })
