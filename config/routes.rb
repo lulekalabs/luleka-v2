@@ -8,8 +8,8 @@ Nl::Application.routes.draw do
   match "home" => "pages#index"
   match "pages/change_locale" => "pages#change_locale", :method => :post, :as => "change_locale"
 
-  get  "/social/canvas" => "social/campaigns#show", :as => :social_campaign
-  post "/social/canvas" => "social/campaigns#show", :as => :social_campaign
+  get  "/social/campaign" => "social/campaigns#show", :as => :social_campaign
+  post "/social/campaign" => "social/campaigns#show", :as => :social_campaign
   post "/social/registrations" => "social/registrations#create", :as => :social_registrations
   get  "/social/signup" => "social/registrations#new", :as => :new_social_registration
   
