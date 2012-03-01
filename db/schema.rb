@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228163159) do
+ActiveRecord::Schema.define(:version => 20120301143145) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -62,8 +62,51 @@ ActiveRecord::Schema.define(:version => 20120228163159) do
     t.string   "postal_code"
     t.string   "region_code"
     t.string   "metrocode"
+    t.string   "type"
+    t.string   "uid"
+    t.string   "referrer_uid"
+    t.boolean  "opt_in",                                                    :default => false, :null => false
+    t.text     "fields"
+    t.text     "user_data"
   end
 
   add_index "registrations", ["email"], :name => "index_registrations_on_email", :unique => true
+  add_index "registrations", ["referrer_uid"], :name => "index_registrations_on_referrer_uid"
+  add_index "registrations", ["type"], :name => "index_registrations_on_type"
+  add_index "registrations", ["uid"], :name => "index_registrations_on_uid", :unique => true
+
+  create_table "social_event_codes", :force => true do |t|
+    t.string "name",  :limit => 50, :null => false
+    t.string "label", :limit => 50, :null => false
+  end
+
+  create_table "social_events", :force => true do |t|
+    t.integer  "code_id",                       :null => false
+    t.boolean  "viral",      :default => false, :null => false
+    t.string   "ip_address"
+    t.text     "payload"
+    t.datetime "created_at"
+  end
+
+  add_index "social_events", ["code_id"], :name => "index_social_events_on_code_id"
+  add_index "social_events", ["created_at"], :name => "index_social_events_on_created_at"
+
+  create_table "social_reports", :force => true do |t|
+    t.date     "date",                                   :null => false
+    t.boolean  "viral",               :default => false, :null => false
+    t.integer  "liked",               :default => 0,     :null => false
+    t.integer  "permissions_denied",  :default => 0,     :null => false
+    t.integer  "permissions_dialog",  :default => 0,     :null => false
+    t.integer  "permissions_granted", :default => 0,     :null => false
+    t.integer  "registration",        :default => 0,     :null => false
+    t.integer  "unique_email",        :default => 0,     :null => false
+    t.integer  "unliked",             :default => 0,     :null => false
+    t.integer  "view_invite_page",    :default => 0,     :null => false
+    t.integer  "wall_post",           :default => 0,     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "social_reports", ["date", "viral"], :name => "index_social_reports_on_date_and_viral", :unique => true
 
 end

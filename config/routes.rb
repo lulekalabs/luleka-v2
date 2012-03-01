@@ -7,6 +7,11 @@ Nl::Application.routes.draw do
   root :to => "pages#splash"
   match "home" => "pages#index"
   match "pages/change_locale" => "pages#change_locale", :method => :post, :as => "change_locale"
+
+  get  "/social/canvas" => "social/campaigns#show", :as => :social_campaign
+  post "/social/canvas" => "social/campaigns#show", :as => :social_campaign
+  post "/social/registrations" => "social/registrations#create", :as => :social_registrations
+  get  "/social/signup" => "social/registrations#new", :as => :new_social_registration
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,2 @@
+module Social::RegistrationsHelper
+end
