@@ -18,3 +18,4 @@ AdminUser.find_or_create_by_email 'manager@luleka.com', {
   :password_confirmation => 'buenosaires11:rosanegra'
 }
 
+Social::Event::Code.create_records!
