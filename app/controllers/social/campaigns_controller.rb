@@ -10,14 +10,4 @@ class Social::CampaignsController < Social::SocialApplicationController
     end
   end
   
-  def inside_facebook?
-    params[:signed_request].present?
-  end
-  helper_method :inside_facebook?
-
-  def inside_standalone_app?
-    false
-  end
-  helper_method :inside_standalone_app?
-  
 end
