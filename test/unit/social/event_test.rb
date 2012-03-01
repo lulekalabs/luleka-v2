@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Social
   class EventTest < ActiveSupport::TestCase
-    fixtures :all
-    
     test "should create campaign tracking event" do
       transaction do
         assert Event.create Event.sample

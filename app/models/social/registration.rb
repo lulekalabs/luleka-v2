@@ -1,6 +1,8 @@
 module Social
   class Registration < ::Registration
   
+    attr_accessible :first_name, :last_name, :user_data, :ip_address
+    
     validates :first_name, :presence => true, :length => { :minimum => 2 }
     validates :last_name,  :presence => true, :length => { :minimum => 2 }
     validates :email,      :presence => true, :format => { :with => /\A.+@.+\..+\z/ }
@@ -13,14 +15,14 @@ module Social
     serialize :fields
   
     # Sample valid attributes usable for tests
-    def self.sample
+    def self.sample(options = {})
       {
         :first_name => "John",
         :last_name  => "Smith",
         :email      => "johnsmith@example.com",
         :user_data  => "{\"a\":\"b\"}",
         :ip_address => "192.168.1.50"
-      }
+      }.merge(options)
     end
   
     def create_registration_tracking_event

@@ -59,8 +59,8 @@ module ActiveSupport
         5.times.each do |i|
           [Date.today - i].each do |date|
             [true, false].each do |bool|
-              report = SocialBuilder::Report.new date: date, viral: bool
-              SocialBuilder::Event::CODES.each do |code|
+              report = Social::Report.new date: date, viral: bool
+              Social::Event::CODES.each do |code|
                 report.send "#{code[:name]}=", rand(5)
               end
               report.save!

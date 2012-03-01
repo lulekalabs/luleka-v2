@@ -17,7 +17,7 @@ module Social
         SELECT
           viral,
           #{Event::CODES.map {|x| "SUM(#{x[:name]}) AS #{x[:name]}"}.join(", ")}
-        FROM reports
+        FROM #{table_name}
         GROUP BY viral
       }
       connection.select_all sql
