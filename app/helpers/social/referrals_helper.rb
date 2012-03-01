@@ -1,0 +1,2 @@
+module Social::ReferralsHelper
+end

@@ -2,10 +2,6 @@ class Social::RegistrationsController < Social::SocialApplicationController
   
   def new
     @registration = Social::Registration.new
-
-    Social::Event.create_from! request,
-      :event_code => "landing_page_view",
-      :viral      => !! @campaign.session.referrer
   end
 
   def create
@@ -16,7 +12,7 @@ class Social::RegistrationsController < Social::SocialApplicationController
     end
     if @registration.save
       @campaign.session.update registration_id: @registration.id
-      redirect_to new_invitation_path
+      redirect_to new_social_invitation_path
     else
       render :new
     end

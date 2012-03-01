@@ -12,6 +12,9 @@ Nl::Application.routes.draw do
   post "/social/campaign" => "social/campaigns#show", :as => :social_campaign
   post "/social/registrations" => "social/registrations#create", :as => :social_registrations
   get  "/social/signup" => "social/registrations#new", :as => :new_social_registration
+  get  "/social/referral" => "social/referrals#show", :as => :referral
+  get  "/social/invite" => "invitations#new", :as => :new_social_invitation
+  resources :events, :only => [:create]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

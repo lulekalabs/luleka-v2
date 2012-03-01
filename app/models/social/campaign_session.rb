@@ -3,8 +3,8 @@ require "koala"
 module Social
   class CampaignSession
     extend Ambry::Model
-    use :cookie
-    field :campaign_id, :liked, :page_id, :referrer, :registration_id, :video_id
+    # use :cookie
+    field :campaign_id, :liked, :page_id, :referrer, :registration_id
 
     attr_accessor :request
 
