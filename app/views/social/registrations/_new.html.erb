@@ -1,3 +1,40 @@
-<%= form_for @registration, :html => {:class => "registration-form"}, :validate => true do |f| %>
-  <%= render "form", :f => f %>
-<% end %>
+<div class="inner">
+  <h1><span><%= t "site.title" %></span></h1>
+  <h2><%= t("splash.pages.index.teaser").html_safe %></h2>
+  <h3 style="display:none;"><a href="/"><%= t("splash.pages.index.message").html_safe %></a></h3>
+  <div class="float-unit">
+    <div class="leftside">
+      <h4>Win an iPad!</h4>
+      <p>
+        We are proud to be giving away one <em>iPad 3</em>. Enter today! 
+        Don't forget to tell your friends if they win the grand prize you win the new <em>Apple TV</em>.
+      </p>
+      <%= image_tag("nl/ipad-p24.png") %>
+    </div>
+    <div class="rightside">
+      <div class="gradient"></div>
+      <div class="front-signup">
+        <h3><%= "Enter to win" %></h3>
+        <%= form_for @registration || Registration.new, :validate => true, :remote => true, :html => {:id => "registration-form"} do |f| %>
+          <div class="holding first-name">
+            <%= f.text_field :first_name %>
+            <span class="holder"><%= "First Name" %></span>
+          </div>
+          <div class="holding last-name">
+            <%= f.text_field :last_name %>
+            <span class="holder"><%= "Last Name" %></span>
+          </div>
+          <div class="holding email">
+            <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
+            <span class="holder"><%= t "splash.pages.index.form.fields.email.label" %></span>
+          </div>
+          <%= f.hidden_field :time_zone %>
+          <%= f.submit "Submit", :class => "submit button promotional" %>
+        <% end %>
+      </div>
+      <div class="front-response">
+        <h3><%= t ".response" %></h3>
+      </div>
+    </div>
+  </div>
+</div>

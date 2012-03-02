@@ -2,7 +2,7 @@
 <html lang="<%= "#{I18n.locale_language}" %>" <%= I18n.rtl? ? 'dir=rtl' : "" %>>
   <head>
     <meta charset="utf-8" />
-    <title>Luleka Social Campaign</title>
+    <title><%= page_title %></title>
     <%= javascript_include_tag "//connect.facebook.net/en_US/all.js" %>
     <%= javascript_include_tag "social/social_application" %>
     <%= javascript_include_tag "//platform.twitter.com/widgets.js" %>

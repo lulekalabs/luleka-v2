@@ -5,7 +5,7 @@ Social::Campaign.create! \
   :uuid                    => "f7daf30c-8bc0-42a5-8125-f31665d755a4",
   :client_name             => "Luleka",
   :end_date                => 90.days.from_now,
-  :name                    => 'Luleka Social Campaign',
+  :name                    => 'Luleka Sweepstakes',
   :recomendation_image_url => "http://placekitten.com/g/50/50",
   :recommendation_body     => "Enter our sweepstakes and you could win cool stuff!",
   :recommendation_title    => "Enter our sweepstakes",

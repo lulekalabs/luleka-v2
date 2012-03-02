@@ -1,5 +1,9 @@
 module Social::SocialApplicationHelper
 
+  def page_title
+    @campaign ? @campaign.name : super
+  end
+
   def date_format(datetime)
     datetime.strftime("%b %d, %Y %H:%M")
   end

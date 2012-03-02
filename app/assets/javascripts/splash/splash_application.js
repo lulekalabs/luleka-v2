@@ -43,13 +43,6 @@ $(function() {
   
 });
 
-/* For email format client side validations */
-clientSideValidations.validators.local["email_format"] = function(element, options) {
-  if (!/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i.test(element.val())) {
-    return options.message;
-  }
-}
-
 /* image preload */
 (function($) {
   var imgList = [];
@@ -80,3 +73,10 @@ clientSideValidations.validators.local["email_format"] = function(element, optio
     }
   });
 })(jQuery);
+
+/* For email format client side validations */
+clientSideValidations.validators.local["email_format"] = function(element, options) {
+  if (!/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i.test(element.val())) {
+    return options.message;
+  }
+}

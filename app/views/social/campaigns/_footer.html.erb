@@ -1,1 +1,9 @@
-<p>&copy; <%= Time.now.year %> Luleka</p>
+<div class="bottompart">
+  <!-- follow  -->
+  <div class="mobile-complete">
+    <%= ("Powered by %s" % link_to("BVision", "http://bvision.com", :target => "_blank")).html_safe %>
+  </div>
+  <div class="footer" style="float:left;">
+    <span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span>
+  </div>
+</div>

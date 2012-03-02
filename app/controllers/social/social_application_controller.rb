@@ -19,4 +19,8 @@ class Social::SocialApplicationController < ApplicationController
     campaign_session.process_signed_request
   end
   
+  def set_locale
+    I18n.locale = :"en"
+  end
+  
 end
