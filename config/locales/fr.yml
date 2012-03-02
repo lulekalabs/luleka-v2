@@ -4,18 +4,18 @@ fr:
     tagline: Le reliant aux professionnels de votre région
     legal_name: Luleka S.A.
 
-splash:    
-  pages:
-    index:
-      message: "Très bientôt."
-      teaser: "<em>Le</em> reliant aux professionnels de votre région."
-      action: "Vous voulez en savoir plus?"
-      response: "Je vous remercie pour votre intérêt! Vous recevrez une réponse sous peu."
-      submit: "Envoyer"
-      form:
-        fields:
-          email:
-            label: Entrez votre e-mail
+  splash:    
+    pages:
+      index:
+        message: "Très bientôt."
+        teaser: "<em>Le</em> reliant aux professionnels de votre région."
+        action: "Vous voulez en savoir plus?"
+        response: "Je vous remercie pour votre intérêt! Vous recevrez une réponse sous peu."
+        submit: "Envoyer"
+        form:
+          fields:
+            email:
+              label: Entrez votre e-mail
       
   layouts:
     splash_application:
