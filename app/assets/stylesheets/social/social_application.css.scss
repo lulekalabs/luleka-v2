@@ -52,218 +52,224 @@ body {
   display: inline-block;
 }
 
-#entry {
+#entry, #invite {
   background: transparent url("/assets/nl/bg/dandelion-op-fb-p8.png") top left no-repeat;
   width: 520px;
   height: 700px;
   z-index: 0;
-  
+
   .inner {
     display: block;
     padding: 30px;
-  }
-}
 
-#entry .inner {
-  h1 {
-    background: url(/assets/luleka_front.png) no-repeat 0px 0px;
-    height: 39px;
-    width: 184px;
-  }
+    h1 {
+      background: url(/assets/luleka_front.png) no-repeat 0px 0px;
+      height: 39px;
+      width: 184px;
+    }
 
-  h1 span {
-    visibility: hidden;
-  }
+    h1 span {
+      visibility: hidden;
+    }
   
-  h2 {
-    color: #333;
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 1.25em;
-    margin-top: 50px;
-  }
+    h2 {
+      color: #333;
+      font-size: 35px;
+      font-weight: 300;
+      line-height: 1.25em;
+      margin-top: 50px;
+    }
   
-  h2 em {
-    font-weight: bold;
-    font-style: normal;
-  }
+    h2 em {
+      font-weight: bold;
+      font-style: normal;
+    }
   
-  h3 {
-    font-size: 35px;
-    font-weight: 100;
-    line-height: 1.3em;
-  }
-
-  h3 a {
-    -webkit-transition: text-shadow 0.4s ease-in-out;
-    color: #006f79;
-    outline: none;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
-    font-weight: bold;
-  }
-
-  h3 a:hover {
-    text-decoration: none;
-    text-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px, #8FB5C8 0px 0px 6px, rgba(143, 181, 200, 0.699219) 0px 0px 30px;
-  }
-  
-  .float-unit {
-    display: block;
-    height: 265px;
-    max-width: 920px;
-    min-width: 530px;
-    margin: 50px 0;
-  }
-  
-  .leftside {
-    float: left;
-    width: 180px;
-    
-    h4 {
-      font-size: 25px;
+    h3 {
+      font-size: 35px;
       font-weight: 100;
       line-height: 1.3em;
     }
 
-    h4 {
+    h3 a {
       -webkit-transition: text-shadow 0.4s ease-in-out;
       color: #006f79;
       outline: none;
       text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
       font-weight: bold;
     }
-    
-    p {
-      color: #333;
-      font-size: 16px;
-      font-weight: normal;
-      margin: 10px 0;
-      text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px; 
-      text-align: justify;
-    }
-    
-    p em {
-      font-weight: bold;
-      font-style: normal;
-    }
-    
-    img {
-      display: block;
-      margin: 30px auto;
-    }
 
-  }
+    h3 a:hover {
+      text-decoration: none;
+      text-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px, #8FB5C8 0px 0px 6px, rgba(143, 181, 200, 0.699219) 0px 0px 30px;
+    }
   
-  .rightside {
-    position: relative;
-    width: 315px;
-    float: right;
-    overflow: visible;
-    padding-top: 1px;
-    z-index: 1;
-
-    div.gradient {
-      background-image: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 180, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
-      position: absolute;
-      left: -250px;
-      top: -200px;
-      height: 617px;
-      width: 750px;
-      z-index: -1;
+    a.post {
+      x-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
+      float: right;
+      height: 35px;
+      padding: 16px 16px 0 16px;
+      margin-top: 15px;
     }
-
-    .front-response {
-      display: none;
-      width: 310px;
-      
-      h3 {
-        color: #333;
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 6px;
-        text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
-        line-height: 1.25em;
+  
+    .float-unit {
+      display: block;
+      height: 265px;
+      max-width: 490px;
+      min-width: 490px;
+      margin: 50px 0;
+    }
+  
+    .leftside {
+      float: left;
+      width: 180px;
+    
+      h4 {
+        font-size: 25px;
+        font-weight: 100;
+        line-height: 1.3em;
       }
-    }
 
-    .front-signup {
-      width: 240px;
-      z-index: 2;
-      h3 {
+      h4 {
+        -webkit-transition: text-shadow 0.4s ease-in-out;
+        color: #006f79;
+        outline: none;
+        text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
+        font-weight: bold;
+      }
+    
+      p {
         color: #333;
         font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 6px;
+        font-weight: normal;
+        margin: 10px 0;
         text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px; 
+        text-align: justify;
       }
-
-      h3 em {
+    
+      p em {
+        font-weight: bold;
         font-style: normal;
-        font-weight: 300;
+      }
+    
+      img {
+        display: block;
+        margin: 30px auto;
       }
 
-      .holding {
-        height: 60px;
-        
-        input, 
-        .holder {
-          font: normal normal normal 15px/normal 'Helvetica Neue', Arial, sans-serif;
+    }
+  
+    .rightside {
+      position: relative;
+      width: 280px;
+      float: right;
+      overflow: visible;
+      padding-top: 1px;
+      z-index: 1;
+
+      div.gradient {
+        background-image: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 180, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
+        position: absolute;
+        left: -250px;
+        top: -200px;
+        height: 617px;
+        width: 750px;
+        z-index: -1;
+      }
+
+      .front-response {
+        display: none;
+        width: 310px;
+      
+        h3 {
+          color: #333;
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 6px;
+          text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
+          line-height: 1.25em;
+        }
+      }
+
+      .front-signup {
+        width: 240px;
+        z-index: 2;
+        h3 {
+          color: #333;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 6px;
+          text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px; 
         }
 
-        input {
-          @include input-rounded-corners(4px);
-          margin-bottom: 8px;
-          padding: 8px 6px;
-          width: 225px;
-          padding: 9px 7px 10px;
+        h3 em {
+          font-style: normal;
+          font-weight: 300;
         }
 
-        .holder {
-          line-height: 38px;
-        }
+        .holding {
+          height: 60px;
         
-        .field_with_errors {
-          label {
-            float: left;
-            position: relative;
-            top: -5px;
-            left: 0;
-            color: red;
-            font-size: 11px;
+          input, 
+          .holder {
+            font: normal normal normal 15px/normal 'Helvetica Neue', Arial, sans-serif;
+          }
+
+          input {
+            @include input-rounded-corners(4px);
+            margin-bottom: 8px;
+            padding: 8px 6px;
+            width: 225px;
+            padding: 9px 7px 10px;
+          }
+
+          .holder {
+            line-height: 38px;
+          }
+        
+          .field_with_errors {
+            label {
+              float: left;
+              position: relative;
+              top: -5px;
+              left: 0;
+              color: red;
+              font-size: 11px;
+            }
           }
         }
-      }
       
-      form {
-        .holding input {
-          -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
-          -webkit-transition: opacity 1s;
-          background-color: white;
-          border: none !important;
-          color: #567792;
-          opacity: 0.7;
+        form {
+          .holding input {
+            -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
+            -webkit-transition: opacity 1s;
+            background-color: white;
+            border: none !important;
+            color: #567792;
+            opacity: 0.7;
+          }
+
+          .holding:hover input {
+            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0px, rgba(0, 0, 0, 0.3) 0px 1px 2px inset;
+            opacity: 0.9;
+          }
+
+          .holding input:focus {
+            outline-width: 0;
+          }
         }
 
-        .holding:hover input {
-          -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0px, rgba(0, 0, 0, 0.3) 0px 1px 2px inset;
-          opacity: 0.9;
+        .button {
+          border: 0;
         }
 
-        .holding input:focus {
-          outline-width: 0;
+        .submit {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
+          float: right;
+          height: 35px;
+          padding-left: 16px;
+          padding-right: 16px;
         }
-      }
-
-      .button {
-        border: 0;
-      }
-
-      .submit {
-        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
-        float: right;
-        height: 35px;
-        padding-left: 16px;
-        padding-right: 16px;
       }
     }
   }
