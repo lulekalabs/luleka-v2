@@ -3,21 +3,22 @@ ru:
     title: Luleka
     tagline: Подключение к вам местных специалистов
     legal_name: Luleka LLC
-    
-  pages:
-    splash:
-      coming_soon: "Скоро."
-      teaser: "Подключение <em>вы</em> на местных специалистов."
-      action: "Хотите знать, когда мы открываем?"
-      response: "Спасибо за ваш интерес! Вы услышите от нас в ближайшее время."
-      submit: "послать"
-      form:
-        fields:
-          email:
-            label: Введите адрес электронной
+
+  splash:
+    pages:
+      index:
+        message: "Скоро."
+        teaser: "Подключение <em>вы</em> на местных специалистов."
+        action: "Хотите знать, когда мы открываем?"
+        response: "Спасибо за ваш интерес! Вы услышите от нас в ближайшее время."
+        submit: "послать"
+        form:
+          fields:
+            email:
+              label: Введите адрес электронной
       
   layouts:
-    splash:
+    splash_application:
       languages: Языки
       follow_us: "Следуйте за нами на %{facebook} или %{twitter}"
   

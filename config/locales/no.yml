@@ -4,20 +4,21 @@
     tagline: Koble deg med fagfolk fra lokale
     legal_name: Luleka GmbH
 
-  pages:
-    splash:
-      coming_soon: "Snart."
-      teaser: "Koble <em>deg</em> med fagfolk fra lokale."
-      action: "Når den tid kommer?"
-      response: "Takk for din interesse! Du vil snart høre fra oss."
-      submit: "Send"
-      form:
-        fields:
-          email:
-            label: E-postadressen for kontoen din
+  splash:
+    pages:
+      index:
+        message: "Snart."
+        teaser: "Koble <em>deg</em> med fagfolk fra lokale."
+        action: "Når den tid kommer?"
+        response: "Takk for din interesse! Du vil snart høre fra oss."
+        submit: "Send"
+        form:
+          fields:
+            email:
+              label: E-postadressen for kontoen din
 
   layouts:
-    splash:
+    splash_application:
       languages: Språk
       follow_us: "Følg oss på %{facebook} eller %{twitter}"
 

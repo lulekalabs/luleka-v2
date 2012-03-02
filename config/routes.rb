@@ -17,6 +17,7 @@ Nl::Application.routes.draw do
   get  "/social/campaign/invite"        => "social/invitations#new", :as => :new_social_invitation
   post "/social/campaign/events"        => "social/events#create", :as => :social_events
 
+  # app
   # match "home" => "pages#index"
 
 end

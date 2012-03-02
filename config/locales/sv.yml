@@ -4,20 +4,21 @@ sv:
     tagline: Anslut dig med yrkesverksamma från lokala
     legal_name: Luleka GmbH
 
-  pages:
-    splash:
-      coming_soon: "Snart."
-      teaser: "Anslut <em>dig</em> med yrkesverksamma från lokala."
-      action: "När det är dags?"
-      response: "Tack för ditt intresse! Du kommer snart att höra av oss."
-      submit: "Sända"
-      form:
-        fields:
-          email:
-            label: E-postadress för ditt konto
+  splash:
+    pages:
+      index:
+        message: "Snart."
+        teaser: "Anslut <em>dig</em> med yrkesverksamma från lokala."
+        action: "När det är dags?"
+        response: "Tack för ditt intresse! Du kommer snart att höra av oss."
+        submit: "Sända"
+        form:
+          fields:
+            email:
+              label: E-postadress för ditt konto
 
   layouts:
-    splash:
+    splash_application:
       languages: Språk
       follow_us: "Följ oss på %{facebook} eller %{twitter}"
 

@@ -4,18 +4,18 @@ hi:
     tagline: आप स्थानीय पेशेवरों के लिए कनेक्ट
     legal_name: Luleka LLC
     
-splash:
-  pages:
-    index:
-      message: "जल्द ही आ रहा है."
-      teaser: "कनेक्ट <em> आप</em> के स्थानीय पेशेवरों के लिए."
-      action: "पता है जब हम खोलने के चाहते हैं?"
-      response: "आपकी रुचि के लिए धन्यवाद! आप हम से शीघ्र ही सुना होगा."
-      submit: "भेजना"
-      form:
-        fields:
-          email:
-            label: अपने ईमेल दर्ज करें
+  splash:
+    pages:
+      index:
+        message: "जल्द ही आ रहा है."
+        teaser: "कनेक्ट <em> आप</em> के स्थानीय पेशेवरों के लिए."
+        action: "पता है जब हम खोलने के चाहते हैं?"
+        response: "आपकी रुचि के लिए धन्यवाद! आप हम से शीघ्र ही सुना होगा."
+        submit: "भेजना"
+        form:
+          fields:
+            email:
+              label: अपने ईमेल दर्ज करें
       
   layouts:
     splash_application:
