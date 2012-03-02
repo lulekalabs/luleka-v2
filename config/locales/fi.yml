@@ -3,21 +3,22 @@ fi:
     title: Luleka
     tagline: Yhteyden sinua paikallisia ammattilaisia
     legal_name: Luleka LLC
-    
-  pages:
-    splash:
-      coming_soon: "Tulossa."
-      teaser: "Yhteyden <em>sinua</em> paikallisia ammattilaisia."
-      action: "Haluatko tietää, milloin avaamme?"
-      response: "Kiitos mielenkiinnostasi! Kuulet takaisin meiltä pian."
-      submit: "Lähettää"
-      form:
-        fields:
-          email:
-            label: Kirjoita sähköpostiosoitteesi
+
+  splash:
+    pages:
+      index:
+        message: "Tulossa."
+        teaser: "Yhteyden <em>sinua</em> paikallisia ammattilaisia."
+        action: "Haluatko tietää, milloin avaamme?"
+        response: "Kiitos mielenkiinnostasi! Kuulet takaisin meiltä pian."
+        submit: "Lähettää"
+        form:
+          fields:
+            email:
+              label: Kirjoita sähköpostiosoitteesi
       
   layouts:
-    splash:
+    splash_application:
       languages: Kielet
       follow_us: "Seuraa meitä %{facebook} ja %{twitter}"
   

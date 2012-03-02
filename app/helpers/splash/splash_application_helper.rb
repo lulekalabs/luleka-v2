@@ -1,0 +1,2 @@
+module Splash::SplashApplicationHelper
+end

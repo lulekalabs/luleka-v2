@@ -4,20 +4,21 @@ it:
     tagline: Collegamento per i professionisti nella tua zona
     legal_name: Luleka S.A.
     
-  pages:
-    splash:
-      coming_soon: "Molto presto."
-      teaser: "<em>Collegamento</em> per i professionisti nella tua zona."
-      action: "Vuoi saperne di più?"
-      response: "Grazie per il vostro interesse! Riceverai una risposta a breve."
-      submit: "Inviare"
-      form:
-        fields:
-          email:
-            label: Inserisci la tua e-mail
+  splash:
+    pages:
+      index:
+        message: "Molto presto."
+        teaser: "<em>Collegamento</em> per i professionisti nella tua zona."
+        action: "Vuoi saperne di più?"
+        response: "Grazie per il vostro interesse! Riceverai una risposta a breve."
+        submit: "Inviare"
+        form:
+          fields:
+            email:
+              label: Inserisci la tua e-mail
       
   layouts:
-    splash:
+    splash_application:
       languages: Lingue
       follow_us: "Seguici su %{facebook} o %{twitter}"
   

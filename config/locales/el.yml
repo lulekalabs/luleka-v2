@@ -3,21 +3,22 @@ el:
     title: Luleka
     tagline: Σας συνδέει με τους τοπικούς επαγγελματίες
     legal_name: Luleka LLC
-    
-  pages:
-    splash:
-      coming_soon: "Σύντομα κοντά σας."
-      teaser: "Σας συνδέει με τους τοπικούς επαγγελματίες."
-      action: "Θέλετε να μάθετε πότε θα ανοίξει;"
-      response: "Ευχαριστώ για το ενδιαφέρον σας! Θα ακούσετε από μας σύντομα."
-      submit: "στέλνω"
-      form:
-        fields:
-          email:
-            label: Εισάγετε το email σας
+
+  splash:    
+    pages:
+      index:
+        message: "Σύντομα κοντά σας."
+        teaser: "Σας συνδέει με τους τοπικούς επαγγελματίες."
+        action: "Θέλετε να μάθετε πότε θα ανοίξει;"
+        response: "Ευχαριστώ για το ενδιαφέρον σας! Θα ακούσετε από μας σύντομα."
+        submit: "στέλνω"
+        form:
+          fields:
+            email:
+              label: Εισάγετε το email σας
       
   layouts:
-    splash:
+    splash_application:
       languages: Γλώσσες
       follow_us: "Ακολουθήστε μας στο %{facebook} ή %{twitter}"
   

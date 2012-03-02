@@ -4,20 +4,21 @@ en:
     tagline: Connecting you to local professionals
     legal_name: Luleka LLC
     
-  pages:
-    splash:
-      coming_soon: "Coming Soon."
-      teaser: "Connecting <em>you</em> to local professionals."
-      action: "Want to know when we open?"
-      response: "Thanks for your interest! You will hear back from us shortly."
-      submit: "Send"
-      form:
-        fields:
-          email:
-            label: Enter your email
+  splash:
+    pages:
+      index:
+        message: "Coming Soon."
+        teaser: "Connecting <em>you</em> to local professionals."
+        action: "Be the first to find out."
+        response: "Thanks for your interest! You will hear back from us shortly."
+        submit: "Notify Me"
+        form:
+          fields:
+            email:
+              label: Enter your email
       
   layouts:
-    splash:
+    splash_application:
       languages: Languages
       follow_us: "Follow us on %{facebook} or %{twitter}"
   

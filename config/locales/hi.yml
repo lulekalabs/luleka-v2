@@ -4,9 +4,10 @@ hi:
     tagline: आप स्थानीय पेशेवरों के लिए कनेक्ट
     legal_name: Luleka LLC
     
+splash:
   pages:
-    splash:
-      coming_soon: "जल्द ही आ रहा है."
+    index:
+      message: "जल्द ही आ रहा है."
       teaser: "कनेक्ट <em> आप</em> के स्थानीय पेशेवरों के लिए."
       action: "पता है जब हम खोलने के चाहते हैं?"
       response: "आपकी रुचि के लिए धन्यवाद! आप हम से शीघ्र ही सुना होगा."
@@ -17,7 +18,7 @@ hi:
             label: अपने ईमेल दर्ज करें
       
   layouts:
-    splash:
+    splash_application:
       languages: भाषाएँ
       follow_us: "%{facebook} या %{twitter} पर हमें का पालन करें"
   

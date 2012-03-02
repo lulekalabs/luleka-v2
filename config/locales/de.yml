@@ -14,20 +14,21 @@ de:
     tagline: Vernetzen Sie sich mit Profis vor Ort
     legal_name: Luleka GmbH
 
-  pages:
-    splash:
-      coming_soon: "Demnächst."
-      teaser: "Vernetzen <em>Sie</em> sich mit Profis vor Ort."
-      action: "Wann ist es soweit?"
-      response: "Danke für Ihr Interesse! Sie werden bald von uns hören."
-      submit: "Senden"
-      form:
-        fields:
-          email:
-            label: E-Mail Adresse eingeben
+  splash:
+    pages:
+      index:
+        coming_soon: "Demnächst."
+        teaser: "Vernetzen <em>Sie</em> sich mit Profis vor Ort."
+        action: "Wann ist es soweit?"
+        response: "Danke für Ihr Interesse! Sie werden bald von uns hören."
+        submit: "Senden"
+        form:
+          fields:
+            email:
+              label: E-Mail Adresse eingeben
 
   layouts:
-    splash:
+    splash_application:
       languages: Sprachen
       follow_us: "Folgen Sie uns auf %{facebook} oder %{twitter}"
 

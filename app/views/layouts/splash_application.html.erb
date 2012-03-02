@@ -13,8 +13,8 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <%= stylesheet_link_tag    "splash" %>
-    <%= javascript_include_tag "splash" %>
+    <%= stylesheet_link_tag    "splash/splash_application" %>
+    <%= javascript_include_tag "splash/splash_application" %>
     <%= csrf_meta_tag %>
     <%= ga_async_javascript_tag("UA-9091575-5") %>
     <%= yield :head %>
@@ -34,7 +34,7 @@
           <div class="bottompart">
             <!-- follow  -->
             <div class="mobile-complete">
-              <%= t(".follow_us", :twitter => '<a href="http://twitter.com/luleka" target="_blank">Twitter</a>', 
+              <%= t(".follow_us", :raise => true, :twitter => '<a href="http://twitter.com/luleka" target="_blank">Twitter</a>', 
                 :facebook => '<a href="http://www.facebook.com/pages/Luleka/191923610825" target="_blank">Facebook</a>').html_safe %>
             </div>
             <!-- locale -->

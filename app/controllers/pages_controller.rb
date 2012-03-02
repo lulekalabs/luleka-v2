@@ -5,16 +5,6 @@ class PagesController < ApplicationController
     render :layout => "front"
   end
   
-  def splash
-    render :layout => "splash"
-  end
-
-  def change_locale
-    self.current_locale = params[:locale].to_sym if params[:locale]
-    redirect_to params[:redirect] || "/"
-    return
-  end
-
   protected
 
   def set_body_dom_id

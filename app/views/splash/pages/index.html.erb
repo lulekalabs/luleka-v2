@@ -1,0 +1,42 @@
+<h1><span><%= t "site.title" %></span></h1>
+<div class="float-unit">
+  <div class="leftside">
+    <h3><a href="/"><%= t(".message").html_safe %></a></h3>
+    <h2><%= t(".teaser").html_safe %></h2>
+  </div>
+  <div class="rightside">
+    <div class="gradient"></div>
+    <div class="front-signup">
+      <h3><%= t ".action" %></h3>
+      <%= form_for @registration || Registration.new, :validate => true, :remote => true do |f| %>
+        <div class="holding email">
+          <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
+          <span class="holder"><%= t ".form.fields.email.label" %></span>
+        </div>
+        <%= f.hidden_field :time_zone %>
+        <%= f.submit t(".submit"), :class => "submit button promotional" %>
+      <% end %>
+    </div>
+    <div class="front-response">
+      <h3><%= t ".response" %></h3>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+<script type='text/javascript'>
+  $.preload([
+    "assets/nl/bg/dandelion-p8.png",
+    "assets/nl/buttons/bg-btn-signup.png"
+  ]);
+  
+  $(function() {
+    if("<%= registered? %>" == "true") {
+      $(".front-signup").hide();
+      $(".front-response").show();
+    } else {
+      $(".front-signup").show();
+      $(".front-response").hide();
+    }
+  });
+</script>
+<% end %>

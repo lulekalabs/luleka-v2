@@ -1,0 +1,2 @@
+module Splash::PagesHelper
+end

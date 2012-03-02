@@ -3,21 +3,22 @@ es:
     title: Luleka
     tagline: Conectándolo a los profesionales en su región
     legal_name: Luleka S.A.
-    
-  pages:
-    splash:
-      coming_soon: "Muy pronto."
-      teaser: "<em>Conectándolo</em> a los profesionales en su región."
-      action: "¿Quieres saber más?"
-      response: "Gracias por su interés! Usted recibira una respuesta en breve."
-      submit: "Enviar"
-      form:
-        fields:
-          email:
-            label: Ingrese su e-mail
+
+  splash:    
+    pages:
+      index:
+        message: "Muy pronto."
+        teaser: "<em>Conectándolo</em> a los profesionales en su región."
+        action: "¿Quieres saber más?"
+        response: "Gracias por su interés! Usted recibira una respuesta en breve."
+        submit: "Enviar"
+        form:
+          fields:
+            email:
+              label: Ingrese su e-mail
       
   layouts:
-    splash:
+    splash_application:
       languages: Idiomas
       follow_us: "Seguinos en %{facebook} o %{twitter}"
   

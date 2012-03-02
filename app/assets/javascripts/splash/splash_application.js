@@ -10,36 +10,6 @@
 //= require detect_timezone
 //= require_self
 
-(function($) {
-  var imgList = [];
-  $.extend({
-    preload: function(imgArr, option) {
-      var setting = $.extend({
-        init: function(loaded, total) {},
-        loaded: function(img, loaded, total) {},
-        loaded_all: function(loaded, total) {}
-      }, option);
-      var total = imgArr.length;
-      var loaded = 0;
-      
-      setting.init(0, total);
-      for(var i in imgArr) {
-        imgList.push($("<img />")
-          .attr("src", imgArr[i])
-          .load(function() {
-            loaded++;
-            setting.loaded(this, loaded, total);
-            if(loaded == total) {
-              setting.loaded_all(loaded, total);
-            }
-          })
-        );
-      }
-      
-    }
-  });
-})(jQuery);
-
 $(function() {
   /* Hide address bar on iOS devices */ 
   window.scrollTo(0, 1);
@@ -79,3 +49,34 @@ clientSideValidations.validators.local["email_format"] = function(element, optio
     return options.message;
   }
 }
+
+/* image preload */
+(function($) {
+  var imgList = [];
+  $.extend({
+    preload: function(imgArr, option) {
+      var setting = $.extend({
+        init: function(loaded, total) {},
+        loaded: function(img, loaded, total) {},
+        loaded_all: function(loaded, total) {}
+      }, option);
+      var total = imgArr.length;
+      var loaded = 0;
+      
+      setting.init(0, total);
+      for(var i in imgArr) {
+        imgList.push($("<img />")
+          .attr("src", imgArr[i])
+          .load(function() {
+            loaded++;
+            setting.loaded(this, loaded, total);
+            if(loaded == total) {
+              setting.loaded_all(loaded, total);
+            }
+          })
+        );
+      }
+      
+    }
+  });
+})(jQuery);

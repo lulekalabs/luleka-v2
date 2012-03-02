@@ -5,7 +5,6 @@
  *= require reset
  *= require base
  *= require buttons
- *= require splash
  *= require_self
 */
 @import "mixins.css.scss";
@@ -57,13 +56,13 @@ body.splash-page {
       float: left;
       width: 530px;
       
-      h2 {
+      h3 {
         font-size: 54px;
         font-weight: 100;
         line-height: 1.3em;
       }
 
-      h2 a {
+      h3 a {
         -webkit-transition: text-shadow 0.4s ease-in-out;
         color: #006f79;
         outline: none;
@@ -71,19 +70,19 @@ body.splash-page {
         font-weight: bold;
       }
 
-      h2 a:hover {
+      h3 a:hover {
         text-decoration: none;
         text-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px, #8FB5C8 0px 0px 6px, rgba(143, 181, 200, 0.699219) 0px 0px 30px;
       }
       
-      p {
+      h2 {
         color: #333;
         font-size: 35px;
         font-weight: 300;
         line-height: 1.25em;
       }
       
-      p em {
+      h2 em {
         font-weight: bold;
         font-style: normal;
       }

@@ -3,21 +3,22 @@ cs:
     title: Luleka
     tagline: Připojení vám místními odborníky
     legal_name: Luleka LLC
-    
-  pages:
-    splash:
-      coming_soon: "Zakrátko."
-      teaser: "Připojení <em>vám</em> místními odborníky."
-      action: "Chcete vědět, kdy jsme se otevřít?"
-      response: "Děkujeme za váš zájem! Uslyšíte od nás v nejbližší době."
-      submit: "Poslat"
-      form:
-        fields:
-          email:
-            label: Zadejte svůj e-mail
+
+  splash:    
+    pages:
+      index:
+        message: "Zakrátko."
+        teaser: "Připojení <em>vám</em> místními odborníky."
+        action: "Chcete vědět, kdy jsme se otevřít?"
+        response: "Děkujeme za váš zájem! Uslyšíte od nás v nejbližší době."
+        submit: "Poslat"
+        form:
+          fields:
+            email:
+              label: Zadejte svůj e-mail
       
   layouts:
-    splash:
+    splash_application:
       languages: Jazyky
       follow_us: "Sledujte nás na %{facebook} nebo %{twitter}"
   
