@@ -14,18 +14,25 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
   xoverflow: hidden;
+  xwidth: 720px;
 }
 
 body {
-  xoverflow: hidden;
-  xmargin: 0;
+  margin:0;
+  padding:0;
+  border:0;
+  background-color: white;
+  overflow:hidden;
+  width:760px;
+  margin:0; 
+  padding:0; 
+  border:0;
 }
 
 #wrapper {
-  width: 520px;
   margin: auto;
-  min-width: 520px;
-  max-width: 520px;
+  xmin-width: 520px;
+  xmax-width: 760px;
 }
 
 #footer {
@@ -52,9 +59,9 @@ body {
   display: inline-block;
 }
 
-#entry, #invite {
-  background: transparent url("/assets/nl/bg/dandelion-op-fb-p8.png") top left no-repeat;
-  width: 520px;
+#campaign {
+  background: transparent url("/assets/nl/bg/dandelion-fb-p24.png") top left no-repeat;
+  width: 780px;
   height: 700px;
   z-index: 0;
 
@@ -115,14 +122,12 @@ body {
     .float-unit {
       display: block;
       height: 265px;
-      max-width: 490px;
-      min-width: 490px;
       margin: 50px 0;
     }
   
     .leftside {
       float: left;
-      width: 180px;
+      width: 300px;
     
       h4 {
         font-size: 25px;
@@ -154,7 +159,7 @@ body {
     
       img {
         display: block;
-        margin: 30px auto;
+        margin: 50px auto;
       }
 
     }
@@ -279,7 +284,7 @@ body {
   border-top: 0px none;
   margin-top: 0;
   padding-top: 5px;
-  width: 520px;
+  width: 780px;
   
   .language {
   }

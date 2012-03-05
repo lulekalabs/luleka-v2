@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="<%= "#{I18n.locale_language}" %>" <%= I18n.rtl? ? 'dir=rtl' : "" %>>
-  <head>
-    <meta charset="utf-8" />
-    <title><%= page_title %></title>
-    <%= javascript_include_tag "//connect.facebook.net/en_US/all.js" %>
-    <%= javascript_include_tag "social/social_application" %>
-    <%= javascript_include_tag "//platform.twitter.com/widgets.js" %>
-    <%= stylesheet_link_tag    "social/social_application" %>
-    <% if @campaign %>
-      <script type="text/javascript">
-        var context  = <%= session_data[:context].camelize.to_json.html_safe %>;
-        var campaign = <%= session_data[:campaign].camelize.to_json.html_safe %>;
-        $(function() {SocialBuilder.init();});
-        window.insideFacebook = function() {
-          return <%= inside_facebook? ? 'true' : 'false' %>;
-        }
-      </script>
-    <% end %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body class="<%= controller_name %>">
-    <div id="wrapper">
-      <div id="fb-root"></div>
-      <div id="canvas">
-        <%= yield %>
-        <%= render 'social/campaigns/footer' %>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <title><%= page_title %></title>
+  <%= javascript_include_tag "//connect.facebook.net/en_US/all.js" %>
+  <%= javascript_include_tag "social/social_application" %>
+  <%= javascript_include_tag "//platform.twitter.com/widgets.js" %>
+  <%= stylesheet_link_tag    "social/social_application" %>
+  <% if @campaign %>
+  <script type="text/javascript">
+  var context  = <%= session_data[:context].camelize.to_json.html_safe %>;
+  var campaign = <%= session_data[:campaign].camelize.to_json.html_safe %>;
+  $(function() {SocialBuilder.init();});
+  window.insideFacebook = function() {
+    return <%= inside_facebook? ? 'true' : 'false' %>;
+  }
+  
+  window.fbAsyncInit = function() {
+  FB.Canvas.setAutoGrow();
+  }
+  // Do things that will sometimes call sizeChangeCallback()
+  function sizeChangeCallback() {
+    FB.Canvas.setSize({width: 520, height: 800});
+  }
+  </script>
+  <% end %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller_name %>">
+  <div id="wrapper">
+    <div id="fb-root"></div>
+    <div id="canvas">
+      <%= yield %>
+      <%= render 'social/campaigns/footer' %>
     </div>
-  </body>
+  </div>
+</body>
 </html>

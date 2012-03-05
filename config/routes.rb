@@ -16,6 +16,8 @@ Nl::Application.routes.draw do
   get  "/social/campaign/referral"      => "social/referrals#show", :as => :referral
   get  "/social/campaign/invite"        => "social/invitations#new", :as => :new_social_invitation
   post "/social/campaign/events"        => "social/events#create", :as => :social_events
+  get  "/social/campaign/over"          => "social/campaigns#over", :as => :social_campaign_over
+  get  "/social/campaign/rules"         => "social/campaigns#rules", :as => :social_campaign_rules
 
   # app
   # match "home" => "pages#index"

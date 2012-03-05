@@ -64,17 +64,17 @@ GEM
     eventmachine (0.12.10)
     execjs (1.3.0)
       multi_json (~> 1.0)
-    factory_girl (2.6.0)
+    factory_girl (2.6.1)
       activesupport (>= 2.3.9)
     factory_girl_rails (1.7.0)
       factory_girl (~> 2.6.0)
       railties (>= 3.0.0)
     fastercsv (1.5.4)
-    formtastic (2.1.0)
+    formtastic (2.1.1)
       actionpack (~> 3.0)
     geocoder (1.1.1)
     has_scope (0.5.1)
-    heroku (2.21.1)
+    heroku (2.21.2)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       rubyzip
@@ -121,7 +121,7 @@ GEM
       activerecord (~> 3.0)
     polyglot (0.3.3)
     rack (1.3.6)
-    rack-cache (1.1)
+    rack-cache (1.2)
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
@@ -137,6 +137,9 @@ GEM
       activesupport (= 3.1.3)
       bundler (~> 1.0)
       railties (= 3.1.3)
+    rails-dev-tweaks (0.6.1)
+      actionpack (~> 3.1)
+      railties (~> 3.1)
     railties (3.1.3)
       actionpack (= 3.1.3)
       activesupport (= 3.1.3)
@@ -178,7 +181,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.31)
+    tzinfo (0.3.32)
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
@@ -206,6 +209,7 @@ DEPENDENCIES
   mocha
   pg
   rails (= 3.1.3)
+  rails-dev-tweaks (~> 0.6.1)
   sass-rails (~> 3.1.5)
   shoulda
   shoulda-matchers

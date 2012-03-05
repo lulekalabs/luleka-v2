@@ -60,3 +60,10 @@ heroku accounts:set nl
 
 *  heroku addons:add custom_domains
 *  heroku addons:add custom_domains:wildcard
+
+## Integrating into Facebook
+
+Adding a Facebook App as a Facebook page tab will require calling this
+
+http://www.facebook.com/dialog/pagetab?app_id=105771169466526&next=http://localhost:3000/social/campaign
+

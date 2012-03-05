@@ -12,6 +12,7 @@ group :test, :development do
   gem "execjs"
   gem "thin"
   gem "hpricot"
+  gem 'rails-dev-tweaks', '~> 0.6.1'
 end
 
 group :production do

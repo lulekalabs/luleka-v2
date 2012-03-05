@@ -3,7 +3,12 @@
   <div class="mobile-complete">
     <%= ("Powered by %s" % link_to("BVision", "http://bvision.com", :target => "_blank")).html_safe %>
   </div>
-  <div class="footer" style="float:left;">
+  <div class="language inline-list">
+    <%= link_to "Rules", social_campaign_rules_path, :target => "_blank" %>
+    <span class="dot">&nbsp;</span>
+    <%= link_to "Website", "http://www.luleka.com", :target => "_blank" %>
+  </div><!-- .inline-list -->
+  <div class="footer inline-list" style="float:left;">
     <span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span>
   </div>
 </div>
