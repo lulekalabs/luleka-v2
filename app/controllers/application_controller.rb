@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
   
   def current_locale
-    @current_locale ||= (locale_from_session || locale_from_cookie) unless @current_locale == false
+    @current_locale ||= (locale_from_params || locale_from_session || locale_from_cookie) unless @current_locale == false
   end
   helper_method :current_locale
 
@@ -42,6 +42,10 @@ class ApplicationController < ActionController::Base
     session[locale_param] = new_locale
     cookies[cookie_auth_token] = {:value => new_locale, :expires => Time.now + 1.year}
     @current_locale = new_locale || false
+  end
+
+  def locale_from_params
+    params[:locale]
   end
 
   def locale_from_session

@@ -8,7 +8,7 @@ class Social::CampaignsController < Social::SocialApplicationController
   protected
 
   def like_gate
-    if !inside_facebook? || @campaign.session.liked?
+    if inside_facebook? && @campaign.session.liked?
       redirect_to new_social_registration_path
     end
   end
