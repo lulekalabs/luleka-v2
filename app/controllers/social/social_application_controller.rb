@@ -33,7 +33,7 @@ class Social::SocialApplicationController < ApplicationController
   end
 
   def ensure_rules
-    if true # @campaign.over? || @campaign.hasnt_started_yet?
+    if @campaign.over? || @campaign.hasnt_started_yet?
       redirect_to social_campaign_over_path
       return
     end
