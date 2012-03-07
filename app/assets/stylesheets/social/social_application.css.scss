@@ -60,17 +60,27 @@ body {
 }
 
 #campaign {
-  background: transparent url("/assets/nl/bg/dandelion-fb-p24.png") top left no-repeat;
+  background: transparent url("/assets/fb/dandelion-fb-p24.png") top left no-repeat;
   width: 780px;
   height: 700px;
   z-index: 0;
 
+  #gate {
+    background: transparent url("/assets/fb/like-gate.png") top left no-repeat;
+    width: 780px;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+  }
+  
   .inner {
     display: block;
     padding: 30px;
 
     h1 {
-      background: url(/assets/luleka_front.png) no-repeat 0px 0px;
+      background: url("/assets/luleka_front.png") no-repeat 0px 0px;
       height: 39px;
       width: 184px;
     }
