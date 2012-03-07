@@ -59,6 +59,18 @@ module Social
       scoped
     end
 
+    def over?
+      Time.zone.now > end_date
+    end
+
+    def started?
+      Time.zone.now > start_date
+    end
+
+    def hasnt_started_yet?
+      !started?
+    end
+
     unless Rails.env.production?
       def test_user_api
         @test_user_api or begin

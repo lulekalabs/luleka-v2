@@ -5,16 +5,21 @@ class Social::RegistrationsController < Social::SocialApplicationController
   end
 
   def create
-    @registration = Social::Registration.new(params[:registration]) do |r|
+    @registration = Social::Registration.new(params[:social_registration]) do |r|
       r.ip_address   = request.remote_ip
       r.referrer_uid = @campaign.session.referrer
-      r.videos << @campaign.session.video
     end
+
     if @registration.save
       @campaign.session.update registration_id: @registration.id
-      redirect_to new_social_invitation_path
+      respond_to do |format|
+        format.js
+        format.html do
+          redirect_to new_social_invitation_path
+        end
+      end
     else
-      render :new
+      render "new"
     end
   end
   

@@ -65,13 +65,13 @@ FormWrapper = function(css) {
         }
         else {
           FB.login(function(response) {
-            if (response.session) {
+            if (response.authResponse) {
               that.checkLikes();
             }
             else {
               that.needPermissions();
             }
-          }, {perms: that.campaign.permissions});
+          }, {scope: that.campaign.permissions});
         }
       });
       return false;
@@ -131,9 +131,9 @@ FormWrapper = function(css) {
   };
 
   this.submitHandler = function() {
-    if (!FB.getSession()) {
+    if (!FB.getAuthResponse()) {
       SocialBuilder.track({event_code : "permissions_dialog"});
-      FB.login(that.loginHandler, {perms: that.campaign.permissions});
+      FB.login(that.loginHandler, {scope: that.campaign.permissions});
     }
     else {
       that.setUserInfoAndSubmit();

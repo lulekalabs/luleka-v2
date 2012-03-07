@@ -15,10 +15,7 @@
 //= require social/main
 //= require_self
 
-$(function() {
-  /* Hide address bar on iOS devices */ 
-  window.scrollTo(0, 1);
-
+$(document).bind("form-loaded", function(event) {
   /* Taking care of inline text input labels */
   $(".holding input").focus(function(event) {
     if($(this).val().length == 0) {
@@ -36,16 +33,16 @@ $(function() {
     }
   });
 
-  /* Locale settings submitted in a form */
-  $("form#change-locale-form a").click(function(event) {
-    $(this).closest("form").find("input[name='locale']").val($(this).attr("data-locale"));
-    $(this).closest("form").submit();
-    event.preventDefault();
-  });
-  
   /* Set browser time zone */
   $("form input[name='registration[time_zone]']").val(jstz.determine_timezone().name());
+});
+
+$(function() {
+  /* Hide address bar on iOS devices */ 
+  window.scrollTo(0, 1);
   
+  /* Load form hooks */
+  $(document).trigger("form-loaded");
 });
 
 /* image preload */

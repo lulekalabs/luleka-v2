@@ -1,0 +1,5 @@
+<% if @registration.new_record? %>
+  $('#campaign').load('<%= new_social_registration_path %> .inner', function() {
+    $(document).trigger("form-loaded");
+  });
+<% end %>

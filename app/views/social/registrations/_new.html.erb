@@ -4,18 +4,21 @@
   <h3 style="display:none;"><a href="/"><%= t("splash.pages.index.message").html_safe %></a></h3>
   <div class="float-unit">
     <div class="leftside">
-      <h4>Win an iPad 3!</h4>
+      <h4>Register and Enter to Win.</h4>
       <p>
-        We are proud to be giving away an <em>iPad 3</em>. Enter today! 
-        Don't forget to tell your friends if they win the grand prize you win the new <em>Apple TV</em>.
+        If you are a professional or if you are looking for one, pre-register with us to find out more.
+      </p>
+      <p>
+        When you enter you get a chance to win the new <em>iPad</em>.
+        Don't forget to tell your friends if they win the grand price you win the new <em>Apple TV</em>.
       </p>
       <%= image_tag("fb/ipad-p24.png") %>
     </div>
     <div class="rightside">
       <div class="gradient"></div>
       <div class="front-signup">
-        <h3><%= "Enter to win" %></h3>
-        <%= form_for @registration || Registration.new, :validate => true, :remote => true, :html => {:class => "registration-form"} do |f| %>
+        <h3><%= "Register to win." %></h3>
+        <%= form_for @registration || Social::Registration.new, :validate => true, :remote => true, :html => {:class => "registration-form"} do |f| %>
           <div class="holding first-name">
             <%= f.text_field :first_name %>
             <span class="holder"><%= "First Name" %></span>
@@ -30,6 +33,15 @@
           </div>
           <%= f.hidden_field :time_zone %>
           <%= f.submit "Submit", :class => "submit button promotional" %>
+        <% end %>
+        <% if @registration && @registration.errors.any? %>
+        <div class="form-errors">
+          <ul>
+          <% @registration.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
         <% end %>
       </div>
       <div class="front-response">
