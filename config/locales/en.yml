@@ -45,6 +45,8 @@ en:
     splash_application:
       languages: Languages
       follow_us: "Follow us on %{facebook} or %{twitter}"
+    social_application:
+      powered_by: "Powered by %s"
   
   errors:
       messages:

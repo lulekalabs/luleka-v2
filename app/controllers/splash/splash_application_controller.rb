@@ -9,5 +9,11 @@ class Splash::SplashApplicationController < ApplicationController
     redirect_to params[:redirect] || "/"
     return
   end
+  
+  protected
+  
+  def active_locale_languages
+    I18n.active_locale_languages
+  end
 
 end

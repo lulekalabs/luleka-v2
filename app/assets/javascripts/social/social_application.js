@@ -41,6 +41,13 @@ $(function() {
   /* Hide address bar on iOS devices */ 
   window.scrollTo(0, 1);
   
+  /* Locale settings submitted in a form */
+  $("form#change-locale-form a").click(function(event) {
+    $(this).closest("form").find("input[name='locale']").val($(this).attr("data-locale"));
+    $(this).closest("form").submit();
+    event.preventDefault();
+  });
+  
   /* Load form hooks */
   $(document).trigger("form-loaded");
 });

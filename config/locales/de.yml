@@ -27,10 +27,36 @@ de:
             email:
               label: E-Mail Adresse eingeben
 
+  social:
+    campaigns:
+      over:
+        headline: In Kontakt Bleiben.
+        explain: "Offiziell ist diese Aktion beendet. Falls Sie Interesse haben mehr über unsere Platform zu erfahren, reservieren Sie sich jetzt schon ein Plätzchen oder empfehlen Sie uns weiter."
+    invitations:
+      new:
+        headline: Geschafft! Empfehlen Sie uns weiter.
+        congrats: "Glückwunsch, Sie sind jetzt vorregistriert und nehmen an der Verlosung des <em>iPads</em> teil."
+        tell: "Weiterempfehlen lohnt sich, denn wenn einer Ihrer Freunde gewinnt, erhalten Sie automatisch den neuen <em>Apple TV</em>."
+        share: "Jetzt Weiterempfehlen"
+    registrations:
+      new:
+        call: "Vorregistrieren und Gewinnen."
+        explain: "Wenn Sie einen Profi suchen oder Sie einer sind, reservieren Sie sich gleich ein Plätzchen und erfahren dann mehr über unser Vorhaben."
+        chance: "Gleichzeitig nehmen Sie an unserer Aktion teil das brandneue <em>iPad</em> zu gewinnen. Vergessen Sie nicht uns Ihren Freunden weiterzuempfehen, denn wenn einer Ihrer Freunde gewinnt, erhalten Sie automatisch den neuen <em>Apple TV</em>."
+        action: "Jetzt Teilnehmen und Gewinnen."
+        form:
+          submit: Teilnehmen
+          fields:
+            first_name: "Vorname"
+            last_name: "Nachname"
+            email: "E-Mail Adresse"
+
   layouts:
     splash_application:
       languages: Sprachen
       follow_us: "Folgen Sie uns auf %{facebook} oder %{twitter}"
+    social_application:
+      powered_by: "Powered by %s"
 
   errors:
       messages:

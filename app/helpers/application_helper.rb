@@ -6,7 +6,7 @@ module ApplicationHelper
   
   def language_links
     html = "".html_safe
-    locales = I18n.active_locale_languages
+    locales = active_locale_languages
     locales.each_with_index do |locale, index|
       if I18n.locale == locale
         html += content_tag(:em, t("languages.#{I18n.locale_language}"), :class => "current")

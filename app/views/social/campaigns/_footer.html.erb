@@ -1,14 +1,26 @@
 <div class="bottompart">
-  <!-- follow  -->
   <div class="mobile-complete">
-    <%= ("Powered by %s" % link_to("BVision", "http://bvision.com", :target => "_blank")).html_safe %>
+    <%= (I18n.t("layouts.social_application.powered_by") % link_to("BVision", "http://bvision.com", :target => "_blank")).html_safe %>
   </div>
+  <!-- locale -->
   <div class="language inline-list">
-    <%= link_to "Go to App", "http://www.luleka.com", :target => "_blank" %>
-    <span class="dot"> &middot; </span>
-    <%= link_to "Rules", social_campaign_rules_path, :target => "_blank" %>
+    <form action="<%= change_locale_path %>" id="change-locale-form" method="post">
+      <input type="hidden" name="locale" value="">
+      <input type="hidden" name="redirect" value="<%= url_for({}) %>">
+      <strong><%= t "layouts.splash_application.languages" %></strong>
+      <span class="dot">&nbsp;</span>
+      <%= language_links %>
+    </form>
   </div><!-- .inline-list -->
-  <div class="footer inline-list" style="float:left;">
-    <span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span>
+  <div class="footer inline-list">
+    <ul class="footer-nav">
+      <li>
+        <%= link_to "Go to App", "http://www.luleka.com", :target => "_blank" %><span class="dot">&middot;</span>
+      </li>
+      <li>
+        <%= link_to "Rules", social_campaign_rules_path, :target => "_blank" %>
+      </li>
+      &nbsp;<li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span></li>
+    </ul>
   </div>
 </div>

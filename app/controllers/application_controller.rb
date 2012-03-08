@@ -71,4 +71,11 @@ class ApplicationController < ActionController::Base
   def cookie_auth_token
     "#{locale_param}_auth_token".to_sym
   end
+  
+  # Override in controllers
+  def active_locale_languages
+    [:en]
+  end
+  helper_method :active_locale_languages
+  
 end

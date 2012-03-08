@@ -21,9 +21,11 @@ class Social::SocialApplicationController < ApplicationController
     campaign_session.process_signed_request
   end
   
+=begin
   def set_locale
     I18n.locale = :"en"
   end
+=end
   
   def ensure_inside_facebook
     if !inside_facebook? && Rails.env.production?
@@ -37,6 +39,10 @@ class Social::SocialApplicationController < ApplicationController
       redirect_to social_campaign_over_path
       return
     end
+  end
+
+  def active_locale_languages
+    [:en, :es, :de]
   end
   
 end
