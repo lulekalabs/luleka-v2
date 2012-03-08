@@ -31,5 +31,9 @@ module Social::SocialApplicationHelper
   def inside_standalone_app?
     false
   end
+  
+  def body_id
+    @body_id || "social"
+  end
 
 end

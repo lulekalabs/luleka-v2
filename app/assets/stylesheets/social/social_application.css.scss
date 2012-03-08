@@ -22,11 +22,14 @@ body {
   padding:0;
   border:0;
   background-color: white;
-  overflow:hidden;
   width:760px;
   margin:0; 
   padding:0; 
   border:0;
+}
+
+body#social {
+  overflow:hidden;
 }
 
 #wrapper {
@@ -170,7 +173,7 @@ body {
       img {
         position: absolute;
         left: 400px;
-        bottom: 65px;
+        bottom: 90px;
         xdisplay: block;
         xmargin: 50px auto;
       }
@@ -327,4 +330,8 @@ body {
   }
 }
 
-
+body#rules {
+  .bottompart {
+    display: none;
+  }
+}

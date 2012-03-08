@@ -1,15 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-
-
-
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
 <div class="campaign">
 
   <p align="center"><a name="0.3__GoBack"></a><font size="3" face="Book Antiqua"><b>OFFICIAL 
 RULES</b></font></p>
-<p align="center"><font size="3" face="Book Antiqua"><b>MyJewelryBox.com 
-1 Carat Three Stone Ring Sweepstakes</b></font><font size="2" face="Times">  <br>
+<p align="center"><font size="3" face="Book Antiqua"><b>Luleka.com Registration
+iPad Sweepstakes</b></font><font size="2" face="Times"><br>
 </font></p>
 <ol type="1">
   <li><font size="3" face="Book Antiqua"><b>NO PURCHASE NECESSARY 
@@ -17,8 +17,8 @@ RULES</b></font></p>
 </ol>
  <br>
 <ol type="1" start="2">
-  <li><font size="3" face="Book Antiqua"><b>SPONSOR:</b> MyJewelryBox.com, 
-  12 Nepco Way, Plattsburgh, NY, 12903 (“Sponsor”). Although the sweepstakes 
+  <li><font size="3" face="Book Antiqua"><b>SPONSOR:</b> Luleka.com 
+  (“Sponsor”). Although the sweepstakes 
   (“Sweepstakes”) is administered through a Facebook interface, Facebook 
   is not affiliated with this promotion and does not endorse or sponsor 
   this promotion in any way.</font></li>
@@ -26,21 +26,22 @@ RULES</b></font></p>
  <br>
 <ol type="1" start="3">
   <li><font size="3" face="Book Antiqua"><b>ADMINISTRATOR: </b>
-  Extole, Inc., 185 Berry St., Lobby 5, Suite 1650, San Francisco, CA 
-  94107 (“Administrator”). </font></li>
+  Luleka.com (“Administrator”). </font></li>
 </ol>
  <br>
 <ol type="1" start="4">
   <li><font size="3" face="Book Antiqua"><b>ELIGIBILITY:</b> 
   This Sweepstakes is open to legal residents in all of the 50 U.S. states, 
-  the District of Columbia and Canada (excluding Quebec) who (1) have 
+  the District of Columbia, Canada (excluding Quebec), 
+  Mexico, Argentina, Chile, Brazil, Uruguay, Colombia, Peru, Bolivia, Ecuador, 
+  Germany, Austria, Switzerland, Luxembourg, Belgium, Netherlands, Lichtenstein, France, Spain, Portugal, Great Britain, Ireland, Poland, 
+  who (1) have 
   a Facebook account, (2) are eighteen (18) years of age or older, and 
   (3) have Internet access. The Sweepstakes is void in Puerto Rico, the 
   U.S. Virgin Islands, U.S. Military installations in foreign countries, 
   all other U.S. territories and possessions and wherever prohibited or 
   restricted by law. The Sweepstakes is subject to all applicable federal, 
-  state and local laws.<b> </b>Employees of MyJewelryBox.com and Extole, 
-  Inc. and their respective parent companies, affiliated companies, subsidiaries 
+  state and local laws.<b> </b>Employees of Luleka.com and their respective parent companies, affiliated companies, subsidiaries 
   and any of their agents, advertising, promotional and other agencies, 
   and the immediate families (parents, siblings, children and spouse) 
   and persons living in the same household (whether related or not) of 
@@ -50,18 +51,16 @@ RULES</b></font></p>
  <br>
 <ol type="1" start="5">
   <li><font size="3" face="Book Antiqua"><b>HOW TO ENTER:</b> 
-  This Sweepstakes begins at 12:00:01 a.m. Pacific Standard Time (&quot;PDT&quot;) 
-  on September 1<sup>st</sup>, 2011, and ends at 11:59:59 p.m. PDT on 
-  September 30<sup>th</sup>, 2011 (the “Sweepstakes Period”), according 
+  This Sweepstakes begins at <%= l(@campaign.start_date, :format => :default) %>, and ends at <%= l(@campaign.end_date, :format => :default) %> (the “Sweepstakes Period”), according 
   to Administrator’s time clock. To enter this Sweepstakes, please access 
-  the sweepstakes application at </font><a href="http://www.facebook.com/MyJewelryBox.com" target="_blank"><font color="#0000FF" size="3" face="Book Antiqua"><u>facebook.com/MyJewelryBox.com</u></font></a><font color="#0000FF" size="3" face="Book Antiqua"><u> </u></font><font size="3" face="Book Antiqua">and 
+  the sweepstakes application at </font><a href="http://www.facebook.com/luleka" target="_blank"><font color="#0000FF" size="3" face="Book Antiqua"><u>facebook.com/luleka</u></font></a><font color="#0000FF" size="3" face="Book Antiqua"><u> </u></font><font size="3" face="Book Antiqua">and 
   complete the entry process. When the Facebook permissions box opens, 
   you must click yes to allow the application to access the information 
-  described on the box.  You may be required to “Like” the MyJewelryBox.com 
+  described on the box.  You may be required to “Like” the Luleka.com 
   Facebook fan page (if you are already a “Liker”, you will not be 
   required to repeat this action).  You may alternately or also be required 
   to, input your name and email address on a separate form page. The order 
-  of these steps may vary. These steps will enter you in the MyJewelryBox.com 
+  of these steps may vary. These steps will enter you in the Luleka.com 
   Sweepstakes. You may also enter through a referral post/message/invitation 
   on Facebook. If your entry (“Entry”) is based on a referral from 
   someone on Facebook, you must enter the Sweepstakes directly through 
@@ -100,7 +99,7 @@ of the Sponsor and will not be acknowledged or returned.</font><font size="2" fa
 <ol type="1" start="6">
   <li><font size="3" face="Book Antiqua"><b>WINNER SELECTION 
   AND NOTIFICATION:</b> Potential winners will be selected in a random 
-  drawing on or about October 1<sup>st</sup>, 2011, by Sponsor or its 
+  drawing on or about <%= l((@campaign.end_date + 3.days).to_date, :format => :short) %>, by Sponsor or its 
   designee, the judge of the Sweepstakes, whose decisions are final and 
   binding on all matters relating to the Sweepstakes (“Potential Winners”). 
   Each Potential Winner will be notified by email using the email address 
@@ -150,8 +149,8 @@ of the Sponsor and will not be acknowledged or returned.</font><font size="2" fa
   <td> </td>
   <td><font size="3" face="Book Antiqua">Approximate Retail Value (“ARV”)</font></td></tr>
 <tr valign="top"><td><font size="3" face="Book Antiqua">First prize</font></td>
-  <td><font size="2" face="Times">1 Carat Three Stone Diamond Ring</font></td>
-  <td><font size="2" face="Times">$3000.00</font></td></tr>
+  <td><font size="2" face="Times">The New iPad</font></td>
+  <td><font size="2" face="Times">$499.00</font></td></tr>
 <tr valign="top"><td><font size="3" face="Book Antiqua">Second prize</font></td>
   <td> </td>
   <td> </td></tr>
@@ -171,7 +170,7 @@ of the Sponsor and will not be acknowledged or returned.</font><font size="2" fa
 </table>
 </div>
  <br>
-<p><font size="3" face="Book Antiqua"><b>R</b></font><font size="2" face="Times"> </font></p>
+<p><font size="3" face="Book Antiqua"></font><font size="2" face="Times"> </font></p>
 <ul><p><font size="3" face="Book Antiqua"><b>Referrer Prizes: one for 
 each Winner who was referred. No referral Prizes are awarded for Winners 
 who were not referred.</b></font> <br></p></ul>
@@ -183,9 +182,8 @@ who were not referred.</b></font> <br></p></ul>
   <td><font size="3" face="Book Antiqua">Approximate Retail Value (“ARV”)</font></td></tr>
 <tr valign="top"><td><font size="2" face="Times">First Place Referral 
   Prize</font></td>
-  <td><font size="2" face="Times">Amethyst Pendant with Diamonds 10K White 
-  Gold</font></td>
-  <td><font size="2" face="Times">$600.00</font></td></tr>
+  <td><font size="2" face="Times">Apple TV</font></td>
+  <td><font size="2" face="Times">$99.00</font></td></tr>
 <tr valign="top"><td><font size="2" face="Times">Second Place Referral 
   Prize</font></td>
   <td> </td>
@@ -206,7 +204,7 @@ who were not referred.</b></font> <br></p></ul>
  <br> <br>
 <ul><p><font size="3" face="Book Antiqua"><b> </b></font></p></ul>
 <ul><p><font size="3" face="Book Antiqua"><b>Total ARV if all Winners 
-come through referral links: $3,600.00</b></font> <br></p></ul>
+come through referral links: $499.00</b></font> <br></p></ul>
 <ol type="1" start="8">
   <li><font size="3" face="Book Antiqua"><b>PRIZE CONDITIONS: </b>
   Selection and specifics of all Prizes will be determined at the Sponsor&#39;s 
@@ -248,8 +246,7 @@ those Winners who are not referred entrants.</font><font size="2" face="Times"> 
   and delivery charges are the sole responsibility of the Winner. All 
   expenses and incidentals and other applicable taxes or charges not specifically 
   mentioned herein are not included and are solely the responsibility 
-  of the Winner. Each Winner may be issued a 1099 tax form for the ARV 
-  of the Prize. </font></li>
+  of the Winner.</font></li>
 </ol>
  <br>
 <ol type="1" start="10">
@@ -257,9 +254,7 @@ those Winners who are not referred entrants.</font><font size="2" face="Times"> 
   By participating in this Sweepstakes and/or by accepting a Prize, participants 
   agree: (a) to be bound by these Official Rules, the decisions of the 
   Sponsor , Administrator and/or their designees, and the Privacy Policies 
-  of MyJewelryBox.com </font><a href="http://www.myjewelrybox.com/?section=privacyPolicy" target="_blank"><font color="#0000FF" size="3" face="Book Antiqua"><u>http://www.myjewelrybox.com/?<WBR>section=privacyPolicy</u></font></a><font size="3" face="Book Antiqua"> and Extole, Inc. (</font><a href="http://sa.tellapal.com/privacy" target="_blank"><font color="#0000FF" size="3" face="Times New
-Roman"><u>http://sa.tellapal.com/<WBR>privacy</u></font></a><font size="3" face="Times New Roman">)</font><font size="3" face="Book Antiqua"> 
-  (b) to release and hold harmless Sponsor and Administrator and their 
+  of Luleka.com (b) to release and hold harmless Sponsor and Administrator and their 
   respective parent companies, affiliates and subsidiaries, together with 
   their respective employees, directors, officers, licensees, licensors, 
   shareholders, attorneys and agents including, without limitation, their 
@@ -278,7 +273,7 @@ Roman"><u>http://sa.tellapal.com/<WBR>privacy</u></font></a><font size="3" face=
   and state of residence, statements, photograph, recordings, and any 
   information available on their Facebook page) for advertising and promotional 
   purposes (including, but not limited to, use on Sponsor&#39;s web site and/or 
-  MyJewelryBox.com’s Facebook page without additional compensation, 
+  Luleka.com’s Facebook page without additional compensation, 
   except where prohibited by law). Sponsor reserves the right to make 
   changes or additions to these Official Rules and/or extend the dates 
   of this Sweepstakes for any reason at any time. Sponsor’s and/or Administrator’s 
@@ -342,14 +337,12 @@ Antiqua"> </font><font size="3" face="Book Antiqua">be
   in the Sweepstakes. This information will be used by Sponsor for the 
   purposes of administering the Sweepstakes and for marketing purposes, 
   but will not be sold or rented to third parties. The personal information 
-  will be collected, processed and used in accordance with MyJewelryBox.com’s 
-  privacy policy which can be found at </font><a href="http://www.myjewelrybox.com/?section=privacyPolicy" target="_blank"><font color="#0000FF" size="3" face="Book Antiqua"><u>http://www.myjewelrybox.com/?<WBR>section=privacyPolicy</u></font></a><font size="3" face="Book Antiqua"> </font><font size="3" face="Times New Roman">and 
-  Extole Inc.’s privacy policy which can be found at </font><a href="http://sa.tellapal.com/privacy" target="_blank"><font color="#0000FF" size="3" face="Times New
-Roman"><u>http://sa.tellapal.com/privacy</u></font></a><font size="3" face="Book Antiqua"><WBR>. In addition, personal information may 
+  will be collected, processed and used in accordance with Luleka.com’s 
+  privacy policy. In addition, personal information may 
   be used by Sponsor or Extole, on Sponsor&#39;s behalf, to contact you after 
   the Sweepstakes is over to provide you with special offers and information 
   about other promotions.   Sponsor and Extole use commercially reasonable 
-  efforts to comply with Federal CAN SPAM laws and state laws regarding 
+  efforts to comply with US Federal CAN SPAM laws and state laws regarding 
   privacy.  You may unsubscribe to these email communications at any time 
   by following the directions contained in the email communication.</font></li>
 </ol>
@@ -412,17 +405,8 @@ Roman"><u>http://sa.tellapal.com/privacy</u></font></a><font size="3" face="Book
   of the laws of any jurisdiction other than those of the State of California. </font></li>
 </ol>
  <br>
-<p><font size="3" face="Book Antiqua"><b>WINNER’S LIST/OFFICIAL RULES:</b> 
-For a list of Winners or a copy of the Official Rules, please send a 
-self-addressed stamped envelope to: </font><font size="3" face="Cambria"> </font><font size="3" face="Book Antiqua">MyJewelryBox.com 1 Carat Three Stone Ring 
-Sweepstakes Winner&#39;s List/Official Rules, c/o Extole, Inc., 185 Berry 
-St, Lobby 5, Suite 1650, San Francisco, CA 94107, to be received no 
-later than December 15th, 2010. Winners’ lists will be sent once all 
-Winners have been verified and Prizes have been awarded.</font><font size="2" face="Times"> </font></p>
-<p><font size="3" face="Book Antiqua">Sponsored by MyJewelryBox.com, 
-12 Nepco Way, Plattsburgh, NY, 12903</font></p>
-<p><font size="3" face="Book Antiqua">© 2010 MyJewelryBox.com and Extole, 
-Inc. All rights reserved.</font></p>
+<p><font size="3" face="Book Antiqua">Sponsored by Luleka.com</font></p>
+<p><font size="3" face="Book Antiqua">© <%= Time.now.year %> Luleka. All rights reserved.</font></p>
 <p><font size="2" face="Times"> </font></p>
 
 

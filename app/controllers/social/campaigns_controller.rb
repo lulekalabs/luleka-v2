@@ -9,6 +9,8 @@ class Social::CampaignsController < Social::SocialApplicationController
   end
   
   def rules
+    @body_id = "rules"
+    I18n.locale = :"en"
   end
 
   protected
