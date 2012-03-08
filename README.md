@@ -71,5 +71,5 @@ http://www.facebook.com/dialog/pagetab?app_id=105771169466526&next=http://localh
 
 * Production
 
-http://www.facebook.com/dialog/pagetab?app_id=105771169466526&next=http://www.luleka.com/social/campaign
+http://www.facebook.com/dialog/pagetab?app_id=196589333699815&next=http://www.luleka.com/social/campaign
 
