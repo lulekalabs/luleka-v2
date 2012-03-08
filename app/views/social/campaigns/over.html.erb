@@ -5,22 +5,22 @@
     <h3 style="display:none;"><a href="/"><%= t("splash.pages.index.message").html_safe %></a></h3>
     <div class="float-unit">
       <div class="leftside">
-        <h4>Reach out.</h4>
+        <h4><%= t(".headline", :raise => true) %></h4>
         <p>
-          The official campaign is over. But if you would like to find out more about us, please pre-register now, like us or tell your friends.
+          <%= t(".explain", :raise => true) %>
         </p>
       </div>
       <div class="rightside">
         <div class="gradient"></div>
         <div class="front-signup">
-          <h3><%= "Want to know when we open?" %></h3>
+          <h3><%= t("splash.pages.index.action").html_safe %></h3>
           <%= form_for @registration || Registration.new, :validate => true, :remote => true do |f| %>
             <div class="holding email">
               <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
               <span class="holder"><%= t "splash.pages.index.form.fields.email.label" %></span>
             </div>
             <%= f.hidden_field :time_zone %>
-            <%= f.submit "Notify Me", :class => "submit button promotional" %>
+            <%= f.submit t("splash.pages.index.form.submit").html_safe, :class => "submit button promotional" %>
           <% end %>
         </div>
         <div class="front-response">

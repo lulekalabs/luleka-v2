@@ -11,8 +11,8 @@ pl:
         teaser: "Łączenie <em>się</em> ze specjalistami z lokalnych."
         action: "Kiedy nadejdzie czas?"
         response: "Dziękujemy za zainteresowanie! Wkrótce usłyszeć od nas."
-        submit: "Wysłać"
         form:
+          submit: "Wysłać"
           fields:
             email:
               label: Adres e-mail dla Twojego konta

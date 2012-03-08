@@ -11,8 +11,8 @@ it:
         teaser: "<em>Collegamento</em> per i professionisti nella tua zona."
         action: "Vuoi saperne di più?"
         response: "Grazie per il vostro interesse! Riceverai una risposta a breve."
-        submit: "Inviare"
         form:
+          submit: "Inviare"
           fields:
             email:
               label: Inserisci la tua e-mail

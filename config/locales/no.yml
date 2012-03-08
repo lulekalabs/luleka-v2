@@ -11,8 +11,8 @@
         teaser: "Koble <em>deg</em> med fagfolk fra lokale."
         action: "Når den tid kommer?"
         response: "Takk for din interesse! Du vil snart høre fra oss."
-        submit: "Send"
         form:
+          submit: "Send"
           fields:
             email:
               label: E-postadressen for kontoen din

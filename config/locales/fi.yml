@@ -11,8 +11,8 @@ fi:
         teaser: "Yhteyden <em>sinua</em> paikallisia ammattilaisia."
         action: "Haluatko tietää, milloin avaamme?"
         response: "Kiitos mielenkiinnostasi! Kuulet takaisin meiltä pian."
-        submit: "Lähettää"
         form:
+          submit: "Lähettää"
           fields:
             email:
               label: Kirjoita sähköpostiosoitteesi

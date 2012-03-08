@@ -1,19 +1,21 @@
 <div id="campaign" class="invite">
   <div class="inner">
     <h1><span><%= t "site.title" %></span></h1>
-    <h2>You are in! Now tell your friends.</h2>
+    <h2><%= t(".headline").html_safe %></h2>
     
     <div class="float-unit">
       <div class="leftside">
         <p>
-          Congratulations, you are pre-registered and you're entered to win a new <em>iPad</em>.
-          Now tell your friends because if your friend who you refer wins, you win a new <em>Apple TV</em>.
+          <%= t(".congrats").html_safe %>
+        </p>
+        <p>
+          <%= t(".tell").html_safe %>
         </p>
         <%= image_tag("fb/ipad-atv-p24.png") %>
       </div>
       <div class="rightside">
         <div class="front-signup">
-          <a class="post promotional button">Share Now</a>
+          <a class="post promotional button"><%= t(".share") %></a>
         </div>
       </div>
     </div>

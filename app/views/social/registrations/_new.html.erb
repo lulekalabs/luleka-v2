@@ -4,35 +4,34 @@
   <h3 style="display:none;"><a href="/"><%= t("splash.pages.index.message").html_safe %></a></h3>
   <div class="float-unit">
     <div class="leftside">
-      <h4>Register and Enter to Win.</h4>
+      <h4><%= t(".call").html_safe %></h4>
       <p>
-        If you are a professional or if you are looking for one, pre-register with us to find out more.
+        <%= t(".explain").html_safe %>
       </p>
       <p>
-        When you enter you get a chance to win the new <em>iPad</em>.
-        Don't forget to tell your friends if they win the grand price you win the new <em>Apple TV</em>.
+        <%= t(".chance").html_safe %>
       </p>
       <%= image_tag("fb/ipad-atv-p24.png") %>
     </div>
     <div class="rightside">
       <div class="gradient"></div>
       <div class="front-signup">
-        <h3><%= "Register to win." %></h3>
+        <h3><%= t(".action") %></h3>
         <%= form_for @registration || Social::Registration.new, :validate => true, :remote => true, :html => {:class => "registration-form"} do |f| %>
           <div class="holding first-name">
             <%= f.text_field :first_name %>
-            <span class="holder"><%= "First Name" %></span>
+            <span class="holder"><%= t(".form.fields.first_name") %></span>
           </div>
           <div class="holding last-name">
             <%= f.text_field :last_name %>
-            <span class="holder"><%= "Last Name" %></span>
+            <span class="holder"><%= t(".form.fields.last_name") %></span>
           </div>
           <div class="holding email">
             <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
-            <span class="holder"><%= t "splash.pages.index.form.fields.email.label" %></span>
+            <span class="holder"><%= t(".form.fields.email") %></span>
           </div>
           <%= f.hidden_field :time_zone %>
-          <%= f.submit "Submit", :class => "submit button promotional" %>
+          <%= f.submit t(".form.submit"), :class => "submit button promotional" %>
         <% end %>
         <% if @registration && @registration.errors.any? %>
         <div class="form-errors">

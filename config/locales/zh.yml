@@ -11,8 +11,8 @@ zh:
         teaser: "連接<em>您</em>本地的專業人士。"
         action: "要知道，當我們打開？"
         response: "感謝您的關注！你會聽到我們回來不久。"
-        submit: "發送"
         form:
+          submit: "發送"
           fields:
             email:
               label: 輸入您的電子郵件

@@ -11,8 +11,8 @@ nl:
         teaser: "Verbind <em>jezelf</em> met professionals uit de lokale."
         action: "Wanneer de tijd komt?"
         response: "Dank u voor uw interesse! U zult snel van ons horen."
-        submit: "Verzenden"
         form:
+          submit: "Verzenden"
           fields:
             email:
               label: E-mailadres van uw account

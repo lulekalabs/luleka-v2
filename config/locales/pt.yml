@@ -11,8 +11,8 @@ pt:
         teaser: "<em>Ligar</em> para os profissionais em sua área."
         action: "Quer saber mais?"
         response: "Obrigado pelo seu interesse! Você receberá uma resposta breve."
-        submit: "Enviar"
         form:
+          submit: "Enviar"
           fields:
             email:
               label: Digite o seu e-mail

@@ -11,8 +11,8 @@ sv:
         teaser: "Anslut <em>dig</em> med yrkesverksamma från lokala."
         action: "När det är dags?"
         response: "Tack för ditt intresse! Du kommer snart att höra av oss."
-        submit: "Sända"
         form:
+          submit: "Sända"
           fields:
             email:
               label: E-postadress för ditt konto

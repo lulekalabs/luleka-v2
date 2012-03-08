@@ -11,8 +11,8 @@ es:
         teaser: "<em>Conectándolo</em> a los profesionales en su región."
         action: "¿Quieres saber más?"
         response: "Gracias por su interés! Usted recibira una respuesta en breve."
-        submit: "Enviar"
         form:
+          submit: "Enviar"
           fields:
             email:
               label: Ingrese su e-mail

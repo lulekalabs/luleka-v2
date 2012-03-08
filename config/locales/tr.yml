@@ -11,8 +11,8 @@ tr:
         teaser: "Yerel profesyoneller ile kendinizi bağlayın."
         action: "Zaman gelir? Zaman"
         response: "İlginiz için teşekkür ederiz! Yakında bizden duyacaksınız."
-        submit: "Göndermek"
         form:
+          submit: "Göndermek"
           fields:
             email:
               label: Hesabınız için e-posta adresi

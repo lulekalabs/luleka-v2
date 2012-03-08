@@ -11,8 +11,8 @@ et:
         teaser: "Ühendamine <em>sa</em> kohalikud spetsialistid."
         action: "Tahan teada, kui me avame?"
         response: "Täname huvi eest! Te kuulete tagasi meile varsti."
-        submit: "Saatma"
         form:
+          submit: "Saatma"
           fields:
             email:
               label: Sisesta oma e-posti

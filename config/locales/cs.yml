@@ -11,8 +11,8 @@ cs:
         teaser: "Připojení <em>vám</em> místními odborníky."
         action: "Chcete vědět, kdy jsme se otevřít?"
         response: "Děkujeme za váš zájem! Uslyšíte od nás v nejbližší době."
-        submit: "Poslat"
         form:
+          submit: "Poslat"
           fields:
             email:
               label: Zadejte svůj e-mail

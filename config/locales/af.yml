@@ -11,8 +11,8 @@ af:
         teaser: "Connecting <em>jy</em> aan die plaaslike professionele mense."
         action: "Wil jy weet wanneer ons oop?"
         response: "Dankie vir jou belangstelling! Jy sal hoor van ons kort."
-        submit: "Stuur"
         form:
+          submit: "Stuur"
           fields:
             email:
               label: Vul jou e-pos
