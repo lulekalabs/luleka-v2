@@ -64,13 +64,13 @@ body#social {
 
 #campaign {
   background: transparent url("/assets/fb/dandelion-fb-p24.png") top left no-repeat;
-  width: 780px;
+  width: 810px;
   height: 700px;
   z-index: 0;
 
   #gate {
     background: transparent url("/assets/fb/like-gate.png") top left no-repeat;
-    width: 780px;
+    width: 810px;
     height: 700px;
     position: absolute;
     top: 0;
@@ -139,13 +139,12 @@ body#social {
   
     .float-unit {
       display: block;
-      height: 265px;
       margin: 50px 0;
     }
   
     .leftside {
       float: left;
-      width: 350px;
+      width: 375px;
     
       h4 {
         font-size: 25px;
@@ -178,7 +177,7 @@ body#social {
       img {
         position: absolute;
         left: 400px;
-        bottom: 90px;
+        bottom: 110px;
         xdisplay: block;
         xmargin: 50px auto;
       }
@@ -218,7 +217,6 @@ body#social {
       }
 
       .front-signup {
-        width: 240px;
         z-index: 2;
         h3 {
           color: #333;
@@ -245,7 +243,7 @@ body#social {
             @include input-rounded-corners(4px);
             margin-bottom: 8px;
             padding: 8px 6px;
-            width: 225px;
+            width: 265px;
             padding: 9px 7px 10px;
           }
 
@@ -309,7 +307,7 @@ body#social {
   border-top: 0px none;
   margin-top: 0;
   padding-top: 5px;
-  width: 780px;
+  width: 810px;
   
   .language {
     em {
