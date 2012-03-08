@@ -14,9 +14,11 @@
   </div><!-- .inline-list -->
   <div class="footer inline-list">
     <ul class="footer-nav">
+      <% if !@campaign.over? && !@campaign.hasnt_started_yet? %>
       <li>
         <%= link_to "Rules", social_campaign_rules_path, :target => "_blank" %><span class="dot">&middot;</span>
       </li>
+      <% end %>
       <li>
         <%= link_to "Go to App", "http://www.luleka.com", :target => "_blank" %>
       </li>

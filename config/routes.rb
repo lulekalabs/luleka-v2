@@ -6,7 +6,7 @@ Nl::Application.routes.draw do
 
   # splash app
   root :to => "splash/pages#index"
-  match "session/change_locale" => "splash/splash_application#change_locale", :method => :post, :as => "change_locale"
+  post "splash/session/change_locale"   => "splash/splash_application#change_locale", :as => "splash_change_locale"
 
   # social app
   get  "/social/campaign"               => "social/campaigns#show", :as => :social_campaign
@@ -18,6 +18,7 @@ Nl::Application.routes.draw do
   post "/social/campaign/events"        => "social/events#create", :as => :social_events
   get  "/social/campaign/over"          => "social/campaigns#over", :as => :social_campaign_over
   get  "/social/campaign/rules"         => "social/campaigns#rules", :as => :social_campaign_rules
+  post "social/session/change_locale"   => "social/splash_application#change_locale", :as => "social_change_locale"
 
   # app
   # match "home" => "pages#index"

@@ -35,5 +35,9 @@ module Social::SocialApplicationHelper
   def body_id
     @body_id || "social"
   end
+  
+  def change_locale_path
+    social_change_locale_path
+  end
 
 end

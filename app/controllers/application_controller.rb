@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   include UrlHelper
   protect_from_forgery
   before_filter :ensure_domain
-  before_filter :set_locale
+  before_filter :set_locale, :except => :change_locale
 
   APP_DOMAIN = 'www.luleka.com'
 
@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = current_locale || request.compatible_language_from(I18n.available_locales)
-    logger.debug "* Current locale set to '#{current_locale}'"
+    logger.debug "* Current locale is '#{current_locale}'"
     logger.debug "* Locale set to '#{I18n.locale}'"
   end
   
@@ -40,19 +40,26 @@ class ApplicationController < ActionController::Base
 
   def current_locale=(new_locale)
     session[locale_param] = new_locale
+    logger.debug "** session['#{locale_param}'] = '#{new_locale}'"
     cookies[cookie_auth_token] = {:value => new_locale, :expires => Time.now + 1.year}
+    logger.debug "** cookies['#{cookie_auth_token}'] = #{{:value => new_locale, :expires => Time.now + 1.year}.inspect}"
     @current_locale = new_locale || false
   end
 
   def locale_from_params
-    params[:locale]
+    if params[:locale] && I18n.active_locale_languages.include?(params[:locale].to_s)
+      logger.debug "** locale_from_params '#{params[:locale]}'"
+      params[:locale]
+    end
   end
 
   def locale_from_session
+    logger.debug "** locale_from_session '#{session[locale_param]}'"
     self.current_locale = session[locale_param] if session[locale_param]
   end
 
   def locale_from_cookie
+    logger.debug "** locale_from_cookie '#{cookies[cookie_auth_token]}'"
     locale = cookies[cookie_auth_token]
     if locale
       cookies[cookie_auth_token] = {
