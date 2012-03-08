@@ -9,6 +9,6 @@ test:
   page_id: "218336978214723"
 
 production:
-  api_key: "297621260250389"
-  secret_key: "9d17cf1755f5bc7b49311b73eb086cac"
+  api_key: "196589333699815"
+  secret_key: "9d1f6437c514f55cb49251fb3b300352"
   page_id: "175465332539759"

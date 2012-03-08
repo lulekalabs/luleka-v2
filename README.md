@@ -65,5 +65,11 @@ heroku accounts:set nl
 
 Adding a Facebook App as a Facebook page tab will require calling this
 
+* Development
+
 http://www.facebook.com/dialog/pagetab?app_id=105771169466526&next=http://localhost:3000/social/campaign
+
+* Production
+
+http://www.facebook.com/dialog/pagetab?app_id=105771169466526&next=http://www.luleka.com/social/campaign
 
