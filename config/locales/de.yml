@@ -30,7 +30,7 @@ de:
   social:
     campaigns:
       show:
-        like_us: Gefällt Mir!
+        like_us: Gefällt mir!
       over:
         headline: Demnächst.
         explain: "Falls Sie Interesse haben mehr über unsere Plattform zu erfahren, reservieren Sie sich jetzt schon ein Plätzchen und empfehlen Sie uns weiter."
@@ -43,8 +43,8 @@ de:
     registrations:
       new:
         call: "Vorregistrieren und Gewinnen."
-        explain: "Wenn Sie einen Profi suchen oder Sie einer sind, reservieren Sie sich gleich ein Plätzchen und erfahren dann mehr über unser Vorhaben."
-        chance: "Gleichzeitig nehmen Sie an unserer Aktion teil das brandneue <em>iPad</em> zu gewinnen. Vergessen Sie nicht uns Ihren Freunden weiterzuempfehen, denn wenn einer Ihrer Freunde gewinnt, erhalten Sie automatisch den neuen <em>Apple TV</em>."
+        explain: "Wenn Sie einen Profi suchen oder Sie einer sind, reservieren Sie sich gleich ein Plätzchen und erfahren dann mehr über unsere Plattform."
+        chance: "Gleichzeitig nehmen Sie an unserer Aktion teil das brandneue <em>iPad</em> zu gewinnen. Vergessen Sie nicht uns Ihren Freunden weiterzuempfehlen, denn wenn einer Ihrer Freunde gewinnt, erhalten Sie automatisch den neuen <em>Apple TV</em>."
         action: "Jetzt Teilnehmen und Gewinnen."
         form:
           submit: Teilnehmen
