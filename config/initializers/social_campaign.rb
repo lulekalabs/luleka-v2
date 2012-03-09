@@ -12,8 +12,8 @@ if Rails.env.production?
     :require_unique_email    => true,
     :require_unique_uid      => true,
     :permissions             => "user_likes",
-    :start_date              => 100.days.from_now,
-    :end_date                => 190.days.from_now,
+    :start_date              => 1.second.ago,
+    :end_date                => 90.days.from_now,
     :api_key                 => facebook_config["api_key"],
     :secret_key              => facebook_config["secret_key"],
     :page_id                 => facebook_config["page_id"]
