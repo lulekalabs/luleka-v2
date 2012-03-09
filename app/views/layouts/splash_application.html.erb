@@ -16,7 +16,6 @@
     <%= stylesheet_link_tag    "splash/splash_application" %>
     <%= javascript_include_tag "splash/splash_application" %>
     <%= csrf_meta_tag %>
-    <%= ga_async_javascript_tag("UA-9091575-5") %>
     <%= yield :head %>
 
     <!-- Le fav and touch icons -->
@@ -56,5 +55,6 @@
         </div><!-- #front-container -->
       </div><!-- #main -->
     </div><!-- #wrapper -->
+    <%= render "shared/tracking", :id => "UA-9091575-5" if Rails.env.production? -%>
   </body>
 </html>
