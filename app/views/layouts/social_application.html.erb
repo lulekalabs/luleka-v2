@@ -12,10 +12,6 @@
   var context  = <%= session_data[:context].camelize.to_json.html_safe %>;
   var campaign = <%= session_data[:campaign].camelize.to_json.html_safe %>;
   $(function() {SocialBuilder.init();});
-  <% if !inside_facebook? && Rails.env.production? -%>
-    window.location = '<%= root_path %>';
-  <% end %>
-  
   window.insideFacebook = function() {
     return <%= inside_facebook? ? 'true' : 'false' %>;
   }
