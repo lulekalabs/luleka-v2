@@ -1,7 +1,6 @@
 class Social::SocialApplicationController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :change_locale
   before_filter :set_p3p_headers
-  before_filter :ensure_inside_facebook
   before_filter :find_campaign
   before_filter :ensure_rules, :except => [:over, :create]
 
@@ -29,13 +28,6 @@ class Social::SocialApplicationController < ApplicationController
     campaign_session.process_signed_request
   end
   
-  def ensure_inside_facebook
-    if !inside_facebook? && Rails.env.production?
-      redirect_to root_path, :status => :moved_permanently
-      return
-    end
-  end
-
   def ensure_rules
     if @campaign.over? || @campaign.hasnt_started_yet?
       redirect_to social_campaign_over_path
