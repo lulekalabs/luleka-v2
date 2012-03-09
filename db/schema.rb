@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120301143145) do
+ActiveRecord::Schema.define(:version => 20120309204644) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20120301143145) do
   add_index "registrations", ["email"], :name => "index_registrations_on_email", :unique => true
   add_index "registrations", ["referrer_uid"], :name => "index_registrations_on_referrer_uid"
   add_index "registrations", ["type"], :name => "index_registrations_on_type"
-  add_index "registrations", ["uid"], :name => "index_registrations_on_uid", :unique => true
+  add_index "registrations", ["uid"], :name => "index_registrations_on_uid"
 
   create_table "social_event_codes", :force => true do |t|
     t.string "name",  :limit => 50, :null => false

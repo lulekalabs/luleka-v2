@@ -6,6 +6,7 @@ module Social
     validates :first_name, :presence => true, :length => { :minimum => 2 }
     validates :last_name,  :presence => true, :length => { :minimum => 2 }
     validates :email,      :presence => true, :format => { :with => /\A.+@.+\..+\z/ }
+    validates :uid,        :uniqueness => true
     validates_acceptance_of :terms
 
     after_create :create_registration_tracking_event
