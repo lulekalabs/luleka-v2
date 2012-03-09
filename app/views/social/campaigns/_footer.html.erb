@@ -1,6 +1,7 @@
 <div class="bottompart">
   <div class="mobile-complete">
-    <%= (I18n.t("layouts.social_application.powered_by") % link_to("BVision", "http://bvision.com", :target => "_blank")).html_safe %>
+    <%= (I18n.t("layouts.social_application.powered_by") % link_to("luleka.com", "http://www.luleka.com", :target => "_blank")).html_safe %>
+    <%#= (I18n.t("layouts.social_application.powered_by") % link_to("BVision", "http://bvision.com", :target => "_blank")).html_safe %>
   </div>
   <!-- locale -->
   <div class="language inline-list">
@@ -18,11 +19,9 @@
       <li>
         <%= link_to "Rules", social_campaign_rules_path, :target => "_blank" %><span class="dot">&middot;</span>
       </li>
+      &nbsp;
       <% end %>
-      <li>
-        <%= link_to "Go to App", "http://www.luleka.com", :target => "_blank" %>
-      </li>
-      &nbsp;&nbsp;<li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span></li>
+      <li><span class="copyright">&copy; <%= Time.now.year %>&nbsp;<%= t("site.title") %></span></li>
     </ul>
   </div>
 </div>

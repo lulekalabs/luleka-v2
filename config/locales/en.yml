@@ -19,6 +19,8 @@ en:
   
   social:
     campaigns:
+      show:
+        like_us: Like Us!
       over:
         headline: Coming Soon.
         explain: "If you would like to find out more about us, please pre-register now, like us or tell your friends."

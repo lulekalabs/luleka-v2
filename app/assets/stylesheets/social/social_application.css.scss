@@ -34,8 +34,8 @@ body#social {
 
 #wrapper {
   margin: auto;
-  xmin-width: 520px;
-  xmax-width: 760px;
+  min-width: 810px;
+  max-width: 810px;
 }
 
 #footer {
@@ -76,6 +76,15 @@ body#social {
     top: 0;
     left: 0;
     z-index: 10000;
+    
+    p {
+      margin-top: 100px;
+      z-index: 10001;
+      color: white;
+      font-size: 110px;
+      font-weight: bold;
+      text-align: center;
+    }
   }
   
   .like-button-wrapper, .follow-button-wrapper {
@@ -177,9 +186,7 @@ body#social {
       img {
         position: absolute;
         left: 400px;
-        bottom: 110px;
-        xdisplay: block;
-        xmargin: 50px auto;
+        bottom: 0px;
       }
 
     }
@@ -195,10 +202,10 @@ body#social {
       div.gradient {
         background-image: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 180, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
         position: absolute;
-        left: -250px;
+        left: -50px;
         top: -200px;
         height: 617px;
-        width: 750px;
+        width: 370px;
         z-index: -1;
       }
 
