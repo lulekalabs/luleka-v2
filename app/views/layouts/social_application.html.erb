@@ -12,6 +12,10 @@
   var context  = <%= session_data[:context].camelize.to_json.html_safe %>;
   var campaign = <%= session_data[:campaign].camelize.to_json.html_safe %>;
   $(function() {SocialBuilder.init();});
+  <% if !inside_facebook? && Rails.env.production? -%>
+    window.location = '<%= root_path %>';
+  <% end %>
+  
   window.insideFacebook = function() {
     return <%= inside_facebook? ? 'true' : 'false' %>;
   }
@@ -21,7 +25,7 @@
   }
   // Do things that will sometimes call sizeChangeCallback()
   function sizeChangeCallback() {
-    FB.Canvas.setSize({width: 520, height: 800});
+    FB.Canvas.setSize({width: 810, height: 700});
   }
   </script>
   <% end %>
