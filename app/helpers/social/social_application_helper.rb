@@ -25,6 +25,7 @@ module Social::SocialApplicationHelper
   end
 
   def inside_facebook?
+    logger.debug "** inside facebook? #{params[:signed_request].present?}"
     params[:signed_request].present?
   end
 

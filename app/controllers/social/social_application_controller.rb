@@ -30,7 +30,7 @@ class Social::SocialApplicationController < ApplicationController
   end
   
   def ensure_inside_facebook
-    if false #!inside_facebook? && Rails.env.production?
+    if !inside_facebook? && Rails.env.production?
       redirect_to root_path, :status => :moved_permanently
       return
     end
