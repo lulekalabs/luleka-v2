@@ -5,7 +5,7 @@ FormWrapper = function(css) {
 
   this.setUpForm = function() {
     this.form.attr("accept-charset", "utf-8");
-    this.form.append('<input type="hidden" id="user_data">');
+    this.form.append('<input type="hidden" id="user_data" name="social_registration[user_data]">');
 
     if (this.form.find("p.status").length === 0) {
       this.form.prepend("<p class='status error'>");

@@ -1,7 +1,7 @@
 module Social
   class Registration < ::Registration
   
-    attr_accessible :first_name, :last_name, :user_data, :ip_address
+    attr_accessible :first_name, :last_name, :user_data, :ip_address, :time_zone
     
     validates :first_name, :presence => true, :length => { :minimum => 2 }
     validates :last_name,  :presence => true, :length => { :minimum => 2 }

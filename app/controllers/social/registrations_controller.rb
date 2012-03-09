@@ -5,6 +5,7 @@ class Social::RegistrationsController < Social::SocialApplicationController
   end
 
   def create
+    p "** params #{params.inspect}"
     @registration = Social::Registration.new(params[:social_registration]) do |r|
       r.ip_address   = request.remote_ip
       r.referrer_uid = @campaign.session.referrer

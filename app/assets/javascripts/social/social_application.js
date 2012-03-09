@@ -34,7 +34,7 @@ $(document).bind("form-loaded", function(event) {
   });
 
   /* Set browser time zone */
-  $("form input[name='registration[time_zone]']").val(jstz.determine_timezone().name());
+  $("form input[name='social_registration[time_zone]']").val(jstz.determine_timezone().name());
 });
 
 $(function() {

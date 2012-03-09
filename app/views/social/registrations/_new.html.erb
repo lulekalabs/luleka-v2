@@ -17,7 +17,7 @@
       <div class="gradient"></div>
       <div class="front-signup">
         <h3><%= t(".action") %></h3>
-        <%= form_for @registration || Social::Registration.new, :validate => true, :remote => true, :html => {:class => "registration-form"} do |f| %>
+        <%= form_for @registration || Social::Registration.new, :validate => true, :html => {:class => "registration-form"} do |f| %>
           <div class="holding first-name">
             <%= f.text_field :first_name %>
             <span class="holder"><%= t(".form.fields.first_name") %></span>
