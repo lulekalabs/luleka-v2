@@ -4,10 +4,10 @@ facebook_config = YAML.load(File.read(path))[Rails.env]
 Social::Campaign.create! \
   :uuid                    => "f7daf30c-8bc0-42a5-8125-f31665d755a4",
   :client_name             => "Luleka",
-  :name                    => 'Pre-registration Sweepstakes',
-  :recomendation_image_url => "http://placekitten.com/g/50/50",
+  :name                    => 'Sweepstakes',
+  :recomendation_image_url => "http://www.luleka.com/assets/fb/sweepstakes-50x50.png",
   :recommendation_body     => "Enter our sweepstakes and you could win the new iPad or the new Apple TV!",
-  :recommendation_title    => "Enter to win the new iPad or Apple TV!",
+  :recommendation_title    => "You could win the new iPad or Apple TV!",
   :require_unique_email    => true,
   :require_unique_uid      => true,
   :permissions             => "user_likes",

@@ -29,9 +29,11 @@ de:
 
   social:
     campaigns:
+      show:
+        like_us: Gefällt Mir!
       over:
         headline: Demnächst.
-        explain: "Falls Sie Interesse haben mehr über unsere Platform zu erfahren, reservieren Sie sich jetzt schon ein Plätzchen oder empfehlen Sie uns weiter."
+        explain: "Falls Sie Interesse haben mehr über unsere Plattform zu erfahren, reservieren Sie sich jetzt schon ein Plätzchen oder empfehlen Sie uns weiter."
     invitations:
       new:
         headline: Geschafft! Empfehlen Sie uns weiter.
