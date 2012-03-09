@@ -17,7 +17,7 @@
     <ul class="footer-nav">
       <% if !@campaign.over? && !@campaign.hasnt_started_yet? %>
       <li>
-        <%= link_to "Rules", social_campaign_rules_path, :target => "_blank" %><span class="dot">&middot;</span>
+        <%= link_to t("layouts.social_application.rules", :raise => true), social_campaign_rules_path, :target => "_blank" %><span class="dot">&middot;</span>
       </li>
       &nbsp;
       <% end %>

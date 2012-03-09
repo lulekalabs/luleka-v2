@@ -16,12 +16,41 @@ es:
           fields:
             email:
               label: Ingrese su e-mail
+
+  social:
+     campaigns:
+       show:
+         like_us: Me Gusta!
+       over:
+         headline: Próximamente.
+         explain: "Si quieres recibir información de nosotros, participa de la pre-registración y recomiéndanos."
+     invitations:
+       new:
+         headline: Ya estás participando! Recomiéndanos.
+         congrats: "Felicitaciones, ya estás pre-registrado y participas por un <em>iPad</em> nuevo."
+         tell: "Ahora recomiéndanos con tus amigos, ya que si ellos ganan, tu también obtienes un <em>Apple TV</em> nuevo."
+         share: "Compartir"
+     registrations:
+       new:
+         call: "Pre-regístrate y participa del sorteo."
+         explain: "Si eres profesional o si buscas uno, pre-regístrate para recibir mayor información."
+         chance: "Cuando ingresas tienes chances de ganar un <em>iPad</em> nuevo. No olvides de recomendarnos con tus amigos ya que si ellos ganan, tu recibes un nuevo <em>Apple TV</em>."
+         action: "Pre-regístrate para ganar."
+         form:
+           submit: Ingresar
+           fields:
+             first_name: "Nombre"
+             last_name: "Apellido"
+             email: "Tu Email"
       
   layouts:
     splash_application:
       languages: Idiomas
       follow_us: "Seguinos en %{facebook} o %{twitter}"
-  
+    social_application:
+      rules: Reglas
+      powered_by: "Powered by %s"
+    
   errors:
       messages:
         email_format: "dirección incorrecta"

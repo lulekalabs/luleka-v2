@@ -48,6 +48,7 @@ en:
       languages: Languages
       follow_us: "Follow us on %{facebook} or %{twitter}"
     social_application:
+      rules: Rules
       powered_by: "Powered by %s"
   
   errors:

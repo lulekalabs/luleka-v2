@@ -13,8 +13,6 @@ html {
   font-size: 100%; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
-  xoverflow: hidden;
-  xwidth: 720px;
 }
 
 body {
@@ -127,6 +125,7 @@ body#social {
 
     h3 a {
       -webkit-transition: text-shadow 0.4s ease-in-out;
+      -moz-transition: text-shadow 0.4s ease-in-out;
       color: #006f79;
       outline: none;
       text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
@@ -139,7 +138,8 @@ body#social {
     }
   
     a.post {
-      x-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
       float: right;
       height: 35px;
       padding: 16px 16px 0 16px;
@@ -163,6 +163,7 @@ body#social {
 
       h4 {
         -webkit-transition: text-shadow 0.4s ease-in-out;
+        -moz-transition: text-shadow 0.4s ease-in-out;
         color: #006f79;
         outline: none;
         text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
@@ -201,6 +202,7 @@ body#social {
 
       div.gradient {
         background-image: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 180, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
+        background-image: -moz-radial-gradient(50% 50%, circle, from(rgba(143, 181, 200, .8)), to(rgba(143, 181, 200, 0)));
         position: absolute;
         left: -50px;
         top: -200px;
@@ -274,6 +276,8 @@ body#social {
           .holding input {
             -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
             -webkit-transition: opacity 1s;
+            -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 2px inset;
+            -moz-transition: opacity 1s;
             background-color: white;
             border: none !important;
             color: #567792;
@@ -282,6 +286,7 @@ body#social {
 
           .holding:hover input {
             -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0px, rgba(0, 0, 0, 0.3) 0px 1px 2px inset;
+            -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0px, rgba(0, 0, 0, 0.3) 0px 1px 2px inset;
             opacity: 0.9;
           }
 
@@ -296,6 +301,7 @@ body#social {
 
         .submit {
           -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
+          -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
           float: right;
           height: 35px;
           padding-left: 16px;
@@ -332,6 +338,7 @@ body#social {
 
   .inline-list {
     -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
     font-size: 12px;
   }
 
