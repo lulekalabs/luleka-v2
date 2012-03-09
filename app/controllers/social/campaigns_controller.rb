@@ -16,7 +16,9 @@ class Social::CampaignsController < Social::SocialApplicationController
   protected
 
   def like_gate
-    if inside_facebook? && @campaign.session.liked?
+    if !inside_facebook? && Rails.env.production?
+      redirect_to social_campaign_over_path
+    elsif inside_facebook? && @campaign.session.liked?
       redirect_to new_social_registration_path
     end
   end
