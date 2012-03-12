@@ -16,8 +16,14 @@
     return <%= inside_facebook? ? 'true' : 'false' %>;
   }
   
+  <% if Rails.env.production? %>
+  if (window.location == top.location) {
+    top.location = '<%= root_url %>';
+  }
+  <% end %>
+  
   window.fbAsyncInit = function() {
-  FB.Canvas.setAutoGrow();
+    FB.Canvas.setAutoGrow();
   }
   // Do things that will sometimes call sizeChangeCallback()
   function sizeChangeCallback() {

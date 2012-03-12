@@ -25,8 +25,8 @@ module Social::SocialApplicationHelper
   end
 
   def inside_facebook?
-    logger.debug "** inside facebook? #{params[:signed_request].present?}"
-    params[:signed_request].present?
+    logger.debug "* Signed request '#{@campaign.session.signed_request}'"
+    @campaign.session.signed_request?
   end
 
   def inside_standalone_app?

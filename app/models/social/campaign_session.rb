@@ -3,7 +3,7 @@ require "koala"
 module Social
   class CampaignSession
     extend Ambry::Model
-    field :id, :campaign_id, :liked, :page_id, :referrer, :registration_id
+    field :id, :campaign_id, :liked, :page_id, :referrer, :registration_id, :signed_request
 
     attr_accessor :request
 
@@ -42,9 +42,14 @@ module Social
       return unless data = request.params["signed_request"]
       parsed = fbclient.parse_signed_request data
       return unless parsed["page"]
+      self.signed_request ||= data
       self.page_id = parsed["page"]["id"]
       self.liked = parsed["page"]["liked"]
       save
+    end
+    
+    def signed_request?
+      !!signed_request
     end
 
     private
