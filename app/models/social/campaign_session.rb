@@ -3,10 +3,23 @@ require "koala"
 module Social
   class CampaignSession
     extend Ambry::Model
-    # use :cookie
-    field :campaign_id, :liked, :page_id, :referrer, :registration_id
+    field :id, :campaign_id, :liked, :page_id, :referrer, :registration_id
 
     attr_accessor :request
+
+    def self.find_or_create_by_id(id, &block)
+      session = nil
+      begin
+        session = CampaignSession.get id
+      rescue Ambry::NotFoundError
+        session = CampaignSession.create id: id
+      end
+      if block_given?
+        yield session
+        session.save
+      end
+      session
+    end
 
     def campaign
       @campaign ||= Campaign.get campaign_id

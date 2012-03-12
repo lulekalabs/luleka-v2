@@ -6,6 +6,8 @@ module Social
     extend Ambry::Model
     extend Ambry::ActiveModel
 
+    attr_accessor :session
+    
     field :uuid,
       :api_key,
       :client_name,
@@ -47,17 +49,13 @@ module Social
       }
     end
 
+=begin
     def session
       CampaignSession.get to_param
     rescue Ambry::NotFoundError
       CampaignSession.create campaign_id: to_param
     end
-
-    def videos
-      scoped = Video.scoped
-      scoped = scoped.where("videos.campaign_id = ?", self.uuid)
-      scoped
-    end
+=end
 
     def over?
       Time.zone.now > end_date

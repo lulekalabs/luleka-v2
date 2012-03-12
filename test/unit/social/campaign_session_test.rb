@@ -7,7 +7,8 @@ module Social
     def setup
       Ambry.remove_adapter :cookie
       Ambry::Adapter.new :name => :cookie
-      @campaign_session = Campaign.first.session
+      @campaign = Campaign.first
+      @campaign_session = CampaignSession.create campaign_id: @campaign.to_param
       @campaign_session.request = OpenStruct.new({
         :remote_ip => "127.0.0.1",
         :params => {
@@ -39,6 +40,21 @@ module Social
         @campaign_session.update liked: true
       end
     end
-  
+    
+    should "find or create by id" do
+      session = CampaignSession.find_or_create_by_id("f7daf30c-8bc0-42a5-8125-f31665d755a4") do |session|
+        session.campaign_id = @campaign.to_param
+      end
+      assert_equal "f7daf30c-8bc0-42a5-8125-f31665d755a4", session.id
+      assert_equal @campaign.to_param, session.campaign_id
+      assert_equal @campaign, session.campaign
+
+      session = CampaignSession.find_or_create_by_id("f7daf30c-8bc0-42a5-8125-f31665d755a4")
+      assert_equal "f7daf30c-8bc0-42a5-8125-f31665d755a4", session.id
+      
+      session = CampaignSession.get "f7daf30c-8bc0-42a5-8125-f31665d755a4"
+      assert_equal @campaign.to_param, session.campaign_id
+    end
+    
   end
 end

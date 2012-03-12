@@ -23,9 +23,14 @@ class Social::SocialApplicationController < ApplicationController
   
   def find_campaign
     @campaign = Social::Campaign.first
-    campaign_session = @campaign.session
-    campaign_session.request = request
-    campaign_session.process_signed_request
+    unless !!current_session
+      self.current_session = Social::CampaignSession.find_or_create_by_id(session[:session_id]) do |session|
+        session.campaign_id = @campaign.to_param 
+      end
+    end
+    @campaign.session = current_session
+    @campaign.session.request = request
+    @campaign.session.process_signed_request
   end
   
   def ensure_rules
@@ -41,6 +46,49 @@ class Social::SocialApplicationController < ApplicationController
   
   def locale_param
     :locale
+  end
+  
+  def current_session
+    @current_session ||= (session_from_session || session_from_cookie) unless @current_session == false
+  end
+  helper_method :current_session
+
+  def current_session=(new_session)
+    session[session_param] = new_session ? new_session.id : nil
+    cookies[cookie_auth_token] = {:value => new_session ? new_session.id : nil, :expires => Time.now + 1.year}
+    @current_session = new_session || false
+  end
+
+  def session_from_session
+    self.current_session = begin
+      CampaignSession.get(session[session_param]) if session[session_param]
+    rescue Ambry::NotFoundError
+      nil
+    end
+  end
+
+  def session_from_cookie
+    session = begin
+      cookies[cookie_auth_token] && CampaignSession.get(cookies[cookie_auth_token])
+    rescue Ambry::NotFoundError
+      nil
+    end
+    if session
+      cookies[cookie_auth_token] = {
+        :value => session.session_id,
+        :expires => Time.now + 1.year
+        # :domain => "domain.com"
+      }
+      self.current_session = session
+    end
+  end
+  
+  def session_param
+    :canonical_session
+  end
+  
+  def cookie_auth_token
+    "#{session_param}_auth_token".to_sym
   end
   
 end

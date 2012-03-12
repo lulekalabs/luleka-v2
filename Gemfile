@@ -37,4 +37,4 @@ gem "geocoder"
 
 gem "koala", "~> 1.1.0"
 gem "uuidtools", "~> 2.1.2"
-gem "ambry"#, "~> 0.2.3"
+gem "ambry"
