@@ -9,7 +9,7 @@ class Social::SocialApplicationController < ApplicationController
 
   def change_locale
     self.current_locale = params[:locale].to_sym if params[:locale]
-    logger.debug "* Current locale set to '#{current_locale}'"
+    logger.debug "* current_locale changed to '#{current_locale}'"
     redirect_to params[:redirect] || "/"
     return
   end
