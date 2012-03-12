@@ -1,5 +1,6 @@
 class Social::SocialApplicationController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :change_locale
+  skip_before_filter :ensure_domain
   before_filter :set_p3p_headers
   before_filter :find_campaign
   before_filter :ensure_rules, :except => [:over, :create]
