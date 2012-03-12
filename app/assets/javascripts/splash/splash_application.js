@@ -15,9 +15,14 @@ $(function() {
   window.scrollTo(0, 1);
 
   /* Taking care of inline text input labels */
+  $(".holding input").each(function(index, input) {
+    if($(input).val().length != 0) {
+      $(this).closest(".holding").find(".holder").hide();
+    }
+  });
   $(".holding input").focus(function(event) {
     if($(this).val().length == 0) {
-      $(this).closest(".holding").find(".holder").fadeOut(25)
+      $(this).closest(".holding").find(".holder").fadeOut(25);
     }
   }).blur(function(event) {
     if($(this).val().length == 0) {

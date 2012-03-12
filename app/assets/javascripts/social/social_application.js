@@ -17,9 +17,14 @@
 
 $(document).bind("form-loaded", function(event) {
   /* Taking care of inline text input labels */
+  $(".holding input").each(function(index, input) {
+    if($(input).val().length != 0) {
+      $(this).closest(".holding").find(".holder").hide();
+    }
+  });
   $(".holding input").focus(function(event) {
     if($(this).val().length == 0) {
-      $(this).closest(".holding").find(".holder").fadeOut(25)
+      $(this).closest(".holding").find(".holder").fadeOut(25);
     }
   }).blur(function(event) {
     if($(this).val().length == 0) {
@@ -32,7 +37,6 @@ $(document).bind("form-loaded", function(event) {
       $(this).parent(".holding").find("input").focus();
     }
   });
-
   /* Set browser time zone */
   $("form input[name='social_registration[time_zone]']").val(jstz.determine_timezone().name());
 });
