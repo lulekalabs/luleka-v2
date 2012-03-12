@@ -22,11 +22,10 @@ class Social::SocialApplicationController < ApplicationController
   def set_locale
     I18n.locale = current_locale || I18n.locale_language(@campaign.session.locale.to_s) || 
       request.compatible_language_from(I18n.available_locales)
-      
-    puts "********************** current_locale '#{current_locale}'"
-    puts "********************** session.locale '#{@campaign.session.locale}'"
-    puts "********************** request.languages '#{request.compatible_language_from(I18n.available_locales).inspect}'"
-    puts "********************** I18n.locale '#{I18n.locale}'"
+    logger.debug "********************** current_locale '#{current_locale}'"
+    logger.debug "********************** session.locale '#{@campaign.session.locale}'"
+    logger.debug "********************** request.languages '#{request.compatible_language_from(I18n.available_locales).inspect}'"
+    logger.debug "********************** I18n.locale '#{I18n.locale}'"
   end
   
   def set_p3p_headers
