@@ -62,7 +62,7 @@ class Social::SocialApplicationController < ApplicationController
 
   def session_from_session
     self.current_session = begin
-      CampaignSession.get(session[session_param]) if session[session_param]
+      Social::CampaignSession.get(session[session_param]) if session[session_param]
     rescue Ambry::NotFoundError
       nil
     end
@@ -70,7 +70,7 @@ class Social::SocialApplicationController < ApplicationController
 
   def session_from_cookie
     session = begin
-      cookies[cookie_auth_token] && CampaignSession.get(cookies[cookie_auth_token])
+      cookies[cookie_auth_token] && Social::CampaignSession.get(cookies[cookie_auth_token])
     rescue Ambry::NotFoundError
       nil
     end
