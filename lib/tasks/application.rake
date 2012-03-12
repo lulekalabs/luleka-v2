@@ -18,3 +18,9 @@ namespace :test do
   Rake::Task['test:fast'].comment = "Run all tests together"
 
 end
+
+namespace :sessions do
+  task :destroy => :environment do
+    Social::CampaignSession.all.each {|session| session.destroy}
+  end
+end
