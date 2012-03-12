@@ -1,8 +1,8 @@
 class Social::SocialApplicationController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :change_locale
   skip_before_filter :ensure_domain
-  before_filter :set_p3p_headers
-  before_filter :find_campaign
+  prepend_before_filter :set_p3p_headers
+  prepend_before_filter :find_campaign
   before_filter :ensure_rules, :except => [:over, :create]
 
   layout "social_application"
@@ -17,6 +17,17 @@ class Social::SocialApplicationController < ApplicationController
   protected
   
   include Social::SocialApplicationHelper
+  
+  # Override from ApplicationController
+  def set_locale
+    I18n.locale = current_locale || I18n.locale_language(@campaign.session.locale.to_s) || 
+      request.compatible_language_from(I18n.available_locales)
+      
+    puts "********************** current_locale '#{current_locale}'"
+    puts "********************** session.locale '#{@campaign.session.locale}'"
+    puts "********************** request.languages '#{request.compatible_language_from(I18n.available_locales).inspect}'"
+    puts "********************** I18n.locale '#{I18n.locale}'"
+  end
   
   def set_p3p_headers
     response.headers["P3P"] = 'CP="HONK"'
@@ -43,10 +54,6 @@ class Social::SocialApplicationController < ApplicationController
 
   def active_locale_languages
     [:en, :es, :de]
-  end
-  
-  def locale_param
-    :locale
   end
   
   def current_session

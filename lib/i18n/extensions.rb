@@ -41,8 +41,8 @@ module I18n
       #   :en        I18n.locale_language -> :en
       #   :"it-IT"   I18n.locale_language -> :it
       #
-      def locale_language(locale=nil)
-        "#{locale || I18n.locale}"[0, 2].to_sym
+      def locale_language(locale = nil)
+        (locale || I18n.locale).to_s.match(/^(\w{2})/) ? $1.to_sym : nil
       end
 
       # Returns the country specific portion of locale as code symbol
@@ -52,9 +52,10 @@ module I18n
       #   :de-DE     I18n.locale_country_code  -> :DE
       #   :en        I18n.locale_country_code  -> nil
       #   :"it-IT"   I18n.locale_country_code -> :IT
+      #   "de_DE"   I18n.locale_country_code -> :DE
       #
-      def locale_country(locale=nil)
-        "#{locale || I18n.locale}".match(/-([a-zA-Z]{2})/) ? $1.to_sym : nil
+      def locale_country(locale = nil)
+        (locale || I18n.locale).to_s.match(/[_-](\w{2})$/) ? $1.to_sym : nil
       end
       
       def active_locales

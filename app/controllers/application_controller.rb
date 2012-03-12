@@ -29,8 +29,8 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = current_locale || request.compatible_language_from(I18n.available_locales)
-    logger.debug "* Current locale is '#{current_locale}'"
-    logger.debug "* Locale set to '#{I18n.locale}'"
+    logger.debug "* current_locale '#{current_locale}'"
+    logger.debug "* I18n.locale set to '#{I18n.locale}'"
   end
   
   def current_locale
@@ -40,9 +40,9 @@ class ApplicationController < ActionController::Base
 
   def current_locale=(new_locale)
     session[locale_param] = new_locale
-    logger.debug "** session['#{locale_param}'] = '#{new_locale}'"
+    logger.debug "** current_locale= session['#{locale_param}'] = '#{new_locale}'"
     cookies[cookie_auth_token] = {:value => new_locale, :expires => Time.now + 1.year}
-    logger.debug "** cookies['#{cookie_auth_token}'] = #{{:value => new_locale, :expires => Time.now + 1.year}.inspect}"
+    logger.debug "** current_locale= cookies['#{cookie_auth_token}'] = #{{:value => new_locale, :expires => Time.now + 1.year}.inspect}"
     @current_locale = new_locale || false
   end
 
@@ -54,25 +54,29 @@ class ApplicationController < ActionController::Base
   end
 
   def locale_from_session
-    logger.debug "** locale_from_session '#{session[locale_param]}'"
+    logger.debug "** locale_param '#{locale_param}'"
+    logger.debug "** locale_from_session '#{session[locale_param].inspect}'"
     self.current_locale = session[locale_param] if session[locale_param]
   end
 
   def locale_from_cookie
-    logger.debug "** locale_from_cookie '#{cookies[cookie_auth_token]}'"
-    locale = cookies[cookie_auth_token]
-    if locale
-      cookies[cookie_auth_token] = {
+    logger.debug "** cookie_auth_token '#{cookie_auth_token}'"
+    token = cookies[cookie_auth_token]
+    if token
+      locale = cookies[cookie_auth_token] = {
         :value => locale,
         :expires => Time.now + 1.year
         # :domain => "domain.com"
       }
-      self.current_locale = locale
+      logger.debug "** locale_from_cookie '#{locale[:value].inspect}'"
+      self.current_locale = locale[:value]
+    else
+      nil
     end
   end
   
   def locale_param
-    :locale
+    :canonical_locale
   end
   
   def cookie_auth_token
