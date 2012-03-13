@@ -2,7 +2,8 @@ class Splash::RegistrationsController < Splash::SplashApplicationController
   
   def create
     @registration = Registration.instance_for(params[:registration], 
-      request.location ? request.location.data : {}, {
+      request.location.data, 
+      {
         :locale     => I18n.locale,
         :ip_address => request.remote_ip
       })

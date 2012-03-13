@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120313173407) do
+ActiveRecord::Schema.define(:version => 20120313190502) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -61,13 +61,13 @@ ActiveRecord::Schema.define(:version => 20120313173407) do
     t.string   "city"
     t.string   "postal_code"
     t.string   "region_code"
-    t.string   "metrocode"
     t.string   "type"
     t.string   "uid"
     t.string   "referrer_uid"
     t.boolean  "opt_in",                                                   :default => false, :null => false
     t.text     "fields"
     t.text     "user_data"
+    t.string   "region_name"
   end
 
   add_index "registrations", ["email"], :name => "index_registrations_on_email", :unique => true

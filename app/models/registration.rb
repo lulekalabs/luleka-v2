@@ -20,19 +20,20 @@ class Registration < ActiveRecord::Base
     private
     
     def normalize_params(attributes = {})
-      attributes, result    = (attributes || {}).symbolize_keys, {}
+      attributes, result = (attributes || {}).symbolize_keys, {}
       if attributes[:ip]
         result[:ip_address]   = attributes[:ip]
         result[:lat]          = attributes[:latitude]
         result[:lng]          = attributes[:longitude]
-        result[:country_code] = attributes[:country_code]
-        result[:postal_code]  = attributes[:zipcode]
-        result[:metrocode]    = attributes[:metrocode]
         result[:city]         = attributes[:city]
+        result[:postal_code]  = attributes[:zipcode]
+        result[:region_code]  = attributes[:region_code]
+        result[:region_name]  = attributes[:region_name]
+        result[:country_code] = attributes[:country_code]
       else
         result = attributes
       end
-      result.reject {|k,v| v.blank? || v.match(/0/)}
+      result.reject {|k,v| v.blank?}
     end
   end
   

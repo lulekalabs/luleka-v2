@@ -10,7 +10,7 @@ Geocoder::Configuration.api_key = Rails.env.production? ? "AIzaSyCR2tu-GOwUDF85_
 Geocoder::Configuration.timeout = 5
 
 # use HTTPS for geocoding service connections:
-Geocoder::Configuration.use_https = true
+Geocoder::Configuration.use_https = false
 
 # language to use (for search queries and reverse geocoding):
 # Geocoder::Configuration.language = :de
