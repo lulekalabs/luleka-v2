@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120309204644) do
+ActiveRecord::Schema.define(:version => 20120313173407) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -48,16 +48,16 @@ ActiveRecord::Schema.define(:version => 20120309204644) do
 
   create_table "registrations", :force => true do |t|
     t.string   "email"
-    t.string   "language_code", :limit => 2
-    t.string   "country_code",  :limit => 2
+    t.string   "locale",       :limit => 8
+    t.string   "country_code", :limit => 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ip_address"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "time_zone"
-    t.decimal  "lat",                        :precision => 11, :scale => 8
-    t.decimal  "lng",                        :precision => 11, :scale => 8
+    t.decimal  "lat",                       :precision => 11, :scale => 8
+    t.decimal  "lng",                       :precision => 11, :scale => 8
     t.string   "city"
     t.string   "postal_code"
     t.string   "region_code"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20120309204644) do
     t.string   "type"
     t.string   "uid"
     t.string   "referrer_uid"
-    t.boolean  "opt_in",                                                    :default => false, :null => false
+    t.boolean  "opt_in",                                                   :default => false, :null => false
     t.text     "fields"
     t.text     "user_data"
   end

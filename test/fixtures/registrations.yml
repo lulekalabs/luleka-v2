@@ -7,7 +7,7 @@
 homer: 
   email: homer@example.com
   ip_address: 127.0.0.1
-  language_code: en
+  locale: en
   country_code: US
   first_name: Homer
   last_name: Simpson

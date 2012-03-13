@@ -12,7 +12,7 @@ class RegistrationTest < ActiveSupport::TestCase
   end
   
   should "locale" do
-    registration = FactoryGirl.create :registration
-    assert_equal :"en-US", registration.locale
+    registration = FactoryGirl.create :registration, :locale => "en-US"
+    assert_equal "en-US", registration.locale
   end
 end
