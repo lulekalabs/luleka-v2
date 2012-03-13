@@ -2,9 +2,9 @@ Nl::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  # splash app
   resources :registrations, :only => :create
 
-  # splash app
   root :to => "splash/pages#index"
   post "splash/session/change_locale"   => "splash/splash_application#change_locale", :as => "splash_change_locale"
 
