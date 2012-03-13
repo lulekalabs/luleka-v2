@@ -1,7 +1,6 @@
 <div class="inner">
   <h1><span><%= t "site.title" %></span></h1>
-  <h2><%= t("splash.pages.index.teaser").html_safe %></h2>
-  <h3 style="display:none;"><a href="/"><%= t("splash.pages.index.message").html_safe %></a></h3>
+  <h2><%= (t("splash.pages.index.teaser") % link_to(t("splash.pages.index.pros"), t("splash.pages.index.pros_link"), :target => "_blank")).html_safe %></h2>
   <div class="float-unit">
     <div class="leftside">
       <h4><%= t(".call").html_safe %></h4>

@@ -73,7 +73,6 @@ body.splash-page {
 
       h3 a:hover {
         text-decoration: none;
-        text-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px, #8FB5C8 0px 0px 6px, rgba(143, 181, 200, 0.699219) 0px 0px 30px;
       }
       
       h2 {
@@ -87,6 +86,22 @@ body.splash-page {
         font-weight: bold;
         font-style: normal;
       }
+      
+      h2 a {
+        -webkit-transition: text-shadow 0.4s ease-in-out;
+        -moz-transition: text-shadow 0.4s ease-in-out;
+        color: #198182;
+        outline: none;
+        text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px;
+      }
+      
+      h2 a:hover {
+        text-decoration: none;
+        xtext-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px, #ade7fd 0px 0px 6px, rgba(173, 231, 253, 0.7) 0px 0px 30px;
+        xtext-shadow: rgba(0, 0, 0, 0.6) 0px 1px 0px, #00e5e5 0px 0px 6px, rgba(0, 229, 229, 0.7) 0px 0px 30px;
+        text-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 0px, #8FB5C8 0px 0px 6px, rgba(143, 181, 200, 0.699219) 0px 0px 30px;
+      }
+      
     }
     
     .rightside {

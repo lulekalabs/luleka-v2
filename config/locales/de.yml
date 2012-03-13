@@ -18,7 +18,9 @@ de:
     pages:
       index:
         message: "Demnächst."
-        teaser: "Vernetzen <em>Sie</em> sich mit Profis vor Ort."
+        teaser: "Vernetzen <em>Sie</em> sich mit %s vor Ort."
+        pros: "Profis"
+        pros_link: "http://de.wikipedia.org/wiki/Profi"
         action: "Wann ist es soweit?"
         response: "Danke für Ihr Interesse! Sie werden bald von uns hören."
         form:
