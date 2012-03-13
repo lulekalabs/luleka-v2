@@ -46,7 +46,7 @@ module Social
       self.page_id = parsed["page"]["id"]
       self.liked   = parsed["page"]["liked"]
       self.country = parsed["user"]["country"]
-      self.locale  = parsed["user"]["locale"]
+      self.locale  = parsed["user"]["locale"].blank? ? nil : parsed["user"]["locale"].gsub(/_/, "-")
       save
     end
     

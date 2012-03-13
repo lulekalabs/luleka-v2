@@ -21,8 +21,10 @@ class RegistrationTest < ActiveSupport::TestCase
       {:email => "testee@test.com"}, 
       {"city"=>"Buenos Aires", "region_code"=>"07", "longitude"=>"-58.6725", "region_name"=>"Distrito Federal", "country_code"=>"AR", "latitude"=>"-34.5875", "country_name"=>"Argentina", "ip"=>"190.247.73.246", "zipcode"=>"1640", "metrocode"=>""}, 
       {:locale => "de-DE", :ip_address => "0.0.0.0"}
-    )
-    assert_equal "testee@test.com", reg.email
+    ) do |r|
+      r.email = "other@example.com"
+    end
+    assert_equal "other@example.com", reg.email
     assert_equal "Buenos Aires", reg.city
     # assert_equal "07", reg.region_code
     assert_equal "-58.6725", reg.lng.to_s

@@ -22,7 +22,8 @@
         <div class="gradient"></div>
         <div class="front-signup">
           <h3><%= t("splash.pages.index.action").html_safe %></h3>
-          <%= form_for @registration || Registration.new, :validate => true, :remote => true do |f| %>
+          <%= form_for @registration || Registration.new, :url => splash_registrations_path, 
+            :validate => true, :remote => true do |f| %>
             <div class="holding email">
               <%= f.text_field :email, :type => "email", :autocomplete => "off" %>
               <span class="holder"><%= t "splash.pages.index.form.fields.email.label" %></span>

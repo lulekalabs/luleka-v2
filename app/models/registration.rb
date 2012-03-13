@@ -6,7 +6,7 @@ class Registration < ActiveRecord::Base
   scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC").limit(10) : order("created_at DESC").limit(n)}
   
   class << self
-    def instance_for(*attrs)
+    def instance_for(*attrs, &block)
       secure_options, custom_options = {}, {}
       attrs.each_with_index do |attr, index|
         index == 0 ? secure_options.merge!(normalize_params(attr)) : custom_options.merge!(normalize_params(attr))
@@ -14,6 +14,7 @@ class Registration < ActiveRecord::Base
       record = new
       custom_options.each {|k, v| record.send("#{k}=", v)}
       record.attributes = secure_options
+      yield record if block_given?
       record
     end
     
