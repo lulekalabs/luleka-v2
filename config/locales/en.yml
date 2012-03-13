@@ -8,7 +8,9 @@ en:
     pages:
       index:
         message: "Coming Soon."
-        teaser: "Connecting <em>you</em> to local professionals."
+        teaser: "Connecting <em>you</em> to local %s."
+        pros: "professionals"
+        pros_link: "http://en.wikipedia.org/wiki/Professional"
         action: "Want to know when we open?"
         response: "Thanks for your interest! You will hear back from us shortly."
         form:
