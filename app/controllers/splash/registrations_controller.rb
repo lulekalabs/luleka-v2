@@ -1,4 +1,4 @@
-class RegistrationsController < ApplicationController
+class Splash::RegistrationsController < Splash::SplashApplicationController
   
   def create
     @registration = Registration.instance_for(params[:registration], 
