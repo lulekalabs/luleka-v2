@@ -6,7 +6,6 @@ class Social::RegistrationsController < Social::SocialApplicationController
   end
 
   def create
-    logger.debug "** params #{params.inspect}"
     @registration = Social::Registration.instance_for(params[:social_registration],
       request.location ? request.location.data : {}) do |r|
       r.ip_address   = request.ip

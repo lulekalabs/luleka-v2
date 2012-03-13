@@ -21,6 +21,6 @@ class Splash::SplashApplicationController < ApplicationController
   end
 
   def locale_param
-    :locale
+    :splash_locale
   end
 end

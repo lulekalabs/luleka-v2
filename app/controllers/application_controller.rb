@@ -41,35 +41,29 @@ class ApplicationController < ActionController::Base
   def current_locale=(new_locale)
     session[locale_param] = new_locale
     logger.debug "** current_locale= session['#{locale_param}'] = '#{new_locale}'"
-    cookies[cookie_auth_token] = {:value => new_locale, :expires => Time.now + 1.year}
-    logger.debug "** current_locale= cookies['#{cookie_auth_token}'] = #{{:value => new_locale, :expires => Time.now + 1.year}.inspect}"
+    cookies[locale_cookie_token] = {:value => new_locale, :expires => Time.now + 1.year}
+    logger.debug "** current_locale= cookies['#{locale_cookie_token}'] = #{{:value => new_locale, :expires => Time.now + 1.year}.inspect}"
     @current_locale = new_locale || false
   end
 
   def locale_from_params
     if params[:locale] && I18n.active_locale_languages.include?(params[:locale].to_s)
-      logger.debug "** locale_from_params '#{params[:locale]}'"
+      logger.debug "** locale_from_params #{params[:locale].inspect}"
       params[:locale]
     end
   end
 
   def locale_from_session
-    logger.debug "** locale_param '#{locale_param}'"
-    logger.debug "** locale_from_session '#{session[locale_param].inspect}'"
+    logger.debug "** locale_param #{locale_param.inspect}"
+    logger.debug "** locale_from_session #{session[locale_param].inspect}"
     self.current_locale = session[locale_param] if session[locale_param]
   end
 
   def locale_from_cookie
-    logger.debug "** cookie_auth_token '#{cookie_auth_token}'"
-    token = cookies[cookie_auth_token]
-    if token
-      locale = cookies[cookie_auth_token] = {
-        :value => locale,
-        :expires => Time.now + 1.year
-        # :domain => "domain.com"
-      }
-      logger.debug "** locale_from_cookie '#{locale[:value].inspect}'"
-      self.current_locale = locale[:value]
+    logger.debug "** locale_cookie_token #{locale_cookie_token.inspect}"
+    if token = cookies[locale_cookie_token]
+      logger.debug "** locale_from_cookie token #{token.inspect}"
+      self.current_locale = token
     else
       nil
     end
@@ -79,8 +73,8 @@ class ApplicationController < ActionController::Base
     :canonical_locale
   end
   
-  def cookie_auth_token
-    "#{locale_param}_auth_token".to_sym
+  def locale_cookie_token
+    "#{locale_param}_cookie_token".to_sym
   end
   
   # Override in controllers

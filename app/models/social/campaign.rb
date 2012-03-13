@@ -49,14 +49,6 @@ module Social
       }
     end
 
-=begin
-    def session
-      CampaignSession.get to_param
-    rescue Ambry::NotFoundError
-      CampaignSession.create campaign_id: to_param
-    end
-=end
-
     def over?
       Time.zone.now > end_date
     end

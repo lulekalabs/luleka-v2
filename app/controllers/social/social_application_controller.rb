@@ -22,10 +22,10 @@ class Social::SocialApplicationController < ApplicationController
   def set_locale
     I18n.locale = current_locale || I18n.locale_language(@campaign.session.locale.to_s) || 
       request.compatible_language_from(I18n.available_locales)
-    logger.debug "********************** current_locale '#{current_locale}'"
-    logger.debug "********************** session.locale '#{@campaign.session.locale}'"
-    logger.debug "********************** request.languages '#{request.compatible_language_from(I18n.available_locales).inspect}'"
-    logger.debug "********************** I18n.locale '#{I18n.locale}'"
+    logger.debug "** current_locale '#{current_locale}'"
+    logger.debug "** session.locale '#{@campaign.session.locale}'"
+    logger.debug "** request.languages '#{request.compatible_language_from(I18n.available_locales).inspect}'"
+    logger.debug "** I18n.locale '#{I18n.locale}'"
   end
   
   def set_p3p_headers
@@ -62,40 +62,37 @@ class Social::SocialApplicationController < ApplicationController
 
   def current_session=(new_session)
     session[session_param] = new_session ? new_session.id : nil
-    cookies[cookie_auth_token] = {:value => new_session ? new_session.id : nil, :expires => Time.now + 1.year}
+    logger.debug "** current_session= session['#{session_param}'] = '#{new_session ? new_session.id : nil}'"
+    cookies[session_cookie_token] = {:value => new_session ? new_session.id : nil, :expires => Time.now + 1.year}
+    logger.debug "** current_session= cookies['#{session_cookie_token}'] = '#{new_session ? new_session.id : nil}'"
     @current_session = new_session || false
   end
 
   def session_from_session
-    self.current_session = begin
-      Social::CampaignSession.get(session[session_param]) if session[session_param]
-    rescue Ambry::NotFoundError
-      nil
-    end
+    logger.debug "** session_param #{session_param.inspect}"
+    logger.debug "** session_from_session session[session_param] #{session[session_param].inspect}"
+    self.current_session = Social::CampaignSession.get(session[session_param]) if session[session_param]
+  rescue Ambry::NotFoundError
   end
 
   def session_from_cookie
-    session = begin
-      cookies[cookie_auth_token] && Social::CampaignSession.get(cookies[cookie_auth_token])
-    rescue Ambry::NotFoundError
-      nil
+    logger.debug "** session_cookie_token #{session_cookie_token.inspect}"
+    if token = cookies[session_cookie_token]
+      logger.debug "** session_from_cookie #{token.inspect}"
+      self.current_session = Social::CampaignSession.get token
     end
-    if session
-      cookies[cookie_auth_token] = {
-        :value => session.session_id,
-        :expires => Time.now + 1.year
-        # :domain => "domain.com"
-      }
-      self.current_session = session
-    end
+  rescue Ambry::NotFoundError
   end
   
   def session_param
     :canonical_session
   end
   
-  def cookie_auth_token
-    "#{session_param}_auth_token".to_sym
+  def session_cookie_token
+    "#{session_param}_cookie_token".to_sym
   end
   
+  def locale_param
+    :social_locale
+  end
 end

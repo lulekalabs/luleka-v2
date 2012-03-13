@@ -45,7 +45,7 @@ module Social
       self.parsed_signed_request ||= parsed
       self.page_id = parsed["page"]["id"]
       self.liked   = parsed["page"]["liked"]
-      self.country = parsed["user"]["country"]
+      self.country = parsed["user"]["country"].blank? ? nil : parsed["user"]["country"].upcase
       self.locale  = parsed["user"]["locale"].blank? ? nil : parsed["user"]["locale"].gsub(/_/, "-")
       save
     end
