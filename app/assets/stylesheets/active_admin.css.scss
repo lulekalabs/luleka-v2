@@ -1,6 +1,17 @@
-// Active Admin CSS Styles
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require gmaps4rails
+ *= require_self
+*/
 @import "active_admin/mixins";
 @import "active_admin/base";
 
-// To customize the Active Admin interfaces, add your
-// styles here:
+.map_container {
+  width: 97%;
+}
+
+.gmaps4rails_map {
+  width: 100%;
+}

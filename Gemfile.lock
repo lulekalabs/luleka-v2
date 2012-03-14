@@ -73,6 +73,8 @@ GEM
     formtastic (2.1.1)
       actionpack (~> 3.0)
     geocoder (1.1.1)
+    gmaps4rails (1.4.7)
+      json
     has_scope (0.5.1)
     heroku (2.21.2)
       launchy (>= 0.3.2)
@@ -202,6 +204,7 @@ DEPENDENCIES
   execjs
   factory_girl_rails
   geocoder
+  gmaps4rails
   heroku
   hpricot
   jquery-rails

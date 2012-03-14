@@ -8,6 +8,12 @@ ActiveAdmin::Dashboards.build do
       link_to "See more...", admin_registrations_path
     end
   end
+  
+  section "Registrations Location", :priority => 1 do
+    div do
+      render "map"
+    end
+  end
 
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just

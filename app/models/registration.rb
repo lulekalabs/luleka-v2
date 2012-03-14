@@ -1,7 +1,9 @@
 class Registration < ActiveRecord::Base
-  validates :email, :email_format => true, :uniqueness => true
-  
   attr_accessible :email, :time_zone
+
+  acts_as_gmappable :lat => "lat", :lng => "lng", :process_geocoding => false
+  
+  validates :email, :email_format => true, :uniqueness => true
   
   scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC").limit(10) : order("created_at DESC").limit(n)}
   
@@ -48,6 +50,15 @@ class Registration < ActiveRecord::Base
   # Convert from "America/Argentina/Buenos_Aires" to "Buenos Aires"
   def time_zone=(value)
     self[:time_zone] = ActiveSupport::TimeZone::MAPPING.invert[value] ? ActiveSupport::TimeZone::MAPPING.invert[value] : value
+  end
+  
+  def gmaps4rails_address
+    result = []
+    result << self.city
+    result << self.region_code
+    result << self.region_name
+    result << self.country_code
+    result.reject(&:blank?).join(", ")
   end
   
 end
