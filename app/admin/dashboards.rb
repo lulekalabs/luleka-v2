@@ -29,7 +29,7 @@ ActiveAdmin::Dashboards.build do
     end
   end
 
-  section "Chart", :priority => 4 do
+  section "Registrations Chart", :priority => 4 do
     div :class => "chart_container" do
       render "chart"
     end
