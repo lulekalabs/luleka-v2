@@ -16,7 +16,7 @@
     return <%= inside_facebook? ? 'true' : 'false' %>;
   }
   
-  <% if Rails.env.production? %>
+  <% if Rails.env.production? && action_name != "rules" %>
   if (window.location == top.location) {
     top.location = '<%= root_url %>';
   }
