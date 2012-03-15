@@ -1,6 +1,12 @@
 ActiveAdmin::Dashboards.build do
 
-  section "Recent registrations" do
+  section "Help", :priority => 3 do
+    div do
+      link_to "Go to Registrations", [:admin, :registrations]
+    end
+  end
+
+  section "Recent registrations", :priority => 2 do
     table_for Registration.recent(10) do |t|
       t.column(:email) {|r| link_to(r.email, [:admin, r])}
     end
@@ -9,12 +15,33 @@ ActiveAdmin::Dashboards.build do
     end
   end
   
-  section "Registration Locations", :priority => 1 do
+  section "Quick Stats", :priority => 1 do
+    ul do
+      li do
+        "%s organic registrations" % Registration.organic.count
+      end
+      li do
+        "%s social registrations" % Social::Registration.count
+      end
+      li do
+        "%s total registrations" % Registration.count
+      end
+    end
+  end
+
+  section "Chart", :priority => 4 do
+    div :class => "chart_container" do
+      render "chart"
+    end
+  end
+
+  section "Registration Locations", :priority => 5 do
     div do
       render "map"
     end
   end
 
+  
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.

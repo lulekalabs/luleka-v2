@@ -5,7 +5,8 @@ class Registration < ActiveRecord::Base
   
   validates :email, :email_format => true, :uniqueness => true
   
-  scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC").limit(10) : order("created_at DESC").limit(n)}
+  scope :organic, where("registrations.type IS NULL")
+  scope :recent, lambda {|n = nil| n.nil? ? order("created_at DESC") : order("created_at DESC").limit(n)}
   
   class << self
     def instance_for(*attrs, &block)
@@ -18,6 +19,10 @@ class Registration < ActiveRecord::Base
       record.attributes = secure_options
       yield record if block_given?
       record
+    end
+
+    def total_on(date)
+      where('date(created_at) = ?', date).count
     end
     
     private

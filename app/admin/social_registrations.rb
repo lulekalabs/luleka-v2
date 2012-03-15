@@ -1,6 +1,9 @@
 ActiveAdmin.register Social::Registration do
   menu :label => "Facebook Registrations", :parent => "Registrations"
   
+  scope :all
+  scope :recent
+  
   index do
     column :email
     column :name
