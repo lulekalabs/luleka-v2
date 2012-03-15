@@ -1,4 +1,5 @@
 ActiveAdmin.register Registration do
+  #menu :label => "Splash Registrations", :parent => "Registrations"
 
   index do
     column :email

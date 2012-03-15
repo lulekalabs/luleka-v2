@@ -9,9 +9,11 @@
 @import "active_admin/base";
 
 .map_container {
-  width: 97%;
+  width: auto;
+  height: 320px;
 }
 
 .gmaps4rails_map {
-  width: 100%;
+  width: auto;
+  height: 100%;
 }

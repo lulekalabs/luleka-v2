@@ -9,7 +9,7 @@ ActiveAdmin::Dashboards.build do
     end
   end
   
-  section "Registrations Location", :priority => 1 do
+  section "Registration Locations", :priority => 1 do
     div do
       render "map"
     end

@@ -1,5 +1,5 @@
 ActiveAdmin.register Social::Registration do
-  menu :label => "My Menu Item Label", :parent => "Dashboard"
+  menu :label => "Facebook Registrations", :parent => "Registrations"
   
   index do
     column :email
