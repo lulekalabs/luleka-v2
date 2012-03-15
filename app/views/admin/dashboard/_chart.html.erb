@@ -1,3 +1,6 @@
+<%
+  start_date = Date.parse("26.02.2012")
+%>
 <script type="text/javascript" charset="utf-8">
 $(function() {
   new Highcharts.Chart({
@@ -27,8 +30,8 @@ $(function() {
       {
         name: "<%= name %>",
         pointInterval: <%= 1.day * 1000 %>,
-        pointStart: <%= 1.week.ago.to_i * 1000 %>,
-        data: <%= registrations_chart_series(registrations, 1.week.ago) %>
+        pointStart: <%= start_date.to_time.to_i * 1000 %>,
+        data: <%= registrations_chart_series(registrations, start_date) %>
       },
       <% end %>
     ]
