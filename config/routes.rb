@@ -18,7 +18,7 @@ Nl::Application.routes.draw do
   get  "/social/campaign/invite"        => "social/invitations#new", :as => :new_social_invitation
   post "/social/campaign/events"        => "social/events#create", :as => :social_events
   get  "/social/campaign/over"          => "social/campaigns#over", :as => :social_campaign_over
-  get  "/social/campaign/rules"         => "social/campaigns#rules", :as => :social_campaign_rules
+  get  "/sweepstakes/rules"             => "social/campaigns#rules", :as => :social_campaign_rules
   post "social/session/change_locale"   => "social/splash_application#change_locale", :as => "social_change_locale"
 
   # app
