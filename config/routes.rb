@@ -3,6 +3,7 @@ Nl::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   # splash app
+  match "/:locale" => "splash/pages#index", :as => :root_with_locale
   namespace :splash do
     resources :registrations, :only => :create
   end

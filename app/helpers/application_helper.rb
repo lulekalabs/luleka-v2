@@ -12,7 +12,7 @@ module ApplicationHelper
         html += content_tag(:em, t("languages.#{I18n.locale_language}"), :class => "current")
       else
         html += link_to(I18n.switch_locale(locale) {t("languages.#{I18n.locale_language(locale)}").titleize}, 
-          url_for({:locale => I18n.locale_language(locale)}),
+          root_with_locale_path(:locale => I18n.locale_language(locale)), # url_for({:locale => I18n.locale_language(locale)}),
             :title => t("languages.#{I18n.locale_language(locale)}").titleize, "data-locale" => locale)
       end
       unless index == locales.size - 1

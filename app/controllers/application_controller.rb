@@ -47,9 +47,9 @@ class ApplicationController < ActionController::Base
   end
 
   def locale_from_params
-    if params[:locale] && I18n.active_locale_languages.include?(params[:locale].to_s)
-      logger.debug "** locale_from_params #{params[:locale].inspect}"
-      params[:locale]
+    logger.debug "** locale_from_params #{params[:locale].inspect}"
+    if params[:locale] && I18n.active_locale_languages.include?(params[:locale].to_sym)
+      params[:locale].to_sym
     end
   end
 
