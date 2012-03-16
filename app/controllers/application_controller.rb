@@ -83,4 +83,14 @@ class ApplicationController < ActionController::Base
   end
   helper_method :active_locale_languages
   
+  def on_tablet?
+    request.user_agent =~ /ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i
+  end
+  helper_method :on_tablet?
+
+  def on_phone?
+    request.user_agent =~ /iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i
+  end
+  helper_method :on_phone?
+  
 end
