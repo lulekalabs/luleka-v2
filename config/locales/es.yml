@@ -10,7 +10,7 @@ es:
         message: "Muy pronto."
         teaser: "<em>Conectándolo</em> a los %s en su región."
         pros: "profesionales"
-        pros_link: "http://es.wikipedia.org/wiki/Profesional"
+        pros_link: "http://es.wikipedia.org/wiki/Profesional#Concepto_de_profesional"
         action: "¿Quieres saber más?"
         response: "Gracias por su interés! Usted recibira una respuesta en breve."
         form:
