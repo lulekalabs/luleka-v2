@@ -18,7 +18,7 @@
       <% if !@campaign.over? && !@campaign.hasnt_started_yet? %>
       <li>
         <%= link_to t("layouts.social_application.rules", :raise => true), 
-          Rails.env.production? ? social_campaign_rules_url(:host => "luleka.com", :port => nil) : social_campaign_rules_path,
+          Rails.env.production? ? social_campaign_rules_url(:host => "www.luleka.com", :port => nil) : social_campaign_rules_path,
             :target => "_blank" %>
         <span class="dot">&middot;</span>
       </li>
