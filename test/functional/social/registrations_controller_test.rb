@@ -9,7 +9,7 @@ class Social::RegistrationsControllerTest < ActionController::TestCase
   should "post" do
     assert_difference "Social::Registration.count" do
       post :create, :social_registration => {:first_name => "Hans", :last_name => "Zimmer", :email => "accepted@example.com",
-         :ip_address => "172.45.3.21", :locale => "en", :country_code => "US", :time_zone => "America/Argentina/Buenos_Aires"}
+         :time_zone => "America/Argentina/Buenos_Aires", :user_data => "{}"}
       assert_response :redirect
     end
   end
