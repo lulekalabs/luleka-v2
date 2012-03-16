@@ -40,7 +40,7 @@
             <div class="language inline-list">
               <form action="<%= change_locale_path %>" id="change-locale-form" method="post">
                 <input type="hidden" name="locale" value="">
-                <input type="hidden" name="redirect" value="<%= url_for({}) %>">
+                <input type="hidden" name="redirect" value="<%= url_for({:locale => nil}) %>">
                 <strong><%= t ".languages" %></strong>
                 <span class="dot">&nbsp;</span>
                 <%= language_links %>
