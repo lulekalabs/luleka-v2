@@ -41,3 +41,12 @@
   });
 </script>
 <% end %>
+<% content_for :head do %>
+  <!-- Le canonical and alternate pages -->
+  <% if current_page?(root_with_locale_url(:locale => I18n.locale_language)) %>
+  <link rel="canonical" href="<%= root_url %>" />
+  <% end %>
+  <% active_locale_languages.each do |locale| %>
+    <link rel="alternate" hreflang="<%= I18n.locale_language(locale) %>" href="<%= root_with_locale_url(:locale => I18n.locale_language(locale)) %>" />
+  <% end %>
+<% end %>
