@@ -1,14 +1,14 @@
 it:
   site:
     title: Luleka
-    tagline: Collegamento per i professionisti nella tua zona
+    tagline: Ti collega con i professionisti nella tua zona
     legal_name: Luleka S.A.
     
   splash:
     pages:
       index:
-        message: "Molto presto."
-        teaser: "<em>Collegamento</em> per i professionisti nella tua zona."
+        message: "Tra poco."
+        teaser: "<em>Ti</em> collega con i professionisti nella tua zona."
         action: "Vuoi saperne di più?"
         response: "Grazie per il vostro interesse! Riceverai una risposta a breve."
         form:
