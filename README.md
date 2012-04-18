@@ -28,10 +28,7 @@ We deploy several times a day, usually whenever we complete a story.
 
 ## Deployment to integration
 
-Deploying should be a simple matter of:
-
-    cap deploy:setup (first time)
-    cap deploy
+git push heroku master
 
 ## Heroku
 
