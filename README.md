@@ -28,35 +28,42 @@ We deploy several times a day, usually whenever we complete a story.
 
 ## Deployment to integration
 
-git push heroku master
+    git push heroku master
 
 ## Heroku
 
 Generate new key:
-ssh-keygen -t rsa -C "heroku@luleka.com" -f ~/.ssh/heroku@luleka.com.identity
+
+    ssh-keygen -t rsa -C "heroku@luleka.com" -f ~/.ssh/heroku@luleka.com.identity
 
 Upload public key to Heroku:
 
-heroku keys:add ~/.ssh/heroku@luleka.com.identity.pub
+    heroku keys:add ~/.ssh/heroku@luleka.com.identity.pub
 
 Check for other keys and remove:
 
-heroku keys
-heroku keys:remove adam@workstation.local
+    heroku keys
+    heroku keys:remove adam@workstation.local
+
+### Adding remote
+
+You need to add the remote end for the heroku deployment piece, like this:
+
+    git remote add heroku git@heroku.com:luleka.git
 
 ### Managing Heroku account
 
-ssh-add -L # list
-ssh-add -D # delete keys if you have to
-ssh-add ~/.ssh/heroku@luleka.com.identity
-heroku plugins:install git://github.com/ddollar/heroku-accounts.git
-heroku accounts:add nl
-heroku accounts:set nl
+    ssh-add -L # list
+    ssh-add -D # delete keys if you have to
+    ssh-add ~/.ssh/heroku@luleka.com.identity
+    heroku plugins:install git://github.com/ddollar/heroku-accounts.git
+    heroku accounts:add nl
+    heroku accounts:set nl
 
 ### Heroku Add-ons
 
-*  heroku addons:add custom_domains
-*  heroku addons:add custom_domains:wildcard
+    heroku addons:add custom_domains
+    heroku addons:add custom_domains:wildcard
 
 ## Integrating into Facebook
 
