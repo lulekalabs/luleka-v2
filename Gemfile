@@ -31,7 +31,10 @@ end
 gem "pg"
 gem "client_side_validations"
 gem "devise", '~> 1.5.3'
-gem "activeadmin"
+
+gem "formtastic", "~> 2.1.1"
+gem "activeadmin", "~> 0.4.3"
+
 gem "heroku"
 gem "geocoder"
 

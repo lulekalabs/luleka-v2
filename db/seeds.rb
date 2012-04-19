@@ -10,7 +10,13 @@
 require File.expand_path(File.dirname(__FILE__) + '/import')
 
 @import.each do |hash|
-  Registration.find_or_create_by_email hash[:email], hash
+  Registration.find_or_create_by_email hash[:email] do |r|
+    r.first_name = hash[:first_name]
+    r.last_name = hash[:last_name]
+    r.country_code = hash[:country_code]
+    r.time_zone = hash[:time_zone]
+    r.locale = hash[:language_code]
+  end
 end
 
 AdminUser.find_or_create_by_email 'manager@luleka.com', {
