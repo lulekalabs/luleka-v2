@@ -25,3 +25,4 @@ AdminUser.find_or_create_by_email 'manager@luleka.com', {
 }
 
 Social::Event::Code.create_records!
+
