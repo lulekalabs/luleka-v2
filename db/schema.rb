@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20120313190502) do
     t.integer  "author_id"
     t.string   "author_type"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "namespace"
   end
 
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20120313190502) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20120313190502) do
     t.string   "email"
     t.string   "locale",       :limit => 8
     t.string   "country_code", :limit => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                                  :null => false
+    t.datetime "updated_at",                                                                  :null => false
     t.string   "ip_address"
     t.string   "first_name"
     t.string   "last_name"
@@ -103,8 +103,8 @@ ActiveRecord::Schema.define(:version => 20120313190502) do
     t.integer  "unliked",             :default => 0,     :null => false
     t.integer  "view_invite_page",    :default => 0,     :null => false
     t.integer  "wall_post",           :default => 0,     :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   add_index "social_reports", ["date", "viral"], :name => "index_social_reports_on_date_and_viral", :unique => true
